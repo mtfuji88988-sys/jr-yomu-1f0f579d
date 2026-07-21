@@ -1,0 +1,247 @@
+<!doctype html>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>日语晨读 · 移动版</title>
+<style>
+:root{--paper:#FAF6F0;--ink:#2B2620;--terra:#C15F3C;--terraInk:#9C4A2E;--soft:#F3E3DA;--line:#E5DCD0;--muted:#8A7F72;--ok:#4C7A5E;--card:#FFFFFF;--hl:#FDEBD3;--focus:#FFF7E8;--warn:#B03A2E}
+@media (prefers-color-scheme: dark){:root{--paper:#201C17;--ink:#EDE6DC;--terra:#D97C52;--terraInk:#E09070;--soft:#3A2E26;--line:#3B342C;--muted:#A5988A;--ok:#8FBEA3;--card:#2A251F;--hl:#4A392B;--focus:#332A21;--warn:#E07A6E}}
+:root[data-theme="dark"]{--paper:#201C17;--ink:#EDE6DC;--terra:#D97C52;--terraInk:#E09070;--soft:#3A2E26;--line:#3B342C;--muted:#A5988A;--ok:#8FBEA3;--card:#2A251F;--hl:#4A392B;--focus:#332A21;--warn:#E07A6E}
+:root[data-theme="light"]{--paper:#FAF6F0;--ink:#2B2620;--terra:#C15F3C;--terraInk:#9C4A2E;--soft:#F3E3DA;--line:#E5DCD0;--muted:#8A7F72;--ok:#4C7A5E;--card:#FFFFFF;--hl:#FDEBD3;--focus:#FFF7E8;--warn:#B03A2E}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Mincho ProN","Songti SC","Noto Serif JP",serif;line-height:2;padding:16px 14px 96px}
+.wrap{max-width:680px;margin:0 auto}
+h1{font-size:19px;line-height:1.6;border-bottom:3px solid var(--terra);padding-bottom:8px;text-wrap:balance}
+.sub{color:var(--muted);font-size:12px;margin:6px 0 12px}
+.tabs{display:flex;gap:8px;position:sticky;top:0;background:var(--paper);padding:10px 0;z-index:6}
+.tab{flex:1;text-align:center;font-size:13.5px;padding:9px 4px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit;line-height:1.4}
+.tab.on{border-color:var(--terra);color:var(--terra);font-weight:700;background:var(--focus)}
+h2{font-size:15px;color:var(--terra);margin:24px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.concl{background:var(--soft);border:1.5px solid var(--terra);border-radius:10px;padding:12px 15px;margin:12px 0;font-size:14px}
+.concl b,.card b{color:var(--terraInk)}
+.vlink{display:block;background:var(--card);border:1.5px solid var(--terra);border-radius:10px;padding:13px 16px;margin:10px 0;text-decoration:none;color:var(--ink);font-size:14.5px}
+.vlink small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.focus{border-left:5px solid var(--terra);background:var(--focus)}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:5px;font-family:"Songti SC",serif}
+.sent .why{display:block;font-size:13px;color:var(--ink);opacity:.82;background:var(--soft);border-radius:6px;margin-top:7px;padding:6px 9px;font-family:"Songti SC",serif}
+body.nozh .sent .zh,body.nozh .sent .why{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9px;color:var(--terraInk)}
+.tag{font-size:10.5px;background:var(--terra);color:#fff;border-radius:4px;padding:1px 6px;margin-right:5px;font-family:"Songti SC",serif;vertical-align:2px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 15px;margin:9px 0;font-size:14px}
+.mut{color:var(--muted);font-size:12px}
+.jp{font-size:16px}
+.re{color:var(--ok);font-size:11.5px}
+.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.dock{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:7px;justify-content:center;flex-wrap:wrap;z-index:9}
+.btn{font-family:inherit;font-size:13px;padding:8px 12px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:18px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}
+.btn:active{transform:scale(.95)}
+.btn:focus-visible,.tab:focus-visible,.sent:focus-visible{outline:2px solid var(--terra);outline-offset:2px}
+#hint{font-size:12px;color:var(--muted);margin:8px 0}
+.pane{display:none}.pane.on{display:block}
+@media (prefers-reduced-motion: no-preference){.sent{transition:background .15s}}
+</style>
+<body>
+<div class="wrap">
+<h1>日语晨读 · 移动版</h1>
+<div class="sub">2026年7月22日(水) · 学习管家 · 视频完整版在家里 Mac(192.168.3.116:8140)</div>
+
+<div class="tabs">
+<button class="tab on" data-pane="p1">第1篇<br>空调出货</button>
+<button class="tab" data-pane="p2">第2篇<br>日元163</button>
+<button class="tab" data-pane="p3">第3篇<br>公寓均价</button>
+</div>
+<div id="hint">点任何一句就朗读;底部按钮切换模式。</div>
+
+<!-- ============ 第1篇 ============ -->
+<div class="pane on" id="p1">
+<div class="concl"><b>记住三件事:</b>①<span class="jp">駆け込み需要</span>=抢购需求;②<span class="jp">「〜とみられます」</span>=被认为是……(新闻分析句);③大数字读法:億/兆(见文末)。</div>
+<a class="vlink" href="https://www.youtube.com/watch?v=E_xzXioRlLk" target="_blank" rel="noopener">▶ 看 ANN 原报道(67秒,播音员原声)<small>外出时在线看;家里 Mac 版是本地视频</small></a>
+
+<span class="sent focus" data-jp="日本電機工業会のまとめによりますと、1月から6月までのエアコンの国内出荷額は6102億円でした。" tabindex="0"><span class="tag">精讲</span><ruby>日本電機工業会<rt>にほんでんきこうぎょうかい</rt></ruby>のまとめによりますと、1<ruby>月<rt>がつ</rt></ruby>から6<ruby>月<rt>がつ</rt></ruby>までのエアコンの<ruby>国内出荷額<rt>こくないしゅっかがく</rt></ruby>は6102<ruby>億円<rt>おくえん</rt></ruby>でした。<span class="zh">据日本电机工业会统计,1月到6月空调的国内出货额为6102亿日元。</span><span class="why">によりますと=据……说(新闻转述句式)|まとめ=汇总|出荷額(しゅっかがく)=出货额。</span></span>
+
+<span class="sent focus" data-jp="去年の同じ時期と比べ21.7%増えました。" tabindex="0"><span class="tag">精讲</span><ruby>去年<rt>きょねん</rt></ruby>の<ruby>同<rt>おな</rt></ruby>じ<ruby>時期<rt>じき</rt></ruby>と<ruby>比<rt>くら</rt></ruby>べ21.7%<ruby>増<rt>ふ</rt></ruby>えました。<span class="zh">与去年同期相比,增长了21.7%。</span><span class="why">〜と比べ=与〜相比|増えました=增加了。整句背下,财报新闻天天见。</span></span>
+
+<span class="sent focus" data-jp="来年4月から省エネ基準が厳しくなりエアコンの価格上昇が予想される、いわゆる「2027年問題」を背景に、駆け込み需要が高まったことが要因とみられます。" tabindex="0"><span class="tag">精讲</span><ruby>来年<rt>らいねん</rt></ruby>4<ruby>月<rt>がつ</rt></ruby>から<ruby>省<rt>しょう</rt></ruby>エネ<ruby>基準<rt>きじゅん</rt></ruby>が<ruby>厳<rt>きび</rt></ruby>しくなりエアコンの<ruby>価格上昇<rt>かかくじょうしょう</rt></ruby>が<ruby>予想<rt>よそう</rt></ruby>される、いわゆる「2027<ruby>年問題<rt>ねんもんだい</rt></ruby>」を<ruby>背景<rt>はいけい</rt></ruby>に、<ruby>駆<rt>か</rt></ruby>け<ruby>込<rt>こ</rt></ruby>み<ruby>需要<rt>じゅよう</rt></ruby>が<ruby>高<rt>たか</rt></ruby>まったことが<ruby>要因<rt>よういん</rt></ruby>とみられます。<span class="zh">明年4月起节能标准收紧、空调价格预计上涨——在这个所谓"2027年问题"的背景下,抢购需求升温,被认为是主因。</span><span class="why">いわゆる=所谓的|〜を背景に=在〜背景下|駆け込み需要=抢购需求⭐|とみられます=被认为(本篇语法)。</span></span>
+
+<span class="sent focus" data-jp="エアコンの購入が大きく伸びたことで、白物家電全体の出荷額も前の年より7.4%多い1兆4350億円となり、上半期としては過去最高額となりました。" tabindex="0"><span class="tag">精讲</span>エアコンの<ruby>購入<rt>こうにゅう</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きく<ruby>伸<rt>の</rt></ruby>びたことで、<ruby>白物家電<rt>しろものかでん</rt></ruby><ruby>全体<rt>ぜんたい</rt></ruby>の<ruby>出荷額<rt>しゅっかがく</rt></ruby>も<ruby>前<rt>まえ</rt></ruby>の<ruby>年<rt>とし</rt></ruby>より7.4%<ruby>多<rt>おお</rt></ruby>い1<ruby>兆<rt>ちょう</rt></ruby>4350<ruby>億円<rt>おくえん</rt></ruby>となり、<ruby>上半期<rt>かみはんき</rt></ruby>としては<ruby>過去最高額<rt>かこさいこうがく</rt></ruby>となりました。<span class="zh">空调购买大增,带动白色家电整体出货额也比上年多7.4%,达1兆4350亿日元,创上半年历史最高。</span><span class="why">〜ことで=因为〜|白物家電(しろものかでん)=白色家电|過去最高(かこさいこう)=历史最高⭐|上半期读かみはんき。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th>词</th><th>读音</th><th>意思</th><th></th></tr>
+<tr><td class="jp">出荷額</td><td>しゅっかがく</td><td>出货额</td><td><button class="spk" data-jp="しゅっかがく">▶</button></td></tr>
+<tr><td class="jp">比べる</td><td>くらべる</td><td>比较</td><td><button class="spk" data-jp="くらべる">▶</button></td></tr>
+<tr><td class="jp">増える</td><td>ふえる</td><td>增加(⇔減る)</td><td><button class="spk" data-jp="ふえる">▶</button></td></tr>
+<tr><td class="jp">駆け込み需要</td><td>かけこみじゅよう</td><td>抢购需求 ⭐</td><td><button class="spk" data-jp="かけこみじゅよう">▶</button></td></tr>
+<tr><td class="jp">白物家電</td><td>しろものかでん</td><td>白色家电</td><td><button class="spk" data-jp="しろものかでん">▶</button></td></tr>
+<tr><td class="jp">過去最高</td><td>かこさいこう</td><td>历史最高 ⭐</td><td><button class="spk" data-jp="かこさいこう">▶</button></td></tr>
+<tr><td class="jp">上半期</td><td>かみはんき</td><td>上半年(⇔下半期しもはんき)</td><td><button class="spk" data-jp="かみはんき">▶</button></td></tr>
+</table>
+<h2>语法:〜とみられます</h2>
+<div class="card">=<b>被认为是……</b>(新闻分析句,给结论不说死)。<span class="jp">駆け込み需要が高まったことが要因<b>とみられます</b>。</span>与「によりますと」(据…说,转述有出处)组成"事实 vs 分析"两件套——听新闻分清事实和观点。</div>
+<h2>大数字读法</h2>
+<table>
+<tr><td class="jp">6102億円</td><td>ろくせんひゃくにおくえん</td><td><button class="spk" data-jp="ろくせんひゃくにおくえん">▶</button></td></tr>
+<tr><td class="jp">1兆4350億円</td><td>いっちょうよんせんさんびゃくごじゅうおくえん</td><td><button class="spk" data-jp="いっちょうよんせんさんびゃくごじゅうおくえん">▶</button></td></tr>
+<tr><td class="jp">21.7%</td><td>にじゅういってんななパーセント(いち+てん→いってん促音)</td><td><button class="spk" data-jp="にじゅういってんななパーセント">▶</button></td></tr>
+</table>
+</div>
+
+<!-- ============ 第2篇 ============ -->
+<div class="pane" id="p2">
+<div class="concl"><b>记住三件事:</b>①<span class="jp">円安</span>=日元贬值 ⇔ <span class="jp">円高</span>;②<span class="jp">「〜ぶり」</span>=时隔……(久しぶり就是它);③<span class="jp">有事のドル買い</span>=避险买美元。</div>
+<a class="vlink" href="https://www.youtube.com/watch?v=7L99Gwt6di4" target="_blank" rel="noopener">▶ 看 ANN 原报道(76秒,播音员原声)<small>外出时在线看;家里 Mac 版是本地视频</small></a>
+
+<span class="sent focus" data-jp="円相場が一時、1ドル163円台まで下落しました。" tabindex="0"><span class="tag">精讲</span><ruby>円相場<rt>えんそうば</rt></ruby>が<ruby>一時<rt>いちじ</rt></ruby>、1ドル=163<ruby>円台<rt>えんだい</rt></ruby>まで<ruby>下落<rt>げらく</rt></ruby>しました。<span class="zh">日元汇率一度跌至1美元=163日元区间。</span><span class="why">円相場=日元汇率|一時=盘中一度|〜円台=…区间(163.0〜163.9)|下落(げらく)=下跌。</span></span>
+
+<span class="sent focus" data-jp="およそ39年半ぶりの円安水準です。" tabindex="0"><span class="tag">精讲</span>およそ39<ruby>年半<rt>ねんはん</rt></ruby>ぶりの<ruby>円安水準<rt>えんやすすいじゅん</rt></ruby>です。<span class="zh">这是约39年半以来的日元最低水平。</span><span class="why">およそ=大约|<b>〜ぶり</b>=时隔…(本篇语法)|水準=水平。这句最短,必背。</span></span>
+
+<span class="sent" data-jp="外国為替市場では、先週から1ドル162円台前半で円相場が推移していましたが、日本時間21日夕方から急速に円安が進み、一時、163円台をつけました。" tabindex="0"><ruby>外国為替市場<rt>がいこくかわせしじょう</rt></ruby>では、<ruby>先週<rt>せんしゅう</rt></ruby>から1ドル=162<ruby>円台前半<rt>えんだいぜんはん</rt></ruby>で<ruby>円相場<rt>えんそうば</rt></ruby>が<ruby>推移<rt>すいい</rt></ruby>していましたが、<ruby>日本時間<rt>にほんじかん</rt></ruby>21<ruby>日<rt>にち</rt></ruby><ruby>夕方<rt>ゆうがた</rt></ruby>から<ruby>急速<rt>きゅうそく</rt></ruby>に<ruby>円安<rt>えんやす</rt></ruby>が<ruby>進<rt>すす</rt></ruby>み、<ruby>一時<rt>いちじ</rt></ruby>、163<ruby>円台<rt>えんだい</rt></ruby>をつけました。<span class="zh">外汇市场上,日元上周以来一直在162日元前半区间波动,21日傍晚起急速走贬,一度触及163日元。</span><span class="why">泛读,抓三个词:為替(かわせ)=外汇⭐|推移=波动运行|「〜をつけました」=触及(行情用语)。</span></span>
+
+<span class="sent" data-jp="1986年以来、およそ39年半ぶりの円安水準です。" tabindex="0">1986<ruby>年<rt>ねん</rt></ruby><ruby>以来<rt>いらい</rt></ruby>、およそ39<ruby>年半<rt>ねんはん</rt></ruby>ぶりの<ruby>円安水準<rt>えんやすすいじゅん</rt></ruby>です。<span class="zh">是1986年以来,约39年半来的日元最低水平。</span><span class="why">〜以来=自…以来。新闻"先结论再补时间锚"的重复手法,白送一次复习。</span></span>
+
+<span class="sent focus" data-jp="イラン情勢の先行きが不透明となり有事のドル買いが強まっていることや、原油の先物価格が上昇していることなどが要因とみられます。" tabindex="0"><span class="tag">精讲</span>イラン<ruby>情勢<rt>じょうせい</rt></ruby>の<ruby>先行<rt>さきゆ</rt></ruby>きが<ruby>不透明<rt>ふとうめい</rt></ruby>となり<ruby>有事<rt>ゆうじ</rt></ruby>のドル<ruby>買<rt>が</rt></ruby>いが<ruby>強<rt>つよ</rt></ruby>まっていることや、<ruby>原油<rt>げんゆ</rt></ruby>の<ruby>先物価格<rt>さきものかかく</rt></ruby>が<ruby>上昇<rt>じょうしょう</rt></ruby>していることなどが<ruby>要因<rt>よういん</rt></ruby>とみられます。<span class="zh">伊朗局势前景不明使"避险买美元"走强、原油期货价格上涨等,被认为是主因。</span><span class="why">先行き=前景|有事のドル買い=避险买美元⭐|先物=期货|とみられます↺第1篇语法。</span></span>
+
+<span class="sent" data-jp="また、財務省から強い牽制がないことなども影響しているとみられます。" tabindex="0">また、<ruby>財務省<rt>ざいむしょう</rt></ruby>から<ruby>強<rt>つよ</rt></ruby>い<ruby>牽制<rt>けんせい</rt></ruby>がないことなども<ruby>影響<rt>えいきょう</rt></ruby>しているとみられます。<span class="zh">另外,财务省没有强力口头干预等,也被认为有影响。</span><span class="why">牽制(けんせい)=口头干预(财务省喊话托汇率叫「口先介入」)。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th>词</th><th>读音</th><th>意思</th><th></th></tr>
+<tr><td class="jp">円相場</td><td>えんそうば</td><td>日元汇率(相場=行情⭐)</td><td><button class="spk" data-jp="えんそうば">▶</button></td></tr>
+<tr><td class="jp">円安 / 円高</td><td>えんやす / えんだか</td><td>日元贬值 / 升值</td><td><button class="spk" data-jp="えんやす、えんだか">▶</button></td></tr>
+<tr><td class="jp">下落</td><td>げらく</td><td>下跌(⇔上昇)</td><td><button class="spk" data-jp="げらく">▶</button></td></tr>
+<tr><td class="jp">為替</td><td>かわせ</td><td>外汇 ⭐读音特殊</td><td><button class="spk" data-jp="かわせ">▶</button></td></tr>
+<tr><td class="jp">先行き</td><td>さきゆき</td><td>前景</td><td><button class="spk" data-jp="さきゆき">▶</button></td></tr>
+<tr><td class="jp">有事</td><td>ゆうじ</td><td>突发大事、危机</td><td><button class="spk" data-jp="ゆうじ">▶</button></td></tr>
+<tr><td class="jp">先物</td><td>さきもの</td><td>期货</td><td><button class="spk" data-jp="さきもの">▶</button></td></tr>
+<tr><td class="jp">一時</td><td>いちじ</td><td>一度、盘中一度</td><td><button class="spk" data-jp="いちじ">▶</button></td></tr>
+</table>
+<h2>语法:〜ぶり</h2>
+<div class="card">=<b>时隔……</b>。<span class="jp">39年半<b>ぶり</b>の円安水準</span>=时隔39年半的日元低位|<span class="jp">久し<b>ぶり</b>!</span>=好久不见(您早就会的这句就是它)|<span class="jp">3年<b>ぶり</b>に日本へ帰りました</span>=时隔3年回日本。新闻里「10年ぶりの高値」天天见。</div>
+</div>
+
+<!-- ============ 第3篇 ============ -->
+<div class="pane" id="p3">
+<div class="concl"><b>记住三件事:</b>①<span class="jp">マンション</span>≠英语mansion,就是普通商品公寓(著名陷阱);②行情:23区新盘均价1億4249万円、同比+9.1%、连续4年破亿;③<span class="jp">「〜を超える」</span>=超过。</div>
+<a class="vlink" href="https://www.youtube.com/watch?v=G308_OL-PmI" target="_blank" rel="noopener">▶ 看 ANN 原报道(98秒,播音员原声)<small>外出时在线看;家里 Mac 版是本地视频</small></a>
+
+<span class="sent focus" data-jp="今年上半期の東京23区の新築マンションの平均価格が1億4000万円を超えました。過去最高額です。" tabindex="0"><span class="tag">精讲</span><ruby>今年<rt>ことし</rt></ruby><ruby>上半期<rt>かみはんき</rt></ruby>の<ruby>東京<rt>とうきょう</rt></ruby>23<ruby>区<rt>く</rt></ruby>の<ruby>新築<rt>しんちく</rt></ruby>マンションの<ruby>平均価格<rt>へいきんかかく</rt></ruby>が1<ruby>億<rt>おく</rt></ruby>4000<ruby>万円<rt>まんえん</rt></ruby>を<ruby>超<rt>こ</rt></ruby>えました。<ruby>過去最高額<rt>かこさいこうがく</rt></ruby>です。<span class="zh">今年上半年,东京23区新建公寓的平均价格超过了1亿4000万日元。创历史最高。</span><span class="why">上半期↺|新築=新建|<b>〜を超えました</b>=超过了(本篇语法)|過去最高額↺——第1篇学的词全在这句里。</span></span>
+
+<span class="sent focus" data-jp="市場の動向を調査している不動産経済研究所によりますと、1月から6月に発売された東京23区の新築マンション1戸あたりの平均価格は前の年の同じ時期より9.1%高い1億4249万円でした。" tabindex="0"><span class="tag">精讲</span><ruby>市場<rt>しじょう</rt></ruby>の<ruby>動向<rt>どうこう</rt></ruby>を<ruby>調査<rt>ちょうさ</rt></ruby>している<ruby>不動産経済研究所<rt>ふどうさんけいざいけんきゅうじょ</rt></ruby>によりますと、1<ruby>月<rt>がつ</rt></ruby>から6<ruby>月<rt>がつ</rt></ruby>に<ruby>発売<rt>はつばい</rt></ruby>された<ruby>東京<rt>とうきょう</rt></ruby>23<ruby>区<rt>く</rt></ruby>の<ruby>新築<rt>しんちく</rt></ruby>マンション1<ruby>戸<rt>こ</rt></ruby>あたりの<ruby>平均価格<rt>へいきんかかく</rt></ruby>は<ruby>前<rt>まえ</rt></ruby>の<ruby>年<rt>とし</rt></ruby>の<ruby>同<rt>おな</rt></ruby>じ<ruby>時期<rt>じき</rt></ruby>より9.1%<ruby>高<rt>たか</rt></ruby>い1<ruby>億<rt>おく</rt></ruby>4249<ruby>万円<rt>まんえん</rt></ruby>でした。<span class="zh">据不动产经济研究所统计,1-6月发售的东京23区新建公寓每户平均价格为1亿4249万日元,比去年同期高9.1%。</span><span class="why">不動産(ふどうさん)=房地产⭐|<b>1戸あたり</b>(いっこあたり)=每户(〜あたり=每…,报价必用)|「前の年の同じ時期より…高い」=同比句型完整版。</span></span>
+
+<span class="sent focus" data-jp="上半期としては過去最高額で4年連続の1億円超えです。" tabindex="0"><span class="tag">精讲</span><ruby>上半期<rt>かみはんき</rt></ruby>としては<ruby>過去最高額<rt>かこさいこうがく</rt></ruby>で4<ruby>年<rt>ねん</rt></ruby><ruby>連続<rt>れんぞく</rt></ruby>の1<ruby>億円超<rt>おくえんご</rt></ruby>えです。<span class="zh">就上半年而言创历史最高,连续4年超过1亿日元。</span><span class="why">〜としては=就…而言|連続=连续|<b>1億円超え</b>读「ごえ」(连浊)——新闻标题最爱。</span></span>
+
+<span class="sent" data-jp="工事費や人件費の上昇などが続いているためとみられます。" tabindex="0"><ruby>工事費<rt>こうじひ</rt></ruby>や<ruby>人件費<rt>じんけんひ</rt></ruby>の<ruby>上昇<rt>じょうしょう</rt></ruby>などが<ruby>続<rt>つづ</rt></ruby>いているためとみられます。<span class="zh">被认为是因为施工费、人工费等持续上涨。</span><span class="why">〜ため=因为|とみられます↺本篇出现3次,找找另外两处。</span></span>
+
+<span class="sent" data-jp="また、神奈川県、千葉県、埼玉県を含めた首都圏全体の平均価格は1億135万円で、初めての1億円台です。" tabindex="0">また、<ruby>神奈川県<rt>かながわけん</rt></ruby>、<ruby>千葉県<rt>ちばけん</rt></ruby>、<ruby>埼玉県<rt>さいたまけん</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>めた<ruby>首都圏<rt>しゅとけん</rt></ruby><ruby>全体<rt>ぜんたい</rt></ruby>の<ruby>平均価格<rt>へいきんかかく</rt></ruby>は1<ruby>億<rt>おく</rt></ruby>135<ruby>万円<rt>まんえん</rt></ruby>で、<ruby>初<rt>はじ</rt></ruby>めての1<ruby>億円台<rt>おくえんだい</rt></ruby>です。<span class="zh">包含神奈川、千叶、埼玉在内的首都圈整体均价1亿135万日元,首次站上1亿区间。</span><span class="why">〜を含めた=包含…的|首都圏(しゅとけん)|〜円台↺第2篇「163円台」刚见过。</span></span>
+
+<span class="sent" data-jp="物価上昇や人件費の高騰から今後もマンション価格は緩やかに上昇し続けるとみられています。" tabindex="0"><ruby>物価上昇<rt>ぶっかじょうしょう</rt></ruby>や<ruby>人件費<rt>じんけんひ</rt></ruby>の<ruby>高騰<rt>こうとう</rt></ruby>から<ruby>今後<rt>こんご</rt></ruby>もマンション<ruby>価格<rt>かかく</rt></ruby>は<ruby>緩<rt>ゆる</rt></ruby>やかに<ruby>上昇<rt>じょうしょう</rt></ruby>し<ruby>続<rt>つづ</rt></ruby>けるとみられています。<span class="zh">由于物价上涨和人工费高涨,预计今后公寓价格仍将缓慢持续上升。</span><span class="why">高騰(こうとう)=高涨|緩やかに=缓慢地|〜し続ける=持续…。</span></span>
+
+<span class="sent focus" data-jp="不動産経済研究所は購入者の所得が安定して伸びれば、今後10年単位でみて2億円台の到達もあり得るとの見方を示しています。" tabindex="0"><span class="tag">精讲</span><ruby>不動産経済研究所<rt>ふどうさんけいざいけんきゅうじょ</rt></ruby>は<ruby>購入者<rt>こうにゅうしゃ</rt></ruby>の<ruby>所得<rt>しょとく</rt></ruby>が<ruby>安定<rt>あんてい</rt></ruby>して<ruby>伸<rt>の</rt></ruby>びれば、<ruby>今後<rt>こんご</rt></ruby>10<ruby>年<rt>ねん</rt></ruby><ruby>単位<rt>たんい</rt></ruby>でみて2<ruby>億円台<rt>おくえんだい</rt></ruby>の<ruby>到達<rt>とうたつ</rt></ruby>もあり<ruby>得<rt>う</rt></ruby>るとの<ruby>見方<rt>みかた</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>しています。<span class="zh">研究所提出:若购房者收入稳定增长,以10年为单位看,达到2亿日元区间也有可能。</span><span class="why">所得(しょとく)=收入|伸びれば=如果增长(〜ば条件形)|あり得る(ありうる)=有可能|「〜との見方を示す」=提出…看法(机构表态句式,读研报天天见)。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th>词</th><th>读音</th><th>意思</th><th></th></tr>
+<tr><td class="jp">マンション</td><td>—</td><td>商品公寓 ⭐≠英语mansion</td><td><button class="spk" data-jp="マンション">▶</button></td></tr>
+<tr><td class="jp">新築</td><td>しんちく</td><td>新建(⇔中古ちゅうこ)</td><td><button class="spk" data-jp="しんちく">▶</button></td></tr>
+<tr><td class="jp">不動産</td><td>ふどうさん</td><td>房地产 ⭐</td><td><button class="spk" data-jp="ふどうさん">▶</button></td></tr>
+<tr><td class="jp">1戸あたり</td><td>いっこあたり</td><td>每户</td><td><button class="spk" data-jp="いっこあたり">▶</button></td></tr>
+<tr><td class="jp">連続</td><td>れんぞく</td><td>连续</td><td><button class="spk" data-jp="れんぞく">▶</button></td></tr>
+<tr><td class="jp">人件費</td><td>じんけんひ</td><td>人工费</td><td><button class="spk" data-jp="じんけんひ">▶</button></td></tr>
+<tr><td class="jp">高騰</td><td>こうとう</td><td>(价格)高涨</td><td><button class="spk" data-jp="こうとう">▶</button></td></tr>
+<tr><td class="jp">所得</td><td>しょとく</td><td>收入</td><td><button class="spk" data-jp="しょとく">▶</button></td></tr>
+</table>
+<h2>语法:〜を超える / 〜超え(ごえ)</h2>
+<div class="card"><span class="jp">1億4000万円<b>を超えました</b></span>=超过了(动词)|<span class="jp">4年連続の1億円<b>超え</b></span>=连续4年破亿(名词,读<b>ごえ</b>)|<span class="jp">気温が40℃<b>を超える</b></span>。新闻标题两个字说完"破了":「50%超え」「1万人超え」。</div>
+</div>
+
+<div class="mut" style="margin-top:24px;padding-top:10px;border-top:1px solid var(--line)">学习管家 · 每日晨读移动版 · 正文=ANN 播报稿原文一字未改(2026-07-21/22),假名/中文/拆解为学习支架 · 本页为您的私人学习页,请勿分享链接 · 完整版(本地视频+背诵检查)在家里 Mac:192.168.3.116:8140</div>
+</div>
+
+<div class="dock">
+<button class="btn" id="bAll">▶ 整篇</button>
+<button class="btn" id="bSlow">龟速:关</button>
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+<button class="btn" id="bRecite">🎙 背诵:关</button>
+</div>
+
+<script>
+let voices=[];
+function loadVoices(){voices=speechSynthesis.getVoices().filter(v=>v.lang&&v.lang.toLowerCase().startsWith('ja'))}
+loadVoices();if('onvoiceschanged' in speechSynthesis)speechSynthesis.onvoiceschanged=loadVoices;
+let slow=false;
+function jaVoice(){return voices.find(v=>/Kyoko/i.test(v.name))||voices[0]||null}
+function speak(text,el){
+  speechSynthesis.cancel();
+  document.querySelectorAll('.sent.playing').forEach(s=>s.classList.remove('playing'));
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='ja-JP';const v=jaVoice();if(v)u.voice=v;
+  u.rate=slow?0.5:0.85;
+  if(el){el.classList.add('playing');u.onend=()=>el.classList.remove('playing')}
+  speechSynthesis.speak(u);
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');document.getElementById(t.dataset.pane).classList.add('on');
+  speechSynthesis.cancel();window.scrollTo({top:0});
+}));
+document.querySelectorAll('.sent').forEach(s=>s.addEventListener('click',()=>{if(!window.__recite)speak(s.dataset.jp,s)}));
+document.querySelectorAll('.spk').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speak(b.dataset.jp)}));
+document.getElementById('bAll').addEventListener('click',()=>{
+  speechSynthesis.cancel();
+  const sents=[...document.querySelectorAll('.pane.on .sent')];let i=0;
+  function next(){
+    if(i>=sents.length)return;
+    const el=sents[i];document.querySelectorAll('.sent.playing').forEach(s=>s.classList.remove('playing'));
+    const u=new SpeechSynthesisUtterance(el.dataset.jp);
+    u.lang='ja-JP';const v=jaVoice();if(v)u.voice=v;u.rate=slow?0.5:0.85;
+    el.classList.add('playing');el.scrollIntoView({block:'center',behavior:'smooth'});
+    u.onend=()=>{el.classList.remove('playing');i++;setTimeout(next,slow?900:400)};
+    speechSynthesis.speak(u);
+  }
+  next();
+});
+document.getElementById('bSlow').addEventListener('click',function(){slow=!slow;this.textContent='龟速:'+(slow?'开':'关');this.classList.toggle('on',slow)});
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+
+/* 背诵检查:能力检测,不支持的浏览器隐藏 */
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+const hintEl=document.getElementById('hint');
+let recite=false;
+function norm(s){return (s||'').replace(/[、。・,.!?！?「」『』()（）\s%℃※=]/g,'')}
+function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let prev=[...Array(n+1).keys()],cur=[];for(let i=1;i<=m;i++){cur=[i];for(let j=1;j<=n;j++){cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1))}prev=cur}return prev[n]}
+if(!SR){document.getElementById('bRecite').style.display='none'}
+document.getElementById('bRecite').addEventListener('click',function(){
+  recite=!recite;window.__recite=recite;this.textContent='🎙 背诵:'+(recite?'开':'关');this.classList.toggle('on',recite);
+  hintEl.innerHTML=recite?'<b style="color:var(--terra)">背诵模式:点一句→出现「聆听中…」→背→停顿自动打分。</b>':'点任何一句就朗读;底部按钮切换模式。';
+});
+function listen(el){
+  const rec=new SR();rec.lang='ja-JP';rec.interimResults=false;
+  let r=el.querySelector('.recres');
+  if(!r){r=document.createElement('span');r.className='recres zh';el.appendChild(r)}
+  r.innerHTML='<b style="color:var(--terra)">🎙 聆听中…请背这一句</b>';
+  rec.onresult=e=>{
+    const said=e.results[0][0].transcript;
+    const t=norm(el.dataset.jp),s2=norm(said);
+    const sc=t?Math.max(0,Math.round(100*(1-lev(t,s2)/Math.max(t.length,s2.length)))):0;
+    const col=sc>=90?'var(--ok)':(sc>=70?'#B07A2E':'var(--warn)');
+    r.innerHTML='🎙 <b style="color:'+col+'">'+sc+' 分</b><br>识别:「'+said+'」';
+    const arr=JSON.parse(localStorage.getItem('studyLog')||'[]');
+    arr.push({time:new Date().toLocaleString('zh-CN'),doc:'移动版',target:el.dataset.jp,said:said,score:sc});
+    localStorage.setItem('studyLog',JSON.stringify(arr));
+  };
+  rec.onerror=e=>{r.innerHTML='<b style="color:var(--warn)">没听到或麦克风未授权('+e.error+')</b>'};
+  rec.start();
+}
+document.querySelectorAll('.sent').forEach(s=>{
+  s.addEventListener('click',()=>{if(recite&&SR){speechSynthesis.cancel();listen(s)}},true);
+});
+</script>
