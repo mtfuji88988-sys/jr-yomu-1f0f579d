@@ -12,7 +12,7 @@ details{margin:10px 0;background:var(--card);border:1px solid var(--line);border
 summary{cursor:pointer;color:var(--terra)}
 .mut{color:var(--dim);font-size:12px;margin-top:30px;border-top:1px solid var(--line);padding-top:10px}
 </style></head><body><div class="wrap">
-<h1>英语睡前故事集</h1><div class="sub">学习管家 · 原创简易级 · 舒缓语速 · 点播放,放下手机,听着入睡</div>
+<h1>英语睡前故事集</h1><div class="sub">学习管家 · 原创简易级 · 舒缓语速 · 点故事文字任意处=播放/暂停,放下手机听着入睡</div>
 <h2>一、The Quiet Town by the Sea(海边小镇)</h2><audio controls preload="none" src="睡前故事1_海边小镇.mp3"></audio><p>Once upon a time, there was a quiet town by the sea. In the evening, the sky turned soft orange, then deep blue.</p>
 <p>The boats came home slowly, one by one. The water was calm, like a mirror.</p>
 <p>An old lighthouse stood on the hill. Every night, its warm light turned slowly, round and round, watching over the town.</p>
@@ -44,4 +44,16 @@ summary{cursor:pointer;color:var(--terra)}
 <p>No one knows exactly where this train goes. But everyone knows it goes somewhere good.</p>
 <p>Lean back. Feel the gentle rocking. The night is long, and the train is in no hurry.</p>
 <p>Good night. Sleep well.</p><details><summary>中文对照</summary>一列长长的火车在夜色中缓缓前行。车厢里灯光昏黄温暖,座椅又软又深。窗外掠过黑黑的田野,偶尔出现一座小镇,亮着困倦的黄灯,然后又消失了。火车轻轻摇晃,车轮唱着安静的歌:咔嗒咔嗒、咔嗒咔嗒。一位旅人放下书,想不起最后一页讲了什么——没关系。列车员轻轻走过,调暗了灯。远处出现了大海,月光下一片银色,火车沿着海岸,又稳又慢。没有人确切知道这趟车开往哪里,但每个人都知道,它开往一个好地方。靠回椅背,感受轻轻的摇晃。夜还长,火车不着急。晚安,睡个好觉。</details>
-<div class="mut">学习管家原创,无版权顾虑 · 睡前听不必求懂,听熟了白天再看字——这也是学习</div></div></body></html>
+<div class="mut">学习管家原创,无版权顾虑 · 睡前听不必求懂,听熟了白天再看字——这也是学习</div></div><script>
+const audios=[...document.querySelectorAll("audio")];
+document.querySelectorAll("p").forEach(p=>{
+  p.style.cursor="pointer";
+  p.addEventListener("click",()=>{
+    let a=null;
+    for(const x of audios){if(x.compareDocumentPosition(p)&Node.DOCUMENT_POSITION_FOLLOWING)a=x}
+    if(!a)return;
+    if(a.paused){audios.forEach(o=>{if(o!==a)o.pause()});a.play()}
+    else{a.pause()}
+  });
+});
+</script></body></html>

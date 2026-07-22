@@ -13,7 +13,7 @@ details{margin:10px 0;background:var(--card);border:1px solid var(--line);border
 summary{cursor:pointer;color:var(--terra)}
 .mut{color:var(--dim);font-size:12px;margin-top:30px;border-top:1px solid var(--line);padding-top:10px}
 </style></head><body><div class="wrap">
-<h1>日语睡前故事集</h1><div class="sub">学习管家 · 原创N5级 · 慢速朗读 · 点播放,放下手机,听着入睡</div>
+<h1>日语睡前故事集</h1><div class="sub">学习管家 · 原创N5级 · 慢速朗读 · 点故事文字任意处=播放/暂停,放下手机听着入睡</div>
 <h2>一、ねこと<ruby>月<rt>つき</rt></ruby>(猫与月)</h2><audio controls preload="none" src="睡前故事1_猫与月.mp3"></audio><p>むかしむかし、<ruby>小<rt>ちい</rt></ruby>さな<ruby>町<rt>まち</rt></ruby>に、<ruby>白<rt>しろ</rt></ruby>いねこがいました。ねこの<ruby>名<rt>な</rt></ruby><ruby>前<rt>まえ</rt></ruby>は、ゆきです。</p>
 <p>ゆきは、<ruby>夜<rt>よる</rt></ruby>になると、<ruby>屋<rt>や</rt></ruby><ruby>根<rt>ね</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>にのぼります。<ruby>屋<rt>や</rt></ruby><ruby>根<rt>ね</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>から、<ruby>町<rt>まち</rt></ruby>がよく<ruby>見<rt>み</rt></ruby>えます。</p>
 <p><ruby>今<rt>こん</rt></ruby><ruby>夜<rt>や</rt></ruby>は、<ruby>月<rt>つき</rt></ruby>がとてもきれいです。まるくて、<ruby>大<rt>おお</rt></ruby>きくて、しずかな<ruby>月<rt>つき</rt></ruby>です。</p>
@@ -51,4 +51,16 @@ summary{cursor:pointer;color:var(--terra)}
 <p>みんな、ゆっくり、ゆっくり、<ruby>歩<rt>ある</rt></ruby>きます。</p>
 <p>あなたも、この<ruby>電<rt>でん</rt></ruby><ruby>車<rt>しゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>って、いい<ruby>夢<rt>ゆめ</rt></ruby>の<ruby>国<rt>くに</rt></ruby>へ、どうぞ。</p>
 <p>おやすみなさい。また<ruby>明日<rt>あした</rt></ruby>。</p><details><summary>中文对照</summary>深夜的车站里,停着一列电车。蓝色的电车,没有乘客。十二点一到,电车静静地开动了。哐当、哐当。电车驶出小镇,行驶在海面上——沿着月光铺成的路,笔直向前。窗外星星流过,一颗、两颗、三颗。星星们在小声唱歌,啦啦啦。电车到了云朵之上,这里是星星车站。星星车站没有时钟,也没有匆忙的人,大家都慢慢地、慢慢地走。你也请上这趟车,去往好梦的国度吧。晚安,明天见。</details>
-<div class="mut">学习管家原创,无版权顾虑 · 睡前听不必求懂,听熟了白天再看字——这也是学习</div></div></body></html>
+<div class="mut">学习管家原创,无版权顾虑 · 睡前听不必求懂,听熟了白天再看字——这也是学习</div></div><script>
+const audios=[...document.querySelectorAll("audio")];
+document.querySelectorAll("p").forEach(p=>{
+  p.style.cursor="pointer";
+  p.addEventListener("click",()=>{
+    let a=null;
+    for(const x of audios){if(x.compareDocumentPosition(p)&Node.DOCUMENT_POSITION_FOLLOWING)a=x}
+    if(!a)return;
+    if(a.paused){audios.forEach(o=>{if(o!==a)o.pause()});a.play()}
+    else{a.pause()}
+  });
+});
+</script></body></html>
