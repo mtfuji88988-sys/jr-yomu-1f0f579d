@@ -293,7 +293,7 @@ let voicesJA=[],voicesEN=[];
 function loadVoices(){const all=speechSynthesis.getVoices();voicesJA=all.filter(v=>v.lang&&v.lang.toLowerCase().startsWith('ja'));voicesEN=all.filter(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))}
 loadVoices();if('onvoiceschanged' in speechSynthesis)speechSynthesis.onvoiceschanged=loadVoices;
 let slow=false,curEl=null;
-function pickVoice(lang){if(lang==='en-US')return voicesEN.find(v=>/Samantha/i.test(v.name))||voicesEN.find(v=>v.lang==='en-US')||voicesEN[0]||null;return voicesJA.find(v=>/Kyoko/i.test(v.name))||voicesJA[0]||null}
+function pickVoice(lang){if(lang==='en-US')return voicesEN.find(v=>/(Premium|Enhanced)/i.test(v.name))||voicesEN.find(v=>/Samantha|Alex|Ava/i.test(v.name))||voicesEN.find(v=>v.lang==='en-US')||voicesEN[0]||null;return voicesJA.find(v=>/Kyoko.*(Enhanced|拡張)/i.test(v.name))||voicesJA.find(v=>/Kyoko/i.test(v.name))||voicesJA[0]||null}
 function langOf(el){return el&&el.dataset&&el.dataset.en?'en-US':'ja-JP'}
 function textOf(el){return el.dataset.en||el.dataset.jp}
 function resetAllBtn(){const b=document.getElementById('bAll');if(b&&window.__seq){window.__seq=false;b.textContent=b.dataset.label||'▶ 整篇'}}
