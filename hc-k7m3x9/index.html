@@ -67,17 +67,19 @@ h2{font-size:14px;color:var(--sageInk);margin:18px 0 8px}
 
 <div class="btns">
 <button class="btn" id="bToday">回到今天</button>
-<button class="btn" id="bExport">导出记录发学习管家</button>
+<button class="btn" id="bExport">导出记录发健康管家</button>
 </div>
 
-<div class="note" id="note">用法:今天做了就点绿 ✓、漏了点红 ✗,不点=未记录。想补记过去某天,点下面日历格子里那天,上面就切到那天打卡。数据只存在这台手机/电脑上;导出后发我,我存台账、算给医生看。<br><b>本页无密码,网址就是钥匙,请勿转发。</b></div>
+<div class="note" id="note">用法:今天做了就点绿 ✓、漏了点红 ✗,不点=未记录。想补记过去某天,点下面日历格子里那天,上面就切到那天打卡。数据只存在这台手机/电脑上;导出后发健康管家,存台账、算给医生看。<br><b>本页无密码,网址就是钥匙,请勿转发。</b></div>
 </div>
 
 <script>
 const ITEMS=[
  {id:'brush_am',ic:'🦷',nm:'早起刷牙5分钟',t:'7:50',freq:'daily'},
  {id:'muco_am',ic:'💊',nm:'早饭后ムコスタ',t:'8:30',freq:'daily'},
- {id:'muco_noon',ic:'💊',nm:'午饭后ムコスタ',t:'13:00',freq:'daily',from:'2026-07-24'},
+ {id:'muco_noon',ic:'💊',nm:'午饭后ムコスタ',t:'13:00',freq:'daily'},
+ {id:'takecab_pm',ic:'💊',nm:'晚饭后タケキャブ',t:'19:30',freq:'daily'},
+ {id:'muco_pm',ic:'💊',nm:'晚饭后ムコスタ',t:'19:35',freq:'daily'},
  {id:'brush_pm',ic:'🦷',nm:'睡前刷牙5分钟',t:'22:30',freq:'daily'},
  {id:'manjaro',ic:'💉',nm:'マンジャロ 2.5mg 注射',t:'每周六',freq:'weekly',dow:6},
 ];
@@ -163,7 +165,7 @@ document.getElementById('bExport').addEventListener('click',()=>{
   keys.forEach(ds=>{const parts=ITEMS.map(it=>{const v=data[ds][it.id];return v?it.nm+'='+(v==='done'?'做了':'没做'):null}).filter(Boolean);if(parts.length)lines.push(ds+' | '+parts.join(' / '))});
   const blob=new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='健康打卡_'+todayStr+'.txt';a.click();
-  document.getElementById('note').innerHTML='<b style="color:var(--sage)">已导出到"下载"——把这个文件发给学习管家,我存台账并做统计。</b>';
+  document.getElementById('note').innerHTML='<b style="color:var(--sage)">已导出到"下载"——把这个文件发给健康管家,我存台账并做统计。</b>';
 });
 document.getElementById('today').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'});
 renderItems();renderStats();renderCal();
