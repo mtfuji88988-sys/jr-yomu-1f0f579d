@@ -1,0 +1,170 @@
+<!doctype html>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>健康打卡</title>
+<style>
+:root{--paper:#F6F8F4;--ink:#26302A;--sage:#4C7A5E;--sageInk:#3A6149;--soft:#E4EEE6;--line:#DCE6DD;--muted:#7C877E;--warn:#C1553D;--gold:#B07A2E;--card:#fff;--done:#4C7A5E;--miss:#C1553D;--none:#D8DED8}
+@media(prefers-color-scheme:dark){:root{--paper:#181F1A;--ink:#E5EAE2;--sage:#7FB395;--sageInk:#93C4A8;--soft:#26302A;--line:#313B32;--muted:#94A096;--warn:#E0836B;--gold:#CBA05A;--card:#212A23;--done:#5E9576;--miss:#B0503A;--none:#39433A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"PingFang SC","Hiragino Sans GB",-apple-system,sans-serif;line-height:1.7;padding:16px 14px 60px}
+.wrap{max-width:560px;margin:0 auto}
+h1{font-size:20px;color:var(--sageInk);text-align:center}
+.date{text-align:center;color:var(--muted);font-size:12.5px;margin:3px 0 16px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center}
+.stat .v{font-size:22px;font-weight:800;color:var(--sageInk);font-variant-numeric:tabular-nums}
+.stat .k{font-size:11px;color:var(--muted);margin-top:2px}
+h2{font-size:14px;color:var(--sageInk);margin:18px 0 8px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:9px 0;display:flex;align-items:center;gap:10px}
+.item .ic{font-size:22px;flex:none}
+.item .nm{flex:1;font-size:15px}
+.item .nm small{display:block;color:var(--muted);font-size:11.5px}
+.tog{display:flex;gap:6px;flex:none}
+.tb{border:1.5px solid var(--line);background:transparent;border-radius:9px;width:44px;height:38px;font-size:16px;cursor:pointer;color:var(--muted);transition:all .12s}
+.tb.done.on{background:var(--done);border-color:var(--done);color:#fff}
+.tb.miss.on{background:var(--miss);border-color:var(--miss);color:#fff}
+.tb:active{transform:scale(.92)}
+.editday{text-align:center;font-size:13px;color:var(--muted);margin:6px 0}
+.editday b{color:var(--sageInk)}
+.cal{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:8px 0}
+.calhead{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:4px}
+.calhead span{text-align:center;font-size:10px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cell{aspect-ratio:1;border-radius:7px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;cursor:pointer;background:var(--soft);color:var(--muted);border:1.5px solid transparent}
+.cell.today{border-color:var(--sage)}
+.cell .d{font-size:10px;opacity:.7}
+.cell.full{background:var(--done);color:#fff}
+.cell.part{background:var(--gold);color:#fff}
+.cell.none-day{background:var(--miss);color:#fff}
+.cell.empty{background:var(--none)}
+.legend{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:11px;color:var(--muted);margin:8px 0}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:-1px;margin-right:3px}
+.btns{display:flex;gap:8px;margin-top:14px}
+.btn{flex:1;font-family:inherit;font-size:13.5px;padding:10px;border:1.5px solid var(--sage);background:var(--card);color:var(--sage);border-radius:20px;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.note{background:var(--soft);border-radius:10px;padding:10px 13px;font-size:12px;color:var(--muted);margin-top:14px}
+</style>
+<body>
+<div class="wrap">
+<h1>🌿 健康打卡</h1>
+<div class="date" id="today"></div>
+
+<div class="stats">
+<div class="stat"><div class="v" id="stToday">—</div><div class="k">今日完成</div></div>
+<div class="stat"><div class="v" id="stStreak">0</div><div class="k">连续全勤(天)</div></div>
+<div class="stat"><div class="v" id="stRate">—</div><div class="k">本月完成率</div></div>
+</div>
+
+<div class="editday" id="editday"></div>
+<div id="items"></div>
+
+<h2>📅 最近30天</h2>
+<div class="cal">
+<div class="calhead"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div>
+<div class="grid" id="grid"></div>
+</div>
+<div class="legend"><span><i style="background:var(--done)"></i>全做</span><span><i style="background:var(--gold)"></i>部分</span><span><i style="background:var(--miss)"></i>全漏</span><span><i style="background:var(--none)"></i>未记录</span></div>
+
+<div class="btns">
+<button class="btn" id="bToday">回到今天</button>
+<button class="btn" id="bExport">导出记录发学习管家</button>
+</div>
+
+<div class="note" id="note">用法:今天做了就点绿 ✓、漏了点红 ✗,不点=未记录。想补记过去某天,点下面日历格子里那天,上面就切到那天打卡。数据只存在这台手机/电脑上;导出后发我,我存台账、算给医生看。<br><b>本页无密码,网址就是钥匙,请勿转发。</b></div>
+</div>
+
+<script>
+const ITEMS=[
+ {id:'brush_am',ic:'🦷',nm:'早起刷牙5分钟',t:'7:50',freq:'daily'},
+ {id:'muco_am',ic:'💊',nm:'早饭后ムコスタ',t:'8:30',freq:'daily'},
+ {id:'muco_noon',ic:'💊',nm:'午饭后ムコスタ',t:'13:00',freq:'daily',from:'2026-07-24'},
+ {id:'brush_pm',ic:'🦷',nm:'睡前刷牙5分钟',t:'22:30',freq:'daily'},
+ {id:'manjaro',ic:'💉',nm:'マンジャロ 2.5mg 注射',t:'每周六',freq:'weekly',dow:6},
+];
+function applicable(ds){const d=new Date(ds+'T12:00:00');return ITEMS.filter(it=>{if(it.from&&ds<it.from)return false;if(it.freq==='weekly')return d.getDay()===it.dow;return true})}
+const KEY='healthLog';
+function load(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return {}}}
+function save(d){localStorage.setItem(KEY,JSON.stringify(d))}
+function ymd(dt){return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0')}
+const SEED={'2026-07-18':{manjaro:'done'},'2026-07-19':{brush_am:'miss'},'2026-07-21':{brush_pm:'miss'},'2026-07-22':{brush_am:'miss',brush_pm:'miss'}};
+let data=load();
+if(Object.keys(data).length===0){data=JSON.parse(JSON.stringify(SEED));save(data)}
+let editing=ymd(new Date());
+const todayStr=ymd(new Date());
+
+function renderItems(){
+  document.getElementById('editday').innerHTML = editing===todayStr ? '今天 <b>'+editing+'</b>' : '补记 <b>'+editing+'</b>';
+  const box=document.getElementById('items');box.innerHTML='';
+  const day=data[editing]||{};
+  const ap=applicable(editing);
+  ap.forEach(it=>{
+    const st=day[it.id]||'';
+    const el=document.createElement('div');el.className='item';
+    el.innerHTML='<span class="ic">'+it.ic+'</span><span class="nm">'+it.nm+'<small>'+it.t+'</small></span>'+
+      '<span class="tog"><button class="tb done'+(st==='done'?' on':'')+'" data-i="'+it.id+'" data-v="done">✓</button>'+
+      '<button class="tb miss'+(st==='miss'?' on':'')+'" data-i="'+it.id+'" data-v="miss">✗</button></span>';
+    box.appendChild(el);
+  });
+  box.querySelectorAll('.tb').forEach(b=>b.addEventListener('click',()=>{
+    if(!data[editing])data[editing]={};
+    const cur=data[editing][b.dataset.i];
+    if(cur===b.dataset.v){delete data[editing][b.dataset.i]}
+    else{data[editing][b.dataset.i]=b.dataset.v}
+    if(Object.keys(data[editing]).length===0)delete data[editing];
+    save(data);renderItems();renderStats();renderCal();
+  }));
+}
+function dayStatus(ds){
+  const day=data[ds];if(!day)return 'empty';
+  const ap=applicable(ds);const n=ap.length;
+  const done=ap.filter(it=>day[it.id]==='done').length;
+  const any=ap.filter(it=>day[it.id]).length;
+  if(n>0&&done===n)return 'full';
+  if(done>0)return 'part';
+  if(any>0)return 'none-day';
+  return 'empty';
+}
+function renderStats(){
+  const day=data[todayStr]||{};
+  const apT=applicable(todayStr);
+  const doneT=apT.filter(it=>day[it.id]==='done').length;
+  document.getElementById('stToday').textContent=doneT+'/'+apT.length;
+  // streak: consecutive full days ending today or yesterday
+  let s=0;let dt=new Date();
+  if(dayStatus(ymd(dt))!=='full')dt.setDate(dt.getDate()-1);
+  while(dayStatus(ymd(dt))==='full'){s++;dt.setDate(dt.getDate()-1)}
+  document.getElementById('stStreak').textContent=s;
+  // month rate: done slots / recorded slots this month
+  const now=new Date();const mp=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+  let done=0,rec=0;
+  Object.keys(data).forEach(ds=>{if(ds.startsWith(mp)){ITEMS.forEach(it=>{const v=data[ds][it.id];if(v){rec++;if(v==='done')done++}})}});
+  document.getElementById('stRate').textContent = rec? Math.round(done/rec*100)+'%' : '—';
+}
+function renderCal(){
+  const grid=document.getElementById('grid');grid.innerHTML='';
+  const today=new Date();
+  const days=[];for(let i=29;i>=0;i--){const d=new Date(today);d.setDate(d.getDate()-i);days.push(d)}
+  // pad to align first day weekday
+  const firstW=days[0].getDay();
+  for(let i=0;i<firstW;i++){const e=document.createElement('div');grid.appendChild(e)}
+  days.forEach(d=>{
+    const ds=ymd(d);const st=dayStatus(ds);
+    const c=document.createElement('div');c.className='cell '+st+(ds===todayStr?' today':'');
+    c.innerHTML='<span class="d">'+(d.getMonth()+1)+'/'+d.getDate()+'</span>';
+    c.addEventListener('click',()=>{editing=ds;renderItems();window.scrollTo({top:0,behavior:'smooth'})});
+    grid.appendChild(c);
+  });
+}
+document.getElementById('bToday').addEventListener('click',()=>{editing=todayStr;renderItems();window.scrollTo({top:0,behavior:'smooth'})});
+document.getElementById('bExport').addEventListener('click',()=>{
+  const keys=Object.keys(data).sort();
+  if(!keys.length){document.getElementById('note').innerHTML='<b>还没有记录——先点几个 ✓/✗ 试试。</b>';return}
+  let lines=['健康打卡导出 '+new Date().toLocaleString('zh-CN')];
+  keys.forEach(ds=>{const parts=ITEMS.map(it=>{const v=data[ds][it.id];return v?it.nm+'='+(v==='done'?'做了':'没做'):null}).filter(Boolean);if(parts.length)lines.push(ds+' | '+parts.join(' / '))});
+  const blob=new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='健康打卡_'+todayStr+'.txt';a.click();
+  document.getElementById('note').innerHTML='<b style="color:var(--sage)">已导出到"下载"——把这个文件发给学习管家,我存台账并做统计。</b>';
+});
+document.getElementById('today').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'});
+renderItems();renderStats();renderCal();
+</script>
