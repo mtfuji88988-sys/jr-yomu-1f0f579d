@@ -88,7 +88,13 @@ const KEY='healthLog';
 function load(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return {}}}
 function save(d){localStorage.setItem(KEY,JSON.stringify(d))}
 function ymd(dt){return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0')}
-const SEED={'2026-07-18':{manjaro:'done'},'2026-07-19':{brush_am:'miss'},'2026-07-21':{brush_pm:'miss'},'2026-07-22':{brush_am:'miss',brush_pm:'miss'}};
+const SEED={
+ '2026-07-18':{manjaro:'done'},
+ '2026-07-19':{brush_am:'miss'},
+ '2026-07-21':{brush_pm:'miss'},
+ '2026-07-22':{brush_am:'miss',brush_pm:'miss',muco_noon:'done',muco_pm:'done',takecab_pm:'done'},
+ '2026-07-23':{brush_am:'done',muco_noon:'done',muco_pm:'done',takecab_pm:'done'}
+};
 let data=load();
 if(Object.keys(data).length===0){data=JSON.parse(JSON.stringify(SEED));save(data)}
 let editing=ymd(new Date());
