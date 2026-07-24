@@ -1,0 +1,436 @@
+<!doctype html>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>日语经典背诵 · 七篇 · 移动版</title>
+<style>
+:root{--paper:#FAF6F0;--ink:#2B2620;--terra:#C15F3C;--terraInk:#9C4A2E;--soft:#F3E3DA;--line:#E5DCD0;--muted:#8A7F72;--ok:#4C7A5E;--card:#FFFFFF;--hl:#FDEBD3;--focus:#FFF7E8;--warn:#B03A2E}
+@media (prefers-color-scheme: dark){:root{--paper:#201C17;--ink:#EDE6DC;--terra:#D97C52;--terraInk:#E09070;--soft:#3A2E26;--line:#3B342C;--muted:#A5988A;--ok:#8FBEA3;--card:#2A251F;--hl:#4A392B;--focus:#332A21;--warn:#E07A6E}}
+:root[data-theme="dark"]{--paper:#201C17;--ink:#EDE6DC;--terra:#D97C52;--terraInk:#E09070;--soft:#3A2E26;--line:#3B342C;--muted:#A5988A;--ok:#8FBEA3;--card:#2A251F;--hl:#4A392B;--focus:#332A21;--warn:#E07A6E}
+:root[data-theme="light"]{--paper:#FAF6F0;--ink:#2B2620;--terra:#C15F3C;--terraInk:#9C4A2E;--soft:#F3E3DA;--line:#E5DCD0;--muted:#8A7F72;--ok:#4C7A5E;--card:#FFFFFF;--hl:#FDEBD3;--focus:#FFF7E8;--warn:#B03A2E}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Mincho ProN","Songti SC","Noto Serif JP",serif;line-height:2;padding:22px 18px 100px}
+.wrap{max-width:680px;margin:0 auto}
+h1{font-size:22px;line-height:1.5;border-bottom:3px solid var(--terra);padding-bottom:9px;text-wrap:balance}
+.sub{color:var(--muted);font-size:12.5px;margin:6px 0 12px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;position:sticky;top:0;background:var(--paper);padding:10px 0;z-index:6}
+.tab{flex:1 1 18%;text-align:center;font-size:13px;padding:9px 4px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit;line-height:1.4}
+.tab.on{border-color:var(--terra);color:var(--terra);font-weight:700;background:var(--focus)}
+h2{font-size:16px;color:var(--terra);margin:22px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.concl{background:var(--soft);border:1.5px solid var(--terra);border-radius:10px;padding:12px 16px;margin:12px 0;font-size:14px}
+.concl b{color:var(--terraInk)}
+.diff{font-size:11px;background:var(--terra);color:#fff;border-radius:5px;padding:2px 8px;margin-left:6px;font-family:"Songti SC",serif;vertical-align:2px}
+.diff.easy{background:var(--ok)}
+.label{font-size:12px;color:var(--muted);font-family:"Songti SC",serif;margin:14px 0 4px;font-weight:700}
+.gain{background:var(--focus);border:1px solid var(--terra);border-radius:10px;padding:11px 15px;margin:10px 0 14px;font-size:13px;font-family:"Songti SC",serif;line-height:1.9}
+.gain b{color:var(--terraInk)}
+.gain .t{display:block;font-weight:700;color:var(--terra);margin-bottom:3px}
+.gain .jp{font-family:"Hiragino Mincho ProN","Songti SC",serif}
+.pair{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+.pair .jp{font-size:20px;line-height:2.5}
+.pair.kata .jp{letter-spacing:.5px}
+.pair.sm .jp{font-size:17px;line-height:2.4}
+.pair .cn{font-size:14.5px;color:var(--muted);font-family:"Songti SC",serif;line-height:1.9;margin-top:9px;padding-top:9px;border-top:1px dashed var(--line)}
+.pair details{margin-top:8px}
+.pair summary{font-size:12px;color:var(--terra);cursor:pointer;font-family:"Songti SC",serif;list-style:none;user-select:none}
+.pair summary::-webkit-details-marker{display:none}
+.pair summary::before{content:"▸ 点拨";}
+.pair details[open] summary::before{content:"▾ 点拨";}
+.pair summary.mod::before{content:"▸ 现代日语译";}
+.pair details[open] summary.mod::before{content:"▾ 现代日语译";}
+.pair summary.kn::before{content:"▸ 全文平假名";}
+.pair details[open] summary.kn::before{content:"▾ 全文平假名";}
+.pair .exp{font-size:13px;color:var(--ink);font-family:"Songti SC",serif;line-height:1.85;margin-top:6px}
+.pair .exp b,.pair .exp .jp{color:var(--terraInk)}
+.pair .exp .jp{font-family:"Hiragino Mincho ProN","Songti SC",serif;font-weight:700}
+.pair .exp .mtext{color:var(--terraInk);font-family:"Hiragino Mincho ProN","Songti SC",serif;font-size:14px;font-weight:400;line-height:2}
+.src{font-size:12px;color:var(--muted);font-family:"Songti SC",serif;background:var(--soft);border-radius:8px;padding:8px 12px;margin:10px 0}
+audio{width:100%;margin:8px 0 4px}
+.acap{font-size:12px;color:var(--muted);font-family:"Songti SC",serif;margin-bottom:6px}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .rhint{display:block;font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:5px;font-family:"Songti SC",serif}
+body.noruby rt{visibility:hidden}
+rt{font-size:10px;color:var(--terraInk)}
+.mut{color:var(--muted);font-size:12px}
+.pane{display:none}.pane.on{display:block}
+.dock{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:7px;justify-content:center;flex-wrap:wrap;z-index:9}
+.btn{font-family:inherit;font-size:13px;padding:8px 12px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:18px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}
+.btn:active{transform:scale(.95)}
+.btn:focus-visible,.tab:focus-visible,.sent:focus-visible{outline:2px solid var(--terra);outline-offset:2px}
+#hint{font-size:12.5px;color:var(--muted);margin:8px 0}
+@media (prefers-reduced-motion: no-preference){.sent{transition:background .15s}}
+</style>
+<body>
+<div class="wrap">
+<h1>日语经典背诵 · 七篇 · 移动版</h1>
+<div class="mut" style="margin:4px 0"><a href="../hub/" style="color:var(--terra);font-size:12.5px;text-decoration:none">⌂ 学习总入口</a></div>
+<div class="sub">学习管家 · 公有领域名篇 · 神经语音朗读(NanamiNeural·稍慢) · 底本逐字校对 · 逐句中日对照(上日语·下中文)</div>
+
+<div class="tabs">
+<button class="tab on" data-pane="p1">一<br>雨ニモマケズ</button>
+<button class="tab" data-pane="p2">二<br>私と小鳥と鈴と</button>
+<button class="tab" data-pane="p3">三<br>走れメロス</button>
+<button class="tab" data-pane="p4">四<br>吾輩は猫である</button>
+<button class="tab" data-pane="p5">五<br>枕草子</button>
+<button class="tab" data-pane="p6">六<br>ごんぎつね</button>
+<button class="tab" data-pane="p7">七<br>手袋を買いに</button>
+</div>
+<div id="hint">点原文任意一句=神经语音朗读那句(再点=暂停);底部「🎙 背诵」开验收模式(念一句自动打分)。</div>
+
+<!-- ============ 篇1 雨ニモマケズ ============ -->
+<div class="pane on" id="p1">
+<h2>一、雨ニモマケズ<span class="diff">超纲经典 · 全文背诵</span></h2>
+<div class="concl"><b>作者:</b>宮沢賢治(1896–1933)。<b>为什么经典:</b>诗人身后从手帐里发现的诗,日本国民级名篇。文语(片假名书写体)朴素刚强,句句以「〜ニモマケズ(不输给…)」立志,末句「サウイフモノニワタシハナリタイ(我想成为这样的人)」是无数日本人从小会背的一句。</div>
+<div class="gain"><span class="t">🎒 背这篇能带走什么</span>① <b class="jp">〇〇にも負(ま)けない</b>=不输给〇〇(立志句式,可直接套用) ② 否定 <b class="jp">〜ず/〜ぬ</b> 的节奏(=现代 <b class="jp">〜ない</b>) ③ 愿望 <b class="jp">〜たい</b>=想成为/想做…(サウイフモノニナリタイ)。</div>
+
+<div class="pair kata">
+<div class="jp"><ruby>雨<rt>あめ</rt></ruby>ニモマケズ<br><ruby>風<rt>かぜ</rt></ruby>ニモマケズ<br><ruby>雪<rt>ゆき</rt></ruby>ニモ<ruby>夏<rt>なつ</rt></ruby>ノ<ruby>暑<rt>あつ</rt></ruby>サニモマケヌ</div>
+<div class="cn">不畏雨,不畏风,也不畏雪与夏日的酷暑,</div>
+<details><summary></summary><div class="exp"><b class="jp">〜ニモマケズ</b> = 不输给…。动词<b class="jp">負(ま)ける</b>=输,<b class="jp">〜に負ける</b>=输给…;<b class="jp">ズ</b>是文语的否定(=现代的<b class="jp">ない</b>)。所以「雨ニモマケズ」=雨にも負けない=不被雨打败。全诗的骨架就是这一句的反复。</div></details>
+</div>
+<div class="pair kata">
+<div class="jp"><ruby>丈夫<rt>じょうぶ</rt></ruby>ナカラダヲモチ<br><ruby>慾<rt>よく</rt></ruby>ハナク<br><ruby>決<rt>けっ</rt></ruby>シテ<ruby>瞋<rt>いか</rt></ruby>ラズ<br>イツモシヅカニワラッテヰル</div>
+<div class="cn">有一副强健的身体。无欲无求,绝不动怒,总是安静地微笑。</div>
+<details><summary></summary><div class="exp"><b class="jp">決シテ〜ズ</b>(=決して〜ない)= 绝不…;<b class="jp">ワラッテヰル</b>的<b class="jp">ヰル</b>是旧假名,读<b>いる</b>,即「笑っている」。这些旧写法看着陌生,读音其实就是现代音。</div></details>
+</div>
+<div class="pair kata">
+<div class="jp"><ruby>一日<rt>いちにち</rt></ruby>ニ<ruby>玄米<rt>げんまい</rt></ruby><ruby>四合<rt>よんごう</rt></ruby>ト<br><ruby>味噌<rt>みそ</rt></ruby>ト<ruby>少<rt>すこ</rt></ruby>シノ<ruby>野菜<rt>やさい</rt></ruby>ヲタベ</div>
+<div class="cn">一天吃四合糙米、一点味噌和少许蔬菜。</div>
+</div>
+<div class="pair kata">
+<div class="jp">アラユルコトヲ<br>ジブンヲカンジョウニ<ruby>入<rt>い</rt></ruby>レズニ<br>ヨクミキキシワカリ<br>ソシテワスレズ</div>
+<div class="cn">凡事不把自己算计进去,好好地看、听、明白,然后记住不忘。</div>
+</div>
+<div class="pair kata">
+<div class="jp"><ruby>野原<rt>のはら</rt></ruby>ノ<ruby>松<rt>まつ</rt></ruby>ノ<ruby>林<rt>はやし</rt></ruby>ノ<ruby>蔭<rt>かげ</rt></ruby>ノ<br><ruby>小<rt>ちい</rt></ruby>サナ<ruby>萓<rt>かや</rt></ruby>ブキノ<ruby>小屋<rt>こや</rt></ruby>ニヰテ</div>
+<div class="cn">在原野松林的树荫下,住在小小的茅草屋里。</div>
+</div>
+<div class="pair kata">
+<div class="jp"><ruby>東<rt>ひがし</rt></ruby>ニ<ruby>病気<rt>びょうき</rt></ruby>ノコドモアレバ<br><ruby>行<rt>い</rt></ruby>ッテ<ruby>看病<rt>かんびょう</rt></ruby>シテヤリ<br><ruby>西<rt>にし</rt></ruby>ニツカレタ<ruby>母<rt>はは</rt></ruby>アレバ<br><ruby>行<rt>い</rt></ruby>ッテソノ<ruby>稲<rt>いね</rt></ruby>ノ<ruby>朿<rt>たば</rt></ruby>ヲ<ruby>負<rt>お</rt></ruby>ヒ<br><ruby>南<rt>みなみ</rt></ruby>ニ<ruby>死<rt>し</rt></ruby>ニサウナ<ruby>人<rt>ひと</rt></ruby>アレバ<br><ruby>行<rt>い</rt></ruby>ッテコハガラナクテモイヽトイヒ<br><ruby>北<rt>きた</rt></ruby>ニケンクヮヤソショウガアレバ<br>ツマラナイカラヤメロトイヒ</div>
+<div class="cn">东边有生病的孩子,就去照顾;西边有疲惫的母亲,就去替她扛起那捆稻子;南边有将死之人,就去说"不必害怕";北边有人吵架或打官司,就说"别做这种无聊事,算了吧"。</div>
+</div>
+<div class="pair kata">
+<div class="jp">ヒドリノトキハナミダヲナガシ<br>サムサノナツハオロオロアルキ</div>
+<div class="cn">天旱时流泪,冷夏时慌乱奔走。</div>
+</div>
+<div class="pair kata">
+<div class="jp">ミンナニデクノボートヨバレ<br>ホメラレモセズ<br>クニモサレズ<br>サウイフモノニ<br>ワタシハナリタイ</div>
+<div class="cn">被大家叫做傻瓜,不受称赞,也不被当回事——我,想成为这样的人。</div>
+<details><summary></summary><div class="exp">名句:<b class="jp">ミンナニデクノボートヨバレ、ホメラレモセズ、クニモサレズ、サウイフモノニワタシハナリタイ</b>。<b class="jp">デクノボー</b>=木偶/呆瓜;甘于被人当傻瓜、不求表扬,却默默助人——这正是全诗的分量所在。把最后三行背熟,就抓住了魂。</div></details>
+</div>
+<div class="mut" style="margin:2px 2px 6px">※ 底本手帳ではこの後に「南無妙法蓮華経」ほか法華経の題目が続く(背诵正文一般到「ワタシハナリタイ」)。「朿」は底本のまま(=「束」たば)、「蔭」は底本の異体字。</div>
+
+<div class="pair">
+<details><summary class="kn"></summary><div class="exp"><span class="mtext">あめにもまけず／かぜにもまけず／ゆきにもなつのあつさにもまけぬ／じょうぶなからだをもち／よくはなく／けっしていからず／いつもしずかにわらっている／いちにちにげんまいよんごうと／みそとすこしのやさいをたべ／あらゆることを／じぶんをかんじょうにいれずに／よくみききしわかり／そしてわすれず／のはらのまつのはやしのかげの／ちいさなかやぶきのこやにいて／ひがしにびょうきのこどもあれば／いってかんびょうしてやり／にしにつかれたははあれば／いってそのいねのたばをおい／みなみにしにそうなひとあれば／いってこわがらなくてもいいといい／きたにけんかやそしょうがあれば／つまらないからやめろといい／ひでりのときはなみだをながし／さむさのなつはおろおろあるき／みんなにでくのぼうとよばれ／ほめられもせず／くにもされず／そういうものに／わたしはなりたい</span></div></details>
+</div>
+
+<div class="acap">🎧 神经语音朗读(NanamiNeural,学习慢速)</div>
+<audio controls preload="metadata" src="media/经典01_雨ニモマケズ.mp3"></audio>
+
+<h2>🎙 背诵检查</h2>
+<div class="mut" style="margin-bottom:6px">先开底部「🎙 背诵」,再点下面一句→出现「聆听中…」→背出来→停顿后自动打分(≥90分过关)。</div>
+<span class="sent" data-jp="雨にも負けず　風にも負けず　雪にも夏の暑さにも負けぬ" tabindex="0">雨にも負けず　風にも負けず　雪にも夏の暑さにも負けぬ<span class="rhint">第一段·立志开头</span></span>
+<span class="sent" data-jp="丈夫な体を持ち　欲はなく　決して怒らず　いつも静かに笑っている" tabindex="0">丈夫な体を持ち　欲はなく　決して怒らず　いつも静かに笑っている<span class="rhint">第二段·为人</span></span>
+<span class="sent" data-jp="褒められもせず　苦にもされず　そういうものに　私はなりたい" tabindex="0">褒められもせず　苦にもされず　そういうものに　私はなりたい<span class="rhint">末段名句·必背</span></span>
+</div>
+
+<!-- ============ 篇2 私と小鳥と鈴と ============ -->
+<div class="pane" id="p2">
+<h2>二、私と小鳥と鈴と<span class="diff easy">N5友好 · 全文背诵</span></h2>
+<div class="concl"><b>作者:</b>金子みすゞ(1903–1930)。<b>为什么经典:</b>童谣诗人的代表作,末句<b class="jp">「みんなちがって、みんないい」</b>(大家都不一样,大家都很好)是日本家喻户晓的一句,常被引用来讲"尊重差异"。全篇用词简单,最适合N5第一首整篇背诵的诗。</div>
+<div class="gain"><span class="t">🎒 背这篇能带走什么</span>① <b class="jp">〜ても</b>=即使…也(让步) ② 可能形 <b class="jp">飛べる/走れる ⇄ 飛べない/走れない</b>=能/不能… ③ <b class="jp">〜のように</b>=像…一样。三个都是日常最常用的比较句型。</div>
+
+<div class="pair">
+<div class="jp"><ruby>私<rt>わたし</rt></ruby>が<ruby>両手<rt>りょうて</rt></ruby>をひろげても、<br>お<ruby>空<rt>そら</rt></ruby>はちっとも<ruby>飛<rt>と</rt></ruby>べないが、<br><ruby>飛<rt>と</rt></ruby>べる<ruby>小鳥<rt>ことり</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>のように、<br><ruby>地面<rt>じべた</rt></ruby>を<ruby>速<rt>はや</rt></ruby>くは<ruby>走<rt>はし</rt></ruby>れない。</div>
+<div class="cn">即使我张开双臂,也一点飞不上天;会飞的小鸟,却不能像我,在地上跑得飞快。</div>
+<details><summary></summary><div class="exp"><b class="jp">〜ても</b>=即使…也(让步)。<b class="jp">ひろげても</b>=即使张开也…;后面接<b class="jp">飛べない</b>(飞不了)。<b class="jp">飛べる／走れる</b>是"可能形"(能…),否定就是<b class="jp">飛べない／走れない</b>(不能…)。全诗就靠这一组"能 / 不能"在比较。</div></details>
+</div>
+<div class="pair">
+<div class="jp"><ruby>私<rt>わたし</rt></ruby>がからだをゆすっても、<br>きれいな<ruby>音<rt>おと</rt></ruby>は<ruby>出<rt>で</rt></ruby>ないけど、<br>あの<ruby>鳴<rt>な</rt></ruby>る<ruby>鈴<rt>すず</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>のように、<br>たくさんな<ruby>唄<rt>うた</rt></ruby>は<ruby>知<rt>し</rt></ruby>らないよ。</div>
+<div class="cn">即使我摇晃身体,也发不出好听的声音;那会响的铃铛,却不能像我,知道那么多的歌。</div>
+<details><summary></summary><div class="exp"><b class="jp">私のように</b>=像我一样。三段各说"对方做不到我能做的事",最后收束到:各有所长、各有所短。</div></details>
+</div>
+<div class="pair">
+<div class="jp"><ruby>鈴<rt>すず</rt></ruby>と、<ruby>小鳥<rt>ことり</rt></ruby>と、それから<ruby>私<rt>わたし</rt></ruby>、<br>みんなちがって、みんないい。</div>
+<div class="cn">铃铛、小鸟,还有我——大家都不一样,大家都很好。</div>
+<details><summary></summary><div class="exp">名句 <b class="jp">みんなちがって、みんないい</b>。<b class="jp">ちがって</b>=不一样(違う的て形),<b class="jp">いい</b>=好。十个字,讲尽了"差异即美好"。背熟这句,就等于会用了。</div></details>
+</div>
+
+<div class="src">来源说明:金子みすゞ作品因保存会主张二次著作权,青空文库未收录;本篇文本依《金子みすゞ全集》(JULA出版局)通行本校对。原诗著作权(作者殁后)已过保护期,属公有领域。</div>
+
+<div class="acap">🎧 神经语音朗读(NanamiNeural,学习慢速)</div>
+<audio controls preload="metadata" src="media/经典02_私と小鳥と鈴と.mp3"></audio>
+
+<h2>🎙 背诵检查</h2>
+<div class="mut" style="margin-bottom:6px">先开底部「🎙 背诵」,再点一句开始验收。</div>
+<span class="sent" data-jp="私が両手をひろげても、お空はちっとも飛べないが、飛べる小鳥は私のように、地面を速くは走れない。" tabindex="0">私が両手をひろげても、お空はちっとも飛べないが、飛べる小鳥は私のように、地面を速くは走れない。<span class="rhint">第一段</span></span>
+<span class="sent" data-jp="私がからだをゆすっても、きれいな音は出ないけど、あの鳴る鈴は私のように、たくさんな唄は知らないよ。" tabindex="0">私がからだをゆすっても、きれいな音は出ないけど、あの鳴る鈴は私のように、たくさんな唄は知らないよ。<span class="rhint">第二段</span></span>
+<span class="sent" data-jp="鈴と、小鳥と、それから私、みんなちがって、みんないい。" tabindex="0">鈴と、小鳥と、それから私、みんなちがって、みんないい。<span class="rhint">末段名句·必背</span></span>
+</div>
+
+<!-- ============ 篇3 走れメロス ============ -->
+<div class="pane" id="p3">
+<h2>三、走れメロス(开头)<span class="diff">超纲经典 · 开头段</span></h2>
+<div class="concl"><b>作者:</b>太宰治(1909–1948)。<b>为什么经典:</b>日本国语教科书必收名篇,讲信义与友情。开头一句<b class="jp">「メロスは激怒した。」</b>短促有力,是日本人一听就知道出处的名开头。本篇只取开头四句熟读。</div>
+<div class="gain"><span class="t">🎒 背这篇能带走什么</span>① <b class="jp">〜なければならない</b>=必须…(现代常用形) ② 引用 <b class="jp">〜と決意した/〜と思う</b>=下定决心…/觉得… ③ <b class="jp">〜である</b> 书面郑重体的语感。</div>
+
+<div class="pair">
+<div class="jp" style="font-size:19px">メロスは<ruby>激怒<rt>げきど</rt></ruby>した。</div>
+<div class="cn">梅洛斯勃然大怒。</div>
+<details><summary></summary><div class="exp"><b class="jp">激怒(げきど)した</b>=勃然大怒。四个假名的一句话独立成段,气势全在这里。<b>激怒</b>=激烈+怒,记住<b class="jp">げきど</b>这个读音。</div></details>
+</div>
+<div class="pair">
+<div class="jp" style="font-size:19px"><ruby>必<rt>かなら</rt></ruby>ず、かの<ruby>邪智暴虐<rt>じゃちぼうぎゃく</rt></ruby>の<ruby>王<rt>おう</rt></ruby>を<ruby>除<rt>のぞ</rt></ruby>かなければならぬと<ruby>決意<rt>けつい</rt></ruby>した。</div>
+<div class="cn">他下定决心:一定要除掉那个奸诈暴虐的国王。</div>
+<details><summary></summary><div class="exp"><b class="jp">〜なければならぬ</b>=不…不行、必须…(=现代<b class="jp">〜なければならない</b>)。<b class="jp">ぬ</b>是文语否定,读起来更铿锵。<b class="jp">除(のぞ)く</b>=除掉。</div></details>
+</div>
+<div class="pair">
+<div class="jp" style="font-size:19px">メロスには<ruby>政治<rt>せいじ</rt></ruby>がわからぬ。メロスは、<ruby>村<rt>むら</rt></ruby>の<ruby>牧人<rt>ぼくじん</rt></ruby>である。</div>
+<div class="cn">梅洛斯不懂政治。梅洛斯,是村里的牧人。</div>
+<details><summary></summary><div class="exp"><b class="jp">わからぬ／である</b>都是书面文语腔:<b class="jp">わからぬ</b>=わからない,<b class="jp">である</b>=だ。朗读时故意保留这种硬朗的节奏,正是名篇的味道。超纲词多(邪智暴虐),重在读出气势,不必逐字会写。</div></details>
+</div>
+
+<div class="acap">🎧 神经语音朗读(NanamiNeural,学习慢速)</div>
+<audio controls preload="metadata" src="media/经典03_走れメロス.mp3"></audio>
+
+<h2>🎙 背诵检查</h2>
+<div class="mut" style="margin-bottom:6px">先开底部「🎙 背诵」,再点一句开始验收。</div>
+<span class="sent" data-jp="メロスは激怒した。" tabindex="0">メロスは激怒した。<span class="rhint">名开头·必背</span></span>
+<span class="sent" data-jp="必ず、かの邪智暴虐の王を除かなければならぬと決意した。" tabindex="0">必ず、かの邪智暴虐の王を除かなければならぬと決意した。<span class="rhint">第二句</span></span>
+<span class="sent" data-jp="メロスには政治がわからぬ。メロスは、村の牧人である。" tabindex="0">メロスには政治がわからぬ。メロスは、村の牧人である。<span class="rhint">第三·四句</span></span>
+</div>
+
+<!-- ============ 篇4 吾輩は猫である ============ -->
+<div class="pane" id="p4">
+<h2>四、吾輩は猫である(开头)<span class="diff easy">N5友好 · 开头段</span></h2>
+<div class="concl"><b>作者:</b>夏目漱石(1867–1916)。<b>为什么经典:</b>日本近代文学最有名的开头之一,以一只猫的口吻旁观人类。开头<b class="jp">「吾輩は猫である。名前はまだ無い。」</b>几乎人人会背,句子本身很简单,最适合当"名句"入门。</div>
+<div class="gain"><span class="t">🎒 背这篇能带走什么</span>① <b class="jp">〜である</b>=だ/です的郑重书面体 ② <b class="jp">まだ〜ない</b>=还没… ③ <b class="jp">〜だけは</b>=唯独…。都是能立刻用进日常的表达。</div>
+
+<div class="pair">
+<div class="jp" style="font-size:19px"><ruby>吾輩<rt>わがはい</rt></ruby>は<ruby>猫<rt>ねこ</rt></ruby>である。<ruby>名前<rt>なまえ</rt></ruby>はまだ<ruby>無<rt>な</rt></ruby>い。</div>
+<div class="cn">我是猫。还没有名字。</div>
+<details><summary></summary><div class="exp"><b class="jp">吾輩(わがはい)</b>=旧时男子自称,相当于"本大爷/在下",自带一点傲气——用在一只猫身上,滑稽感十足。这就是全书的幽默基调。<b class="jp">〜である</b>=だ/です的郑重书面体;<b class="jp">まだ無い</b>=还没有。</div></details>
+</div>
+<div class="pair">
+<div class="jp" style="font-size:19px">どこで<ruby>生<rt>う</rt></ruby>れたかとんと<ruby>見当<rt>けんとう</rt></ruby>がつかぬ。</div>
+<div class="cn">到底生在哪里,完全没有头绪。</div>
+<details><summary></summary><div class="exp"><b class="jp">とんと〜ぬ</b>=完全不…(<b class="jp">見当がつかぬ</b>=毫无头绪)。<b class="jp">どこで生れたか</b>=在哪里出生的(疑问小句)。</div></details>
+</div>
+<div class="pair">
+<div class="jp" style="font-size:19px"><ruby>何<rt>なん</rt></ruby>でも<ruby>薄暗<rt>うすぐら</rt></ruby>いじめじめした<ruby>所<rt>ところ</rt></ruby>でニャーニャー<ruby>泣<rt>な</rt></ruby>いていた<ruby>事<rt>こと</rt></ruby>だけは<ruby>記憶<rt>きおく</rt></ruby>している。</div>
+<div class="cn">只记得曾在一个昏暗潮湿的地方喵喵地哭着。</div>
+<details><summary></summary><div class="exp"><b class="jp">〜だけは</b>=唯独…(只有喵喵哭这件事还记得)。<b class="jp">泣いていた</b>=(过去)正哭着(〜ていた)。整段用词都在N5–N4之间,可以放心整段背。</div></details>
+</div>
+<div class="pair">
+<div class="jp" style="font-size:19px"><ruby>吾輩<rt>わがはい</rt></ruby>はここで<ruby>始<rt>はじ</rt></ruby>めて<ruby>人間<rt>にんげん</rt></ruby>というものを<ruby>見<rt>み</rt></ruby>た。</div>
+<div class="cn">我在这里第一次见到了人类这种东西。</div>
+<details><summary></summary><div class="exp"><b class="jp">始めて</b>=第一次(现代多写「初めて」);<b class="jp">〜というもの</b>=…这种东西。</div></details>
+</div>
+
+<div class="acap">🎧 神经语音朗读(NanamiNeural,学习慢速)</div>
+<audio controls preload="metadata" src="media/经典04_吾輩は猫である.mp3"></audio>
+
+<h2>🎙 背诵检查</h2>
+<div class="mut" style="margin-bottom:6px">先开底部「🎙 背诵」,再点一句开始验收。</div>
+<span class="sent" data-jp="吾輩は猫である。名前はまだ無い。" tabindex="0">吾輩は猫である。名前はまだ無い。<span class="rhint">名开头·必背</span></span>
+<span class="sent" data-jp="どこで生れたかとんと見当がつかぬ。" tabindex="0">どこで生れたかとんと見当がつかぬ。<span class="rhint">第二句</span></span>
+<span class="sent" data-jp="何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。" tabindex="0">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="rhint">第三句</span></span>
+<span class="sent" data-jp="吾輩はここで始めて人間というものを見た。" tabindex="0">吾輩はここで始めて人間というものを見た。<span class="rhint">第四句</span></span>
+</div>
+
+<!-- ============ 篇5 枕草子 ============ -->
+<div class="pane" id="p5">
+<h2>五、枕草子 第一段「春はあけぼの」<span class="diff">超纲经典 · 先熟读后背</span></h2>
+<div class="concl"><b>作者:</b>清少納言(平安时代)。<b>为什么经典:</b>约一千年前女官随笔的开篇,日本随笔文学的源头。用极短的句子点出四季各自最美的时刻:<b class="jp">春=あけぼの(破晓)/夏=夜/秋=夕暮れ/冬=つとめて(清晨)</b>。<b>属古文</b>,语法(たる・なり・べし)超出N5,建议先跟读听熟、记住四季对应,再慢慢背。</div>
+<div class="gain"><span class="t">🎒 背这篇能带走什么</span>① 四季审美词 <b class="jp">をかし</b>(雅致有趣)/<b class="jp">あはれ</b>(动人) ② 主题提示 <b class="jp">「〇〇は〜」</b>=说到〇〇嘛,就是… ③ 古文语法先听熟节奏、记住画面即可,不强求逐字迁移。</div>
+
+<div class="pair sm">
+<div class="jp"><ruby>春<rt>はる</rt></ruby>はあけぼの。やうやう<ruby>白<rt>しろ</rt></ruby>くなりゆく<ruby>山<rt>やま</rt></ruby>ぎは、すこし<ruby>明<rt>あ</rt></ruby>かりて、<ruby>紫<rt>むらさき</rt></ruby>だちたる<ruby>雲<rt>くも</rt></ruby>の<ruby>細<rt>ほそ</rt></ruby>くたなびきたる。</div>
+<div class="cn">春天,是破晓最美。天边渐渐泛白,山际微微透亮,紫色的云细细横斜。</div>
+<details><summary class="mod"></summary><div class="exp"><span class="mtext">春は明け方が趣深い。だんだん白くなっていく山際が、少し明るくなって、紫がかった雲が細くたなびいているのがよい。</span><br><br>结构极简:四季各起一句<b class="jp">「〇〇は〜」</b>,后面只白描一个瞬间的景。先把四组对应背下——<b>春=あけぼの / 夏=夜 / 秋=夕暮れ / 冬=つとめて</b>——这是全段的骨架,也是最常被引用的部分。</div></details>
+</div>
+<div class="pair sm">
+<div class="jp"><ruby>夏<rt>なつ</rt></ruby>は<ruby>夜<rt>よる</rt></ruby>。<ruby>月<rt>つき</rt></ruby>の<ruby>頃<rt>ころ</rt></ruby>はさらなり。<ruby>闇<rt>やみ</rt></ruby>もなほ、<ruby>蛍<rt>ほたる</rt></ruby>の<ruby>多<rt>おほ</rt></ruby>く<ruby>飛<rt>と</rt></ruby>びちがひたる。また、ただ<ruby>一<rt>ひと</rt></ruby>つ<ruby>二<rt>ふた</rt></ruby>つなど、ほのかにうち<ruby>光<rt>ひか</rt></ruby>りて<ruby>行<rt>ゆ</rt></ruby>くもをかし。<ruby>雨<rt>あめ</rt></ruby>など<ruby>降<rt>ふ</rt></ruby>るも、をかし。</div>
+<div class="cn">夏天,是夜晚。有月的夜自不必说,即使漆黑无月,萤火成群飞舞也好;还有一两只微微发光飞过,也别有情趣;下点雨,也好。</div>
+<details><summary class="mod"></summary><div class="exp"><span class="mtext">夏は夜。月のころは言うまでもなく、闇夜もやはり、蛍がたくさん飛び交っているのがよい。ほんの一つ二つ、かすかに光って飛んでいくのも趣がある。雨などが降るのも趣がある。</span><br><br>关键词 <b class="jp">をかし</b>=有意思、雅致;<b class="jp">あはれなり</b>=令人感怀。这两个词是平安时代的审美关键词,读古文见到就想到"美/动人"。</div></details>
+</div>
+<div class="pair sm">
+<div class="jp"><ruby>秋<rt>あき</rt></ruby>は<ruby>夕暮<rt>ゆふぐ</rt></ruby>れ。<ruby>夕日<rt>ゆふひ</rt></ruby>のさして<ruby>山<rt>やま</rt></ruby>の<ruby>端<rt>は</rt></ruby>いと<ruby>近<rt>ちか</rt></ruby>うなりたるに、<ruby>烏<rt>からす</rt></ruby>の<ruby>寝所<rt>ねどころ</rt></ruby>へ<ruby>行<rt>ゆ</rt></ruby>くとて、<ruby>三<rt>み</rt></ruby>つ<ruby>四<rt>よ</rt></ruby>つ、<ruby>二<rt>ふた</rt></ruby>つ<ruby>三<rt>み</rt></ruby>つなど、<ruby>飛<rt>と</rt></ruby>び<ruby>急<rt>いそ</rt></ruby>ぐさへあはれなり。まいて<ruby>雁<rt>かり</rt></ruby>などの<ruby>連<rt>つら</rt></ruby>ねたるが、いと<ruby>小<rt>ちひ</rt></ruby>さく<ruby>見<rt>み</rt></ruby>ゆるは、いとをかし。<ruby>日<rt>ひ</rt></ruby><ruby>入<rt>い</rt></ruby>り<ruby>果<rt>は</rt></ruby>てて、<ruby>風<rt>かぜ</rt></ruby>の<ruby>音<rt>おと</rt></ruby>、<ruby>虫<rt>むし</rt></ruby>の<ruby>音<rt>ね</rt></ruby>など、はた<ruby>言<rt>い</rt></ruby>ふべきにあらず。</div>
+<div class="cn">秋天,是黄昏。夕阳西斜、贴近山头时,乌鸦归巢,三只四只、两只三只匆匆飞去,也令人感怀;更有大雁排成行,远望极小,那更是妙不可言。待日头落尽,风声、虫鸣,更是无须多言的好。</div>
+<details><summary class="mod"></summary><div class="exp"><span class="mtext">秋は夕暮れ。夕日がさして山の端にとても近づいたころ、烏が寝床へ帰ろうと三つ四つ、二つ三つと飛び急ぐ様子までしみじみとする。まして雁などが列を連ねて、とても小さく見えるのは、たいそう趣深い。日がすっかり沈んで、風の音や虫の声が聞こえるのは、言うまでもなくよい。</span></div></details>
+</div>
+<div class="pair sm">
+<div class="jp"><ruby>冬<rt>ふゆ</rt></ruby>はつとめて。<ruby>雪<rt>ゆき</rt></ruby>の<ruby>降<rt>ふ</rt></ruby>りたるは<ruby>言<rt>い</rt></ruby>ふべきにもあらず。<ruby>霜<rt>しも</rt></ruby>のいと<ruby>白<rt>しろ</rt></ruby>きも、またさらでも、いと<ruby>寒<rt>さむ</rt></ruby>きに、<ruby>火<rt>ひ</rt></ruby>など<ruby>急<rt>いそ</rt></ruby>ぎおこして、<ruby>炭<rt>すみ</rt></ruby><ruby>持<rt>も</rt></ruby>て<ruby>渡<rt>わた</rt></ruby>るもいとつきづきし。<ruby>昼<rt>ひる</rt></ruby>になりて、ぬるくゆるびもていけば、<ruby>火桶<rt>ひをけ</rt></ruby>の<ruby>火<rt>ひ</rt></ruby>も<ruby>白<rt>しろ</rt></ruby>き<ruby>灰<rt>はひ</rt></ruby>がちになりて、わろし。</div>
+<div class="cn">冬天,是清晨。下雪自不待言;即使无雪,浓霜洁白、或天寒时,急急生起炭火、捧着炭盆穿廊而过,也正合冬日情致。等到日上,寒意渐松,火盆里的火积成白灰,便煞风景了。</div>
+<details><summary class="mod"></summary><div class="exp"><span class="mtext">冬は早朝。雪が降っているのは言うまでもなく、霜がとても白いのも、またそうでなくてもとても寒い朝に、火を急いでおこして、炭を持って渡っていくのも、いかにも冬らしい。昼になって寒さがゆるむと、火桶の火も白い灰が多くなってよくない。</span><br><br>古文语法(<b class="jp">〜たる・〜なり・言ふべきにあらず</b>)超出N5,不必纠结逐字文法;先跟着朗读听熟节奏、记住画面即可。<b class="jp">つとめて</b>=清晨(古语),别理解成"努力"。</div></details>
+</div>
+
+<div class="src">底本参考:三巻本系《枕草子》第一段通行校订本(古典原文属公有领域)。</div>
+
+<div class="acap">🎧 神经语音朗读 · 古文原文(NanamiNeural)</div>
+<audio controls preload="metadata" src="media/经典05_枕草子_古文.mp3"></audio>
+<div class="acap" style="margin-top:8px">🎧 神经语音朗读 · 现代日语译(听懂意思用)</div>
+<audio controls preload="metadata" src="media/经典05_枕草子_現代語訳.mp3"></audio>
+
+<h2>🎙 背诵检查(先背四季开头)</h2>
+<div class="mut" style="margin-bottom:6px">古文识别较难,先从四句季节开头练起。</div>
+<span class="sent" data-jp="春はあけぼの。" tabindex="0">春はあけぼの。<span class="rhint">春</span></span>
+<span class="sent" data-jp="夏は夜。" tabindex="0">夏は夜。<span class="rhint">夏</span></span>
+<span class="sent" data-jp="秋は夕暮れ。" tabindex="0">秋は夕暮れ。<span class="rhint">秋</span></span>
+<span class="sent" data-jp="冬はつとめて。" tabindex="0">冬はつとめて。<span class="rhint">冬</span></span>
+</div>
+
+<!-- ============ 篇6 ごんぎつね ============ -->
+<div class="pane" id="p6">
+<h2>六、ごんぎつね(开头)<span class="diff easy">N5友好 · 现代口语 · 小学必读</span></h2>
+<div class="concl"><b>作者:</b>新美南吉(1913–1943)。<b>为什么经典:</b>日本小学国语课本收录率第一的名篇,几乎每个日本人小时候都读过。开头以「これは、私が…お話です」的说书口吻娓娓道来,纯现代口语、句型高频,是最适合N5练"完整叙事句"的一篇。</div>
+<div class="gain"><span class="t">🎒 背这篇能带走什么</span>① <b class="jp">これは〜です</b>=这是…(自我介绍/说明万能句) ② <b class="jp">〜という</b>=叫做…的(超高频定义句) ③ <b class="jp">〜ています/〜ました</b> 叙事时态 ④ <b class="jp">〜そうです</b>=听说…(传闻)。</div>
+
+<div class="pair">
+<div class="jp">これは、<ruby>私<rt>わたし</rt></ruby>が<ruby>小<rt>ちい</rt></ruby>さいときに、<ruby>村<rt>むら</rt></ruby>の<ruby>茂平<rt>もへい</rt></ruby>というおじいさんからきいたお<ruby>話<rt>はなし</rt></ruby>です。</div>
+<div class="cn">这是我小时候,从村里一位叫茂平的老爷爷那儿听来的故事。</div>
+<details><summary></summary><div class="exp"><b class="jp">これは〜です</b>=这是…,全篇最实用的说明句。<b class="jp">〜という</b>=叫做…的(茂平というおじいさん=叫茂平的老爷爷);<b class="jp">〜からきいた</b>=从…听来的。「お話」的「お」是美化语。</div></details>
+</div>
+<div class="pair">
+<div class="jp">むかしは、<ruby>私<rt>わたし</rt></ruby>たちの<ruby>村<rt>むら</rt></ruby>のちかくの、<ruby>中山<rt>なかやま</rt></ruby>というところに<ruby>小<rt>ちい</rt></ruby>さなお<ruby>城<rt>しろ</rt></ruby>があって、<ruby>中山<rt>なかやま</rt></ruby>さまというおとのさまが、おられたそうです。</div>
+<div class="cn">从前,在我们村子附近一个叫中山的地方,有一座小小的城,据说住着一位叫中山大人的城主。</div>
+<details><summary></summary><div class="exp"><b class="jp">〜があって</b>=有…,然后(ある的て形连接);<b class="jp">〜そうです</b>=听说…(传闻)。<b class="jp">おられた</b>=いた的敬语(在/有)。</div></details>
+</div>
+<div class="pair">
+<div class="jp">その<ruby>中山<rt>なかやま</rt></ruby>から、<ruby>少<rt>すこ</rt></ruby>しはなれた<ruby>山<rt>やま</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に、「ごん<ruby>狐<rt>ぎつね</rt></ruby>」という<ruby>狐<rt>きつね</rt></ruby>がいました。</div>
+<div class="cn">离那中山不远的山里,有一只叫“狐狸阿权”的狐狸。</div>
+<details><summary></summary><div class="exp"><b class="jp">〜という〜がいました</b>=有一只叫…的…。<b class="jp">いました</b>=いる的过去(表存在,用于人/动物)。「ごん狐」读<b class="jp">ごんぎつね</b>(连浊),单独的「狐」读<b class="jp">きつね</b>。</div></details>
+</div>
+<div class="pair">
+<div class="jp">ごんは、<ruby>一人<rt>ひとり</rt></ruby>ぼっちの<ruby>小狐<rt>こぎつね</rt></ruby>で、しだの<ruby>一<rt>いっ</rt></ruby>ぱいしげった<ruby>森<rt>もり</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>穴<rt>あな</rt></ruby>をほって<ruby>住<rt>す</rt></ruby>んでいました。</div>
+<div class="cn">阿权是只孤零零的小狐狸,在长满羊齿草的森林里挖了个洞住着。</div>
+<details><summary></summary><div class="exp"><b class="jp">一人ぼっち</b>=孤零零一个;<b class="jp">〜で</b>(中顿)连接前后描写;<b class="jp">穴をほって住んでいました</b>=挖了洞住着(<b class="jp">〜ている</b>表持续状态)。</div></details>
+</div>
+
+<div class="src">底本:青空文库《ごん狐》(新美南吉),cards/000121。取开头四句(第一节起首)。原文属公有领域。</div>
+
+<div class="acap">🎧 神经语音朗读(NanamiNeural,学习慢速)</div>
+<audio controls preload="metadata" src="media/经典06_ごんぎつね.mp3"></audio>
+
+<h2>🎙 背诵检查</h2>
+<div class="mut" style="margin-bottom:6px">先开底部「🎙 背诵」,再点一句开始验收。</div>
+<span class="sent" data-jp="これは、私が小さいときに、村の茂平というおじいさんからきいたお話です。" tabindex="0">これは、私が小さいときに、村の茂平というおじいさんからきいたお話です。<span class="rhint">第一句·これは〜です</span></span>
+<span class="sent" data-jp="むかしは、私たちの村のちかくの、中山というところに小さなお城があって、中山さまというおとのさまが、おられたそうです。" tabindex="0">むかしは、私たちの村のちかくの、中山というところに小さなお城があって、中山さまというおとのさまが、おられたそうです。<span class="rhint">第二句·〜そうです</span></span>
+<span class="sent" data-jp="その中山から、少しはなれた山の中に、「ごん狐」という狐がいました。" tabindex="0">その中山から、少しはなれた山の中に、「ごん狐」という狐がいました。<span class="rhint">第三句·〜という</span></span>
+<span class="sent" data-jp="ごんは、一人ぼっちの小狐で、しだの一ぱいしげった森の中に穴をほって住んでいました。" tabindex="0">ごんは、一人ぼっちの小狐で、しだの一ぱいしげった森の中に穴をほって住んでいました。<span class="rhint">第四句·〜ている</span></span>
+</div>
+
+<!-- ============ 篇7 手袋を買いに ============ -->
+<div class="pane" id="p7">
+<h2>七、手袋を買いに(开头)<span class="diff easy">N5–N4 · 现代描写文 · 连体修饰典范</span></h2>
+<div class="concl"><b>作者:</b>新美南吉(1913–1943)。<b>为什么经典:</b>与《ごん狐》齐名的暖心童话。开头一句<b class="jp">「狐の親子の棲んでいる森」</b>是"连体修饰"(把一整句话塞进名词前面)的教科书范例,现代描写文、朗朗上口,是N5迈向N4最该练的句型。</div>
+<div class="gain"><span class="t">🎒 背这篇能带走什么</span>① ★连体修饰 <b class="jp">〜ている+名词</b>(棲んでいる森=居住的森林)——从N5到"能说完整句子"最关键的一跳 ② <b class="jp">〜ようとする</b>=正要… ③ <b class="jp">〜ながら</b>=一边…一边 ④ <b class="jp">と言いました</b>=(某人)说…(引用)。</div>
+
+<div class="pair">
+<div class="jp"><ruby>寒<rt>さむ</rt></ruby>い<ruby>冬<rt>ふゆ</rt></ruby>が<ruby>北方<rt>ほっぽう</rt></ruby>から、<ruby>狐<rt>きつね</rt></ruby>の<ruby>親子<rt>おやこ</rt></ruby>の<ruby>棲<rt>す</rt></ruby>んでいる<ruby>森<rt>もり</rt></ruby>へもやって<ruby>来<rt>き</rt></ruby>ました。</div>
+<div class="cn">寒冷的冬天,从北方也来到了狐狸母子居住的森林。</div>
+<details><summary></summary><div class="exp">★连体修饰典范:<b class="jp">狐の親子の棲んでいる森</b>="狐狸母子居住的森林"——把一整句『狐狸母子住着』塞到名词『森(森林)』前面,这是从N5迈向能说完整句子的最关键一步。<b class="jp">〜ている</b>表状态;<b class="jp">棲(す)む</b>=底本用字,同「住む」。</div></details>
+</div>
+<div class="pair">
+<div class="jp"><ruby>或朝<rt>あるあさ</rt></ruby><ruby>洞穴<rt>ほらあな</rt></ruby>から<ruby>子供<rt>こども</rt></ruby>の<ruby>狐<rt>きつね</rt></ruby>が<ruby>出<rt>で</rt></ruby>ようとしましたが、「あっ」と<ruby>叫<rt>さけ</rt></ruby>んで<ruby>眼<rt>め</rt></ruby>を<ruby>抑<rt>おさ</rt></ruby>えながら<ruby>母<rt>かあ</rt></ruby>さん<ruby>狐<rt>きつね</rt></ruby>のところへころげて<ruby>来<rt>き</rt></ruby>ました。</div>
+<div class="cn">一天早晨,小狐狸正要从洞里出去,却“啊”地叫了一声,捂着眼睛滚回了狐狸妈妈身边。</div>
+<details><summary></summary><div class="exp"><b class="jp">〜ようとした</b>=正要…(动作即将发生);<b class="jp">〜ながら</b>=一边…一边(抑えながら=捂着眼);<b class="jp">〜てくる</b>(ころげて来ました)=…过来。<b class="jp">或朝(あるあさ)</b>=某天早晨。</div></details>
+</div>
+<div class="pair">
+<div class="jp">「<ruby>母<rt>かあ</rt></ruby>ちゃん、<ruby>眼<rt>め</rt></ruby>に<ruby>何<rt>なに</rt></ruby>か<ruby>刺<rt>さ</rt></ruby>さった、ぬいて<ruby>頂戴<rt>ちょうだい</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>早<rt>はや</rt></ruby>く」と<ruby>言<rt>い</rt></ruby>いました。</div>
+<div class="cn">“妈妈,眼睛里扎进什么了,快帮我拔出来,快点快点!”小狐狸说。</div>
+<details><summary></summary><div class="exp"><b class="jp">〜に〜が刺さった</b>=…扎进了…;<b class="jp">〜てちょうだい</b>=(亲昵地)请…(=〜てください的口语);<b class="jp">と言いました</b>=(某人)说…(引用句,日常超高频)。</div></details>
+</div>
+
+<div class="src">底本:青空文库《手袋を買いに》(新美南吉),cards/000121。取开头三句。「棲(す)む」为底本用字(=住む)。原文属公有领域。</div>
+
+<div class="acap">🎧 神经语音朗读(NanamiNeural,学习慢速)</div>
+<audio controls preload="metadata" src="media/经典07_手袋を買いに.mp3"></audio>
+
+<h2>🎙 背诵检查</h2>
+<div class="mut" style="margin-bottom:6px">先开底部「🎙 背诵」,再点一句开始验收。</div>
+<span class="sent" data-jp="寒い冬が北方から、狐の親子の棲んでいる森へもやって来ました。" tabindex="0">寒い冬が北方から、狐の親子の棲んでいる森へもやって来ました。<span class="rhint">第一句·连体修饰</span></span>
+<span class="sent" data-jp="或朝洞穴から子供の狐が出ようとしましたが、「あっ」と叫んで眼を抑えながら母さん狐のところへころげて来ました。" tabindex="0">或朝洞穴から子供の狐が出ようとしましたが、「あっ」と叫んで眼を抑えながら母さん狐のところへころげて来ました。<span class="rhint">第二句</span></span>
+<span class="sent" data-jp="「母ちゃん、眼に何か刺さった、ぬいて頂戴早く早く」と言いました。" tabindex="0">「母ちゃん、眼に何か刺さった、ぬいて頂戴早く早く」と言いました。<span class="rhint">第三句·引用</span></span>
+</div>
+
+<div class="mut" style="margin-top:26px;padding-top:12px;border-top:1px solid var(--line)">学习管家 · 经典背诵七篇 · 逐句中日对照(上日语·下中文) · 原文均取自公有领域名篇并与底本逐字校对(青空文库/通行校订本;金子みすゞ见篇内来源说明) · 假名/翻译/讲解为学习支架 · 本页为私人学习页,请勿分享链接</div>
+</div>
+
+<div class="dock">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn" id="bRecite">🎙 背诵:关</button>
+<button class="btn" id="bExport">导出成绩</button>
+</div>
+
+<script>
+let voicesJA=[];
+function loadVoices(){const all=speechSynthesis.getVoices();voicesJA=all.filter(v=>v.lang&&v.lang.toLowerCase().startsWith('ja'))}
+loadVoices();if('onvoiceschanged' in speechSynthesis)speechSynthesis.onvoiceschanged=loadVoices;
+let curEl=null;
+function pickVoiceJA(){return voicesJA.find(v=>/Kyoko.*(Enhanced|拡張)/i.test(v.name))||voicesJA.find(v=>/Kyoko/i.test(v.name))||voicesJA[0]||null}
+function textOf(el){return el.dataset.jp}
+function speak(text,el){
+  if(el&&el===curEl&&speechSynthesis.speaking){
+    if(speechSynthesis.paused){speechSynthesis.resume();el.classList.remove('paused')}
+    else{speechSynthesis.pause();el.classList.add('paused')}
+    return;
+  }
+  speechSynthesis.cancel();curEl=el||null;
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='ja-JP';const v=pickVoiceJA();if(v)u.voice=v;u.rate=0.8;
+  if(el){el.classList.add('playing');u.onend=()=>{el.classList.remove('playing','paused');curEl=null}}
+  speechSynthesis.speak(u);
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');document.getElementById(t.dataset.pane).classList.add('on');
+  speechSynthesis.cancel();window.scrollTo({top:0});
+}));
+document.querySelectorAll('.sent').forEach(s=>s.addEventListener('click',()=>{if(!window.__recite)speak(textOf(s),s)}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+const hintEl=document.getElementById('hint');
+let recite=false;
+function normJA(s){return (s||'').replace(/[、。・,.!?！?「」『』()（）\s%℃※=　／]/g,'')}
+function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let prev=[...Array(n+1).keys()],cur=[];for(let i=1;i<=m;i++){cur=[i];for(let j=1;j<=n;j++){cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1))}prev=cur}return prev[n]}
+function scoreText(target,said){const t=normJA(target),s=normJA(said);if(!t.length)return 0;return Math.max(0,Math.round(100*(1-lev(t,s)/Math.max(t.length,s.length))))}
+if(!SR){const b=document.getElementById('bRecite');if(b)b.style.display='none'}
+document.getElementById('bRecite').addEventListener('click',function(){
+  recite=!recite;window.__recite=recite;this.textContent='🎙 背诵:'+(recite?'开':'关');this.classList.toggle('on',recite);
+  hintEl.innerHTML=recite?'<b style="color:var(--terra)">背诵模式:点一句→出现「聆听中…」→背→停顿自动打分(≥90分过关)。</b>':'点原文任意一句=神经语音朗读那句(再点=暂停);底部「🎙 背诵」开验收模式。';
+});
+function listen(el){
+  const rec=new SR();rec.lang='ja-JP';rec.interimResults=false;
+  let r=el.querySelector('.recres');
+  if(!r){r=document.createElement('span');r.className='recres rhint';el.appendChild(r)}
+  r.innerHTML='<b style="color:var(--terra)">🎙 聆听中…请背这一句</b>';
+  rec.onresult=e=>{
+    const said=e.results[0][0].transcript;
+    const sc=scoreText(textOf(el),said);
+    const col=sc>=90?'var(--ok)':(sc>=70?'#B07A2E':'var(--warn)');
+    r.innerHTML='🎙 <b style="color:'+col+'">'+sc+' 分</b>　识别:「'+said+'」';
+    const arr=JSON.parse(localStorage.getItem('studyLog')||'[]');
+    arr.push({time:new Date().toLocaleString('zh-CN'),doc:'经典背诵',target:textOf(el),said:said,score:sc});
+    localStorage.setItem('studyLog',JSON.stringify(arr));
+  };
+  rec.onerror=e=>{r.innerHTML='<b style="color:var(--warn)">没听到或麦克风未授权('+e.error+')</b>'};
+  rec.start();
+}
+document.querySelectorAll('.sent').forEach(s=>{
+  s.addEventListener('click',()=>{if(recite&&SR){speechSynthesis.cancel();listen(s)}},true);
+});
+document.getElementById('bExport').addEventListener('click',function(){
+  const arr=JSON.parse(localStorage.getItem('studyLog')||'[]');
+  if(!arr.length){alert('还没有背诵成绩记录。先开「🎙 背诵」念几句再导出。');return}
+  let csv='﻿时间,页面,目标句,识别结果,得分\n';
+  arr.forEach(r=>{csv+=[r.time,r.doc,'"'+(r.target||'').replace(/"/g,'""')+'"','"'+(r.said||'').replace(/"/g,'""')+'"',r.score].join(',')+'\n'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='背诵成绩_'+new Date().toISOString().slice(0,10)+'.csv';a.click();
+});
+</script>
