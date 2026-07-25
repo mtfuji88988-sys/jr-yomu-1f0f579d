@@ -87,25 +87,23 @@ td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
 <div class="card"><b>②〜あまり</b>(…多、…有余)——接数量词后,表示“比这个数稍多”。<br><span class="jp">7<ruby>万<rt>まん</rt></ruby>7000<ruby>人<rt>にん</rt></ruby><b>あまり</b>が<ruby>暮<rt>く</rt></ruby>らす</span>=有7万7000多人生活。<span class="eg">例:<ruby>会場<rt>かいじょう</rt></ruby>には100<ruby>人<rt>にん</rt></ruby><b>あまり</b>が<ruby>集<rt>あつ</rt></ruby>まった。(会场聚集了100多人。)</span></div>
 
 <div class="note">📌 版权说明:本页为私人日语学习页,新闻原文<b>照录自上述来源</b>(节录报道开头前两段,后续车站排名列表略去),假名注音与中文翻译为学习管家所加,仅供本人学习使用,请勿分享链接。</div>
-<div class="foot">学习管家 · 新闻阅读线 02 · 朗读=神经语音 Nanami(地名「蕨=わらび」「中山道=なかせんどう」等已用假名喂入,页面仍显示原文汉字)</div>
+<div class="foot">学习管家 · 新闻阅读线 02 · 朗读=Azure 神经语音 Nanami(整篇·逐句·生词全部真人级语音,难读地名已喂假名)</div>
 </div>
 
 <script>
-let voices=[];function lv(){voices=speechSynthesis.getVoices().filter(v=>v.lang&&v.lang.toLowerCase().startsWith('ja'))}
-lv();speechSynthesis.onvoiceschanged=lv;
-function jaVoice(){return voices.find(v=>/Kyoko.*(Enhanced|拡張)/i.test(v.name))||voices.find(v=>/Kyoko/i.test(v.name))||voices[0]||null}
-let curEl=null;
-function speak(text,el){
-  if(el&&el===curEl&&speechSynthesis.speaking){
-    if(speechSynthesis.paused){speechSynthesis.resume();el.classList.remove('paused')}
-    else{speechSynthesis.pause();el.classList.add('paused')}return;}
-  speechSynthesis.cancel();curEl=el||null;
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
   document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
-  const u=new SpeechSynthesisUtterance(text);u.lang='ja-JP';const v=jaVoice();if(v)u.voice=v;u.rate=0.82;
-  u.onend=()=>{if(el)el.classList.remove('playing','paused');curEl=null};
-  if(el)el.classList.add('playing');speechSynthesis.speak(u);}
-document.querySelectorAll('.sent').forEach(s=>s.addEventListener('click',()=>speak(s.dataset.jp,s)));
-document.querySelectorAll('.spk').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speak(b.dataset.jp)}));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/a2s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/a2w'+(i+1)+'.mp3')}));
 document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
 document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
 </script>
