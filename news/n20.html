@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>新闻阅读 20 · 『クチコミを消してほしい』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">N4</span>『「クチコミを<ruby>消<rt>け</rt></ruby>してほしい」　<ruby>医者<rt>いしゃ</rt></ruby>などがグーグルを<ruby>訴<rt>うった</rt></ruby>えた』</h1>
+<div class="src">来源:NHK News Web Easy(2024-04-19)照录 · 对应ElsaJapanese【日文閱讀#15】 · 分类:互联网·法律</div>
+<div class="guide">📖 <b>学习+背诵指引</b>:第一遍听整篇音频通读抓大意 → 第二遍逐句点读跟读、对照中文 → 第三遍关掉中文只读日文 → <b>第四遍(背诵)</b>连假名也关掉,看汉字原文出声背,卡壳就点那一句再听。</div>
+
+<audio controls preload="metadata" src="media/n20.mp3"></audio>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+
+<h2>本文(逐句中日对照 · 点句朗读)</h2>
+
+<span class="sent" data-jp="グーグルマップは、多くの人が利用している地図のアプリです。">グーグルマップは、<ruby>多<rt>おお</rt></ruby>くの<ruby>人<rt>ひと</rt></ruby>が<ruby>利用<rt>りよう</rt></ruby>している<ruby>地図<rt>ちず</rt></ruby>のアプリです。<span class="zh">谷歌地图是许多人都在使用的地图应用。</span></span>
+
+<span class="sent" data-jp="地図の中に、店や病院などの感想「クチコミ」を書くことができます。"><ruby>地図<rt>ちず</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に、<ruby>店<rt>みせ</rt></ruby>や<ruby>病院<rt>びょういん</rt></ruby>などの<ruby>感想<rt>かんそう</rt></ruby>「クチコミ」を<ruby>書<rt>か</rt></ruby>くことができます。<span class="zh">在地图里,可以写下对店铺、医院等的感想,也就是“评价(网络口碑)”。</span></span>
+
+<span class="sent" data-jp="クチコミについて、東京の医者や団体などが、アメリカのグーグルを訴えました。">クチコミについて、<ruby>東京<rt>とうきょう</rt></ruby>の<ruby>医者<rt>いしゃ</rt></ruby>や<ruby>団体<rt>だんたい</rt></ruby>などが、アメリカのグーグルを<ruby>訴<rt>うった</rt></ruby>えました。<span class="zh">围绕这些评价,东京的医生和团体等起诉了美国的谷歌公司。</span></span>
+
+<span class="sent" data-jp="訴えた医者は「本当ではないことを書かれて、グーグルに消してほしいと頼みました。しかし、消してもらえなくて困っています」と話しています。"><ruby>訴<rt>うった</rt></ruby>えた<ruby>医者<rt>いしゃ</rt></ruby>は「<ruby>本当<rt>ほんとう</rt></ruby>ではないことを<ruby>書<rt>か</rt></ruby>かれて、グーグルに<ruby>消<rt>け</rt></ruby>してほしいと<ruby>頼<rt>たの</rt></ruby>みました。しかし、<ruby>消<rt>け</rt></ruby>してもらえなくて<ruby>困<rt>こま</rt></ruby>っています」と<ruby>話<rt>はな</rt></ruby>しています。<span class="zh">提起诉讼的医生说:“被人写了不属实的内容,我请求谷歌删掉。可是对方不给删,让我很为难。”</span></span>
+
+<span class="sent" data-jp="弁護士は、書いた人ではなくて、アプリの会社を訴えるのは、珍しいと言っています。"><ruby>弁護士<rt>べんごし</rt></ruby>は、<ruby>書<rt>か</rt></ruby>いた<ruby>人<rt>ひと</rt></ruby>ではなくて、アプリの<ruby>会社<rt>かいしゃ</rt></ruby>を<ruby>訴<rt>うった</rt></ruby>えるのは、<ruby>珍<rt>めずら</rt></ruby>しいと<ruby>言<rt>い</rt></ruby>っています。<span class="zh">律师说,不起诉撰写者、而是起诉应用的运营公司,这种做法很少见。</span></span>
+
+<span class="sent" data-jp="グーグルは、うそや悪口、正しいかどうかわからないことは消していると言っています。">グーグルは、うそや<ruby>悪口<rt>わるくち</rt></ruby>、<ruby>正<rt>ただ</rt></ruby>しいかどうかわからないことは<ruby>消<rt>け</rt></ruby>していると<ruby>言<rt>い</rt></ruby>っています。<span class="zh">谷歌方面称,谎言、恶语,以及无法判断是否属实的内容,都会予以删除。</span></span>
+
+<span class="sent" data-jp="しかし、書いた人と書かれた人の意見が違う場合、">しかし、<ruby>書<rt>か</rt></ruby>いた<ruby>人<rt>ひと</rt></ruby>と<ruby>書<rt>か</rt></ruby>かれた<ruby>人<rt>ひと</rt></ruby>の<ruby>意見<rt>いけん</rt></ruby>が<ruby>違<rt>ちが</rt></ruby>う<ruby>場合<rt>ばあい</rt></ruby>、<span class="zh">但是,当撰写者与被评论者双方说法不一致时,</span></span>
+
+<span class="sent" data-jp="グーグルはどちらが正しいか決めないと言っています。">グーグルはどちらが<ruby>正<rt>ただ</rt></ruby>しいか<ruby>決<rt>き</rt></ruby>めないと<ruby>言<rt>い</rt></ruby>っています。<span class="zh">谷歌表示自己不会判定哪一方正确。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="クチコミ">▶</button></td><td class="jp">クチコミ</td><td>くちこみ</td><td>名</td><td>网评、口碑评论(口コミ)⭐本文主题</td></tr>
+<tr><td><button class="spk" data-jp="地図">▶</button></td><td class="jp">地図</td><td>ちず</td><td>名</td><td>地图⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="利用する">▶</button></td><td class="jp">利用する</td><td>りようする</td><td>名·サ変</td><td>使用、利用⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="感想">▶</button></td><td class="jp">感想</td><td>かんそう</td><td>名</td><td>感想、评价</td></tr>
+<tr><td><button class="spk" data-jp="病院">▶</button></td><td class="jp">病院</td><td>びょういん</td><td>名</td><td>医院⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="医者">▶</button></td><td class="jp">医者</td><td>いしゃ</td><td>名</td><td>医生、大夫⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="団体">▶</button></td><td class="jp">団体</td><td>だんたい</td><td>名</td><td>团体、组织</td></tr>
+<tr><td><button class="spk" data-jp="訴える">▶</button></td><td class="jp">訴える</td><td>うったえる</td><td>动Ⅱ</td><td>起诉、控告(也指诉说)</td></tr>
+<tr><td><button class="spk" data-jp="消す">▶</button></td><td class="jp">消す</td><td>けす</td><td>动Ⅰ</td><td>删除、关掉、抹去⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="頼む">▶</button></td><td class="jp">頼む</td><td>たのむ</td><td>动Ⅰ</td><td>请求、拜托、点(菜)⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="困る">▶</button></td><td class="jp">困る</td><td>こまる</td><td>动Ⅰ</td><td>为难、伤脑筋⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="弁護士">▶</button></td><td class="jp">弁護士</td><td>べんごし</td><td>名</td><td>律师</td></tr>
+<tr><td><button class="spk" data-jp="珍しい">▶</button></td><td class="jp">珍しい</td><td>めずらしい</td><td>形Ⅰ</td><td>少见、罕见、稀奇</td></tr>
+<tr><td><button class="spk" data-jp="悪口">▶</button></td><td class="jp">悪口</td><td>わるくち</td><td>名</td><td>坏话、恶语</td></tr>
+<tr><td><button class="spk" data-jp="場合">▶</button></td><td class="jp">場合</td><td>ばあい</td><td>名</td><td>情况、场合⭐生活高频</td></tr>
+</table>
+
+<h2>语法(本文出现的重点句型)</h2>
+<div class="card"><b>①〜てほしい</b>(希望别人做…)——对象是他人,自己想做时用「〜たい」。<br><span class="jp">グーグルに<ruby>消<rt>け</rt></ruby>して<b>ほしい</b>と<ruby>頼<rt>たの</rt></ruby>みました</span>=请求谷歌把它删掉。<span class="eg">例:もう<ruby>少<rt>すこ</rt></ruby>し<ruby>待<rt>ま</rt></ruby>って<b>ほしい</b>です。(希望你再等我一会儿。)</span></div>
+<div class="card"><b>②〜てもらう / 〜てもらえない</b>(请对方为我做/得不到对方为我做)——「もらえなくて」是可能形的否定+て,表原因。<br><span class="jp"><ruby>消<rt>け</rt></ruby>して<b>もらえなくて</b><ruby>困<rt>こま</rt></ruby>っています</span>=没能让对方删掉,很为难。<span class="eg">例:<ruby>友達<rt>ともだち</rt></ruby>に<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>って<b>もらいました</b>。(请朋友帮我拍了照。)</span></div>
+<div class="card"><b>③〜ことができます</b>(能够…)——动词辞书形+ことができる,比可能形更书面。<br><span class="jp"><ruby>感想<rt>かんそう</rt></ruby>を<ruby>書<rt>か</rt></ruby>く<b>ことができます</b></span>=可以写感想。<span class="eg">例:ここで<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>買<rt>か</rt></ruby>う<b>ことができます</b>。(在这里可以买票。)</span></div>
+<div class="card"><b>④〜かどうか</b>(是否…)——把「Yes / No 疑问」嵌进句中;疑问词句则用「〜か」(见本文「どちらが<ruby>正<rt>ただ</rt></ruby>しい<b>か</b>」)。<br><span class="jp"><ruby>正<rt>ただ</rt></ruby>しい<b>かどうか</b>わからないこと</span>=不知道是否属实的内容。<span class="eg">例:<ruby>明日<rt>あした</rt></ruby><ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>る<b>かどうか</b>わかりません。(不知道明天会不会下雨。)</span></div>
+<div class="card"><b>⑤A ではなくて B</b>(不是A而是B)——名词的否定接续,口语常说「じゃなくて」。<br><span class="jp"><ruby>書<rt>か</rt></ruby>いた<ruby>人<rt>ひと</rt></ruby><b>ではなくて</b>、アプリの<ruby>会社<rt>かいしゃ</rt></ruby>を<ruby>訴<rt>うった</rt></ruby>える</span>=起诉的不是撰写者,而是应用公司。<span class="eg">例:これはコーヒー<b>ではなくて</b>、<ruby>紅茶<rt>こうちゃ</rt></ruby>です。(这不是咖啡,是红茶。)</span></div>
+
+<div class="note">📌 版权说明:本页为私人日语学习页。日文正文<b>一字不改照录自 NHK News Web Easy(2024-04-19 稿)</b>,原文著作权归 NHK 所有;假名注音、中文翻译、生词表与语法说明为学习管家所加(AI 辅助整理),配合 ElsaJapanese【日文閱讀#15】视频精读使用。仅供本人学习,请勿分享链接或转载。</div>
+<div class="foot">学习管家 · 新闻阅读线 20(背诵篇)· 朗读=Azure 神经语音 Keita(男声·整篇·逐句·生词全部真人级语音)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/a20s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/a20w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>
