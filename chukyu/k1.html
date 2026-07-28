@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>标日中级 第1课 · 『あの時の方』+『十年ぶりの東京』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">中级</span>『あの<ruby>時<rt>とき</rt></ruby>の<ruby>方<rt>かた</rt></ruby>』</h1>
+<div class="src">标日中级伴学 · 第1课「<ruby>出会<rt>であ</rt></ruby>い」对应自写文 · 覆盖本课全部语法点与核心词汇 · 配合教材使用</div>
+<div class="guide">📖 <b>伴学用法</b>:先学教材第1课 → 用本页自写文做二遍活用:第一遍听整篇 → 第二遍逐句点读跟读 → 第三遍关中文 → 第四遍关假名出声读;语法卡=本课句型换例句再巩固。</div>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+<h2><ruby>会話<rt>かいわ</rt></ruby>『あの<ruby>時<rt>とき</rt></ruby>の<ruby>方<rt>かた</rt></ruby>』(场景:上周雨天在公交站借伞给<ruby>王<rt>おう</rt></ruby>さん的人,竟在客户公司再次遇见)</h2>
+<audio controls preload="metadata" src="media/k1a.mp3"></audio>
+
+<span class="sent c" data-jp="あのう、失礼ですが、先週の金曜日、駅前のバス停にいらっしゃいませんでしたか。"><b><ruby>王<rt>おう</rt></ruby>:</b>あのう、<ruby>失礼<rt>しつれい</rt></ruby>ですが、<ruby>先週<rt>せんしゅう</rt></ruby>の<ruby>金曜日<rt>きんようび</rt></ruby>、<ruby>駅前<rt>えきまえ</rt></ruby>のバス<ruby>停<rt>てい</rt></ruby>にいらっしゃいませんでしたか。<span class="zh">请问,恕我冒昧,上周五您是不是在站前的公交车站?</span></span>
+
+<span class="sent c" data-jp="ええ、いましたよ。あっ、あの時の方ですね。"><b><ruby>田中<rt>たなか</rt></ruby>:</b>ええ、いましたよ。あっ、あの<ruby>時<rt>とき</rt></ruby>の<ruby>方<rt>かた</rt></ruby>ですね。<span class="zh">嗯,我在啊。啊,您是那时候的那位吧。</span></span>
+
+<span class="sent c" data-jp="はい、そうです。あの日は傘を貸していただいて、本当に助かりました。"><b><ruby>王<rt>おう</rt></ruby>:</b>はい、そうです。あの<ruby>日<rt>ひ</rt></ruby>は<ruby>傘<rt>かさ</rt></ruby>を<ruby>貸<rt>か</rt></ruby>していただいて、<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>助<rt>たす</rt></ruby>かりました。<span class="zh">是的。那天承蒙您借伞,真是帮了大忙。</span></span>
+
+<span class="sent c" data-jp="いいえ、大したことじゃありませんよ。傘ももう返していただきましたから、気にしないでください。"><b><ruby>田中<rt>たなか</rt></ruby>:</b>いいえ、<ruby>大<rt>たい</rt></ruby>したことじゃありませんよ。<ruby>傘<rt>かさ</rt></ruby>ももう<ruby>返<rt>かえ</rt></ruby>していただきましたから、<ruby>気<rt>き</rt></ruby>にしないでください。<span class="zh">哪里,不是什么大事。伞也已经还给我了,请别放在心上。</span></span>
+
+<span class="sent c" data-jp="まさか取引先の会社でお会いするとは思いませんでした。"><b><ruby>王<rt>おう</rt></ruby>:</b>まさか<ruby>取引先<rt>とりひきさき</rt></ruby>の<ruby>会社<rt>かいしゃ</rt></ruby>でお<ruby>会<rt>あ</rt></ruby>いするとは<ruby>思<rt>おも</rt></ruby>いませんでした。<span class="zh">真没想到会在客户公司遇见您。</span></span>
+
+<span class="sent c" data-jp="本当に偶然ですね。王さんは、いつ日本にいらっしゃったんですか。"><b><ruby>田中<rt>たなか</rt></ruby>:</b><ruby>本当<rt>ほんとう</rt></ruby>に<ruby>偶然<rt>ぐうぜん</rt></ruby>ですね。<ruby>王<rt>おう</rt></ruby>さんは、いつ<ruby>日本<rt>にほん</rt></ruby>にいらっしゃったんですか。<span class="zh">真是巧啊。王女士是什么时候来日本的?</span></span>
+
+<span class="sent c" data-jp="先月です。実は、東京の本社に転勤になったんです。"><b><ruby>王<rt>おう</rt></ruby>:</b><ruby>先月<rt>せんげつ</rt></ruby>です。<ruby>実<rt>じつ</rt></ruby>は、<ruby>東京<rt>とうきょう</rt></ruby>の<ruby>本社<rt>ほんしゃ</rt></ruby>に<ruby>転勤<rt>てんきん</rt></ruby>になったんです。<span class="zh">上个月。其实是调到东京总公司工作了。</span></span>
+
+<span class="sent c" data-jp="そうですか。東京は初めてですか。"><b><ruby>田中<rt>たなか</rt></ruby>:</b>そうですか。<ruby>東京<rt>とうきょう</rt></ruby>は<ruby>初<rt>はじ</rt></ruby>めてですか。<span class="zh">这样啊。是第一次来东京吗?</span></span>
+
+<span class="sent c" data-jp="いいえ、十年前に留学していました。でも、街はすっかり変わりましたね。"><b><ruby>王<rt>おう</rt></ruby>:</b>いいえ、<ruby>十年前<rt>じゅうねんまえ</rt></ruby>に<ruby>留学<rt>りゅうがく</rt></ruby>していました。でも、<ruby>街<rt>まち</rt></ruby>はすっかり<ruby>変<rt>か</rt></ruby>わりましたね。<span class="zh">不是,十年前我在这里留学过。不过,城市完全变样了。</span></span>
+
+<span class="sent c" data-jp="ええ、この辺も高層ビルがずいぶん増えましたから。"><b><ruby>田中<rt>たなか</rt></ruby>:</b>ええ、この<ruby>辺<rt>へん</rt></ruby>も<ruby>高層<rt>こうそう</rt></ruby>ビルがずいぶん<ruby>増<rt>ふ</rt></ruby>えましたから。<span class="zh">是啊,这一带高楼也多了不少。</span></span>
+
+<span class="sent c" data-jp="駅の様子も変わって、初めて来た街という感じがします。"><b><ruby>王<rt>おう</rt></ruby>:</b><ruby>駅<rt>えき</rt></ruby>の<ruby>様子<rt>ようす</rt></ruby>も<ruby>変<rt>か</rt></ruby>わって、<ruby>初<rt>はじ</rt></ruby>めて<ruby>来<rt>き</rt></ruby>た<ruby>街<rt>まち</rt></ruby>という<ruby>感<rt>かん</rt></ruby>じがします。<span class="zh">车站的样子也变了,感觉像是第一次来的城市。</span></span>
+
+<span class="sent c" data-jp="わたしも時々、変化についていけないくらいですよ。"><b><ruby>田中<rt>たなか</rt></ruby>:</b>わたしも<ruby>時々<rt>ときどき</rt></ruby>、<ruby>変化<rt>へんか</rt></ruby>についていけないくらいですよ。<span class="zh">连我也常常觉得,简直快跟不上这变化了。</span></span>
+
+<span class="sent c" data-jp="これから、どうぞよろしくお願いします。"><b><ruby>王<rt>おう</rt></ruby>:</b>これから、どうぞよろしくお<ruby>願<rt>ねが</rt></ruby>いします。<span class="zh">今后请多多关照。</span></span>
+
+<span class="sent c" data-jp="こちらこそ。今度、ゆっくり食事でもしましょう。"><b><ruby>田中<rt>たなか</rt></ruby>:</b>こちらこそ。<ruby>今度<rt>こんど</rt></ruby>、ゆっくり<ruby>食事<rt>しょくじ</rt></ruby>でもしましょう。<span class="zh">彼此彼此。下次找机会一起吃个饭吧。</span></span>
+
+<h2><ruby>読解<rt>どっかい</rt></ruby>『<ruby>十年<rt>じゅうねん</rt></ruby>ぶりの<ruby>東京<rt>とうきょう</rt></ruby>』(<ruby>王<rt>おう</rt></ruby>さんの<ruby>随筆<rt>ずいひつ</rt></ruby>)</h2>
+<audio controls preload="metadata" src="media/k1b.mp3"></audio>
+
+<span class="sent r" data-jp="先月、わたしは東京の本社に転勤になった。"><ruby>先月<rt>せんげつ</rt></ruby>、わたしは<ruby>東京<rt>とうきょう</rt></ruby>の<ruby>本社<rt>ほんしゃ</rt></ruby>に<ruby>転勤<rt>てんきん</rt></ruby>になった。<span class="zh">上个月,我调到了东京总公司。</span></span>
+
+<span class="sent r" data-jp="東京で暮らすのは、留学以来、十年ぶりだ。"><ruby>東京<rt>とうきょう</rt></ruby>で<ruby>暮<rt>く</rt></ruby>らすのは、<ruby>留学<rt>りゅうがく</rt></ruby><ruby>以来<rt>いらい</rt></ruby>、<ruby>十年<rt>じゅうねん</rt></ruby>ぶりだ。<span class="zh">在东京生活,自留学以来已时隔十年。</span></span>
+
+<span class="sent r" data-jp="空港から都心へ向かう電車の窓から、外の景色を眺めた。"><ruby>空港<rt>くうこう</rt></ruby>から<ruby>都心<rt>としん</rt></ruby>へ<ruby>向<rt>む</rt></ruby>かう<ruby>電車<rt>でんしゃ</rt></ruby>の<ruby>窓<rt>まど</rt></ruby>から、<ruby>外<rt>そと</rt></ruby>の<ruby>景色<rt>けしき</rt></ruby>を<ruby>眺<rt>なが</rt></ruby>めた。<span class="zh">在从机场开往市中心的电车上,我从车窗眺望外面的景色。</span></span>
+
+<span class="sent r" data-jp="海の近くには高層ビルが並んでいて、十年前とは別の街のような感じがした。"><ruby>海<rt>うみ</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くには<ruby>高層<rt>こうそう</rt></ruby>ビルが<ruby>並<rt>なら</rt></ruby>んでいて、<ruby>十年前<rt>じゅうねんまえ</rt></ruby>とは<ruby>別<rt>べつ</rt></ruby>の<ruby>街<rt>まち</rt></ruby>のような<ruby>感<rt>かん</rt></ruby>じがした。<span class="zh">海边高楼林立,感觉像是和十年前完全不同的城市。</span></span>
+
+<span class="sent r" data-jp="駅前の小さな本屋は、大きなカフェに変わっていた。"><ruby>駅前<rt>えきまえ</rt></ruby>の<ruby>小<rt>ちい</rt></ruby>さな<ruby>本屋<rt>ほんや</rt></ruby>は、<ruby>大<rt>おお</rt></ruby>きなカフェに<ruby>変<rt>か</rt></ruby>わっていた。<span class="zh">站前的小书店,变成了一家大咖啡馆。</span></span>
+
+<span class="sent r" data-jp="よく通った食堂も、もうない。">よく<ruby>通<rt>かよ</rt></ruby>った<ruby>食堂<rt>しょくどう</rt></ruby>も、もうない。<span class="zh">以前常去的食堂,也已经没有了。</span></span>
+
+<span class="sent r" data-jp="街だけではなく、生活も変わった。"><ruby>街<rt>まち</rt></ruby>だけではなく、<ruby>生活<rt>せいかつ</rt></ruby>も<ruby>変<rt>か</rt></ruby>わった。<span class="zh">不只是城市,生活也变了。</span></span>
+
+<span class="sent r" data-jp="買い物も切符も、今はスマートフォン一つでできる。"><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>も<ruby>切符<rt>きっぷ</rt></ruby>も、<ruby>今<rt>いま</rt></ruby>はスマートフォン<ruby>一<rt>ひと</rt></ruby>つでできる。<span class="zh">购物也好、买票也好,现在一部智能手机就能搞定。</span></span>
+
+<span class="sent r" data-jp="便利になったが、変化が速すぎて、ついていけないと感じることもある。"><ruby>便利<rt>べんり</rt></ruby>になったが、<ruby>変化<rt>へんか</rt></ruby>が<ruby>速<rt>はや</rt></ruby>すぎて、ついていけないと<ruby>感<rt>かん</rt></ruby>じることもある。<span class="zh">虽然方便了,但变化太快,有时也觉得跟不上。</span></span>
+
+<span class="sent r" data-jp="それでも、新しい東京での生活が楽しみだ。">それでも、<ruby>新<rt>あたら</rt></ruby>しい<ruby>東京<rt>とうきょう</rt></ruby>での<ruby>生活<rt>せいかつ</rt></ruby>が<ruby>楽<rt>たの</rt></ruby>しみだ。<span class="zh">即便如此,我还是期待在东京的新生活。</span></span>
+
+<span class="sent r" data-jp="まず、傘を貸してくれたあの人に、もう一度お礼を言いたい。">まず、<ruby>傘<rt>かさ</rt></ruby>を<ruby>貸<rt>か</rt></ruby>してくれたあの<ruby>人<rt>ひと</rt></ruby>に、もう<ruby>一度<rt>いちど</rt></ruby>お<ruby>礼<rt>れい</rt></ruby>を<ruby>言<rt>い</rt></ruby>いたい。<span class="zh">首先,想对借伞给我的那个人,再道一次谢。</span></span>
+
+<h2>生词(本课核心15词)</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="出会い">▶</button></td><td class="jp">出会い</td><td>であい</td><td>名</td><td>相遇、邂逅⭐本课课题</td></tr>
+<tr><td><button class="spk" data-jp="助かる">▶</button></td><td class="jp">助かる</td><td>たすかる</td><td>动1</td><td>得救、获得帮助⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="すっかり">▶</button></td><td class="jp">すっかり</td><td>すっかり</td><td>副</td><td>完全、彻底⭐</td></tr>
+<tr><td><button class="spk" data-jp="街">▶</button></td><td class="jp">街</td><td>まち</td><td>名</td><td>街市、城市</td></tr>
+<tr><td><button class="spk" data-jp="変化">▶</button></td><td class="jp">変化</td><td>へんか</td><td>名·サ変</td><td>变化</td></tr>
+<tr><td><button class="spk" data-jp="ついていく">▶</button></td><td class="jp">ついていく</td><td>ついていく</td><td>动1</td><td>跟上⭐</td></tr>
+<tr><td><button class="spk" data-jp="高層ビル">▶</button></td><td class="jp">高層ビル</td><td>こうそうビル</td><td>名</td><td>高楼大厦</td></tr>
+<tr><td><button class="spk" data-jp="辺">▶</button></td><td class="jp">辺</td><td>へん</td><td>名</td><td>一带、附近</td></tr>
+<tr><td><button class="spk" data-jp="失礼ですが">▶</button></td><td class="jp">失礼ですが</td><td>しつれいですが</td><td>惯用</td><td>恕我冒昧⭐搭话神句</td></tr>
+<tr><td><button class="spk" data-jp="転勤">▶</button></td><td class="jp">転勤</td><td>てんきん</td><td>名·サ変</td><td>调动工作⭐</td></tr>
+<tr><td><button class="spk" data-jp="偶然">▶</button></td><td class="jp">偶然</td><td>ぐうぜん</td><td>名·副</td><td>偶然、碰巧</td></tr>
+<tr><td><button class="spk" data-jp="貸す">▶</button></td><td class="jp">貸す</td><td>かす</td><td>动1</td><td>借出⭐</td></tr>
+<tr><td><button class="spk" data-jp="眺める">▶</button></td><td class="jp">眺める</td><td>ながめる</td><td>动2</td><td>眺望</td></tr>
+<tr><td><button class="spk" data-jp="暮らす">▶</button></td><td class="jp">暮らす</td><td>くらす</td><td>动1</td><td>生活、过日子⭐</td></tr>
+<tr><td><button class="spk" data-jp="お礼">▶</button></td><td class="jp">お礼</td><td>おれい</td><td>名</td><td>道谢、谢意⭐</td></tr>
+</table>
+<h2>语法卡(本课句型 · 例句自造)</h2>
+<div class="card"><b>①自动词与他动词的焦点</b>——同一件事,说话焦点在「事」用自动词、在「人」用他动词。正文「<ruby>助<rt>たす</rt></ruby>かりました」(自动词:焦点=我得救了,而非“您帮了我”)。<span class="eg">例:ドア<b>が</b><ruby>開<rt>あ</rt></ruby>きました(焦点在门)/ドア<b>を</b><ruby>開<rt>あ</rt></ruby>けました(焦点在人)。</span></div>
+<div class="card"><b>②「あの<ruby>時<rt>とき</rt></ruby>の+名词」省略式</b>——「の」把整个情境挂在名词上,省去动词。正文「あの<ruby>時<rt>とき</rt></ruby>の<ruby>方<rt>かた</rt></ruby>」=那时(帮我)的那位。<span class="eg">例:<ruby>昨日<rt>きのう</rt></ruby>の<ruby>件<rt>けん</rt></ruby>、ありがとうございました。(昨天那件事,谢谢您了。)</span></div>
+<div class="card"><b>③〜という<ruby>感<rt>かん</rt></ruby>じがします</b>——表主观印象“感觉像…”。正文「<ruby>初<rt>はじ</rt></ruby>めて<ruby>来<rt>き</rt></ruby>た<ruby>街<rt>まち</rt></ruby><b>という<ruby>感<rt>かん</rt></ruby>じがします</b>」。<span class="eg">例:<ruby>春<rt>はる</rt></ruby>が<ruby>来<rt>き</rt></ruby>た<b>という<ruby>感<rt>かん</rt></ruby>じがします</b>。(感觉春天来了。)</span></div>
+<div class="card"><b>④〜になる(<ruby>転勤<rt>てんきん</rt></ruby>になりました)</b>——非本人意志的安排、组织决定。<span class="eg">例:<ruby>来月<rt>らいげつ</rt></ruby>から<ruby>大阪<rt>おおさか</rt></ruby><ruby>勤務<rt>きんむ</rt></ruby><b>になりました</b>。(下个月起调去大阪工作了。)</span></div>
+<div class="card"><b>⑤すっかり vs ずいぶん</b>——すっかり=整体彻底变;ずいぶん=程度、数量大。正文9句/10句正好成对。<span class="eg">例:<ruby>病気<rt>びょうき</rt></ruby>は<b>すっかり</b><ruby>良<rt>よ</rt></ruby>くなりました。(病完全好了。)/<ruby>日本語<rt>にほんご</rt></ruby>が<b>ずいぶん</b><ruby>上手<rt>じょうず</rt></ruby>になりましたね。(日语进步了不少呢。)</span></div>
+<div class="card"><b>⑥〜についていけない</b>——「ついていく」的可能否定,“跟不上”。<span class="eg">例:<ruby>若<rt>わか</rt></ruby>い<ruby>人<rt>ひと</rt></ruby>の<ruby>流行<rt>りゅうこう</rt></ruby><b>についていけません</b>。(跟不上年轻人的流行。)</span></div>
+<div class="card"><b>⑦〜くらいです</b>——用夸张结果表程度。正文「ついていけない<b>くらいです</b>よ」。<span class="eg">例:<ruby>嬉<rt>うれ</rt></ruby>しくて、<ruby>泣<rt>な</rt></ruby>きたい<b>くらいです</b>。(高兴得快哭了。)</span></div>
+<div class="note">📌 版权说明:本页为私人日语学习页。正文会話与読解文均为按《新版中日交流标准日本语 中级》第1课的语法点与词汇范围<b>原创写作</b>的自写文,非教材原文;生词表与语法点条目为知识性内容,例句自造。仅供本人配合正版教材学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 标日中级伴学 第1课 · 朗读=Azure 神经语音 Keita(男声·田中さん/読解/生词)+ Nanami(女声·王さん)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent.c').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/k1s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.sent.r').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/k1r'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/k1w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>
