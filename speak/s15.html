@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>大声说日文 15 · 『友達と一緒に過ごした一日』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">初级</span>『<ruby>友達<rt>ともだち</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>過<rt>す</rt></ruby>ごした<ruby>一日<rt>いちにち</rt></ruby>』</h1>
+<div class="src">来源:Elsa の放送「跟我一起大聲說日文 #15」视频语音整理 · 初级口语短文 · 分类:生活/会话</div>
+<div class="guide">📖 <b>学习+背诵指引</b>:第一遍听整篇音频通读抓大意 → 第二遍逐句点读<b>大声跟读</b>、对照中文 → 第三遍关掉中文只读日文 → <b>第四遍(背诵)</b>连假名也关掉,看汉字原文出声背,卡壳就点那一句再听。</div>
+
+<audio controls preload="metadata" src="media/s15.mp3"></audio>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+
+<h2>本文(逐句中日对照 · 点句朗读)</h2>
+
+<span class="sent" data-jp="今日は友達と遊びに行きました。"><ruby>今日<rt>きょう</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>と<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>きました。<span class="zh">今天和朋友出去玩了。</span></span>
+
+<span class="sent" data-jp="お昼に遊ぶ時は、昼ご飯を食べて、">お<ruby>昼<rt>ひる</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>ぶ<ruby>時<rt>とき</rt></ruby>は、<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べて、<span class="zh">白天出去玩的时候,一般是先吃午饭,</span></span>
+
+<span class="sent" data-jp="ぶらぶらショッピングをして、カフェに行って、">ぶらぶらショッピングをして、カフェに<ruby>行<rt>い</rt></ruby>って、<span class="zh">再随便逛逛街、去咖啡店坐坐,</span></span>
+
+<span class="sent" data-jp="散歩するのがいつものコースです。"><ruby>散歩<rt>さんぽ</rt></ruby>するのがいつものコースです。<span class="zh">最后散散步——这就是我们固定的路线。</span></span>
+
+<span class="sent" data-jp="ブイログを撮りたくて、ついに自撮り棒を買いました。">ブイログを<ruby>撮<rt>と</rt></ruby>りたくて、ついに<ruby>自撮<rt>じど</rt></ruby>り<ruby>棒<rt>ぼう</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<span class="zh">因为想拍Vlog,终于买了自拍杆。</span></span>
+
+<span class="sent" data-jp="自分が自撮り棒を持つ日が来るなんて思わなかったです。"><ruby>自分<rt>じぶん</rt></ruby>が<ruby>自撮<rt>じど</rt></ruby>り<ruby>棒<rt>ぼう</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ<ruby>日<rt>ひ</rt></ruby>が<ruby>来<rt>く</rt></ruby>るなんて<ruby>思<rt>おも</rt></ruby>わなかったです。<span class="zh">真没想到自己也会有拿自拍杆的一天。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="過ごす">▶</button></td><td class="jp">過ごす</td><td>すごす</td><td>動Ⅰ</td><td>度过(时间)⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="遊びに行く">▶</button></td><td class="jp">遊びに行く</td><td>あそびにいく</td><td>慣用</td><td>去玩⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="お昼">▶</button></td><td class="jp">お昼</td><td>おひる</td><td>名</td><td>中午、午饭⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="昼ご飯">▶</button></td><td class="jp">昼ご飯</td><td>ひるごはん</td><td>名</td><td>午饭⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="ぶらぶら">▶</button></td><td class="jp">ぶらぶら</td><td>ぶらぶら</td><td>副</td><td>溜达、闲逛⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="ショッピング">▶</button></td><td class="jp">ショッピング</td><td>ショッピング</td><td>名·サ変</td><td>购物</td></tr>
+<tr><td><button class="spk" data-jp="カフェ">▶</button></td><td class="jp">カフェ</td><td>カフェ</td><td>名</td><td>咖啡店⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="散歩">▶</button></td><td class="jp">散歩</td><td>さんぽ</td><td>名·サ変</td><td>散步⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="いつもの">▶</button></td><td class="jp">いつもの</td><td>いつもの</td><td>連体</td><td>老一套的、一贯的⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="コース">▶</button></td><td class="jp">コース</td><td>コース</td><td>名</td><td>路线、流程</td></tr>
+<tr><td><button class="spk" data-jp="撮る">▶</button></td><td class="jp">撮る</td><td>とる</td><td>動Ⅰ</td><td>拍(照片/视频)⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="ついに">▶</button></td><td class="jp">ついに</td><td>ついに</td><td>副</td><td>终于⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="自撮り棒">▶</button></td><td class="jp">自撮り棒</td><td>じどりぼう</td><td>名</td><td>自拍杆</td></tr>
+<tr><td><button class="spk" data-jp="〜なんて">▶</button></td><td class="jp">〜なんて</td><td>〜なんて</td><td>副助</td><td>竟然…(表意外)⭐口语高频</td></tr>
+</table>
+
+<h2>语法(本文出现的语法点 · 例句自造)</h2>
+<div class="card"><b>①〜て、〜て、〜</b>(动作接续)——用「て形」把一连串动作串起来,是讲流水账最常用的说法。<span class="jp"><ruby>食<rt>た</rt></ruby>べ<b>て</b>、ショッピングをし<b>て</b>、カフェに<ruby>行<rt>い</rt></ruby>っ<b>て</b>、<ruby>散歩<rt>さんぽ</rt></ruby>する</span>。<span class="eg">例:<ruby>朝<rt>あさ</rt></ruby><ruby>起<rt>お</rt></ruby>き<b>て</b>、<ruby>顔<rt>かお</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>っ<b>て</b>、コーヒーを<ruby>飲<rt>の</rt></ruby>みます。(早上起床、洗脸、然后喝咖啡。)</span></div>
+<div class="card"><b>②〜のが+名詞</b>(把动作当名词用)——动词普通形+「の」名词化后当主语。<span class="jp"><ruby>散歩<rt>さんぽ</rt></ruby>する<b>のが</b>いつものコースです</span>=散步是我们固定的流程。<span class="eg">例:<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>む<b>のが</b><ruby>好<rt>す</rt></ruby>きです。(我喜欢看书。)</span></div>
+<div class="card"><b>③〜たくて</b>(因为想…所以)——「〜たい」的て形,后面接采取的行动。<span class="jp">ブイログを<ruby>撮<rt>と</rt></ruby>り<b>たくて</b>、<ruby>自撮<rt>じど</rt></ruby>り<ruby>棒<rt>ぼう</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました</span>。<span class="eg">例:<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>し<b>たくて</b>、<ruby>毎日<rt>まいにち</rt></ruby><ruby>練習<rt>れんしゅう</rt></ruby>しています。(因为想说日语,所以每天练。)</span></div>
+<div class="card"><b>④〜なんて</b>(竟然…)——表示意外、难以置信,口语里非常常用。<span class="jp"><ruby>持<rt>も</rt></ruby>つ<ruby>日<rt>ひ</rt></ruby>が<ruby>来<rt>く</rt></ruby>る<b>なんて</b><ruby>思<rt>おも</rt></ruby>わなかった</span>=没想到竟然会有这么一天。<span class="eg">例:<ruby>彼<rt>かれ</rt></ruby>が<ruby>来<rt>く</rt></ruby>る<b>なんて</b>びっくりしました。(他竟然来了,吓我一跳。)</span></div>
+
+<div class="note">📌 版权说明:本页为私人日语学习页,短文整理自 Elsa の放送「跟我一起大聲說日文 #15」视频语音(视频号 55ge8y-uaGI),尽量忠实还原;分句、假名注音、中文翻译、生词表与语法卡为学习管家用 AI 整理所加,仅供本人学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 大声说日文 15 · 朗读=Azure 神经语音 Keita(男声·整篇·逐句·生词全部真人级语音)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/e15s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/e15w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>

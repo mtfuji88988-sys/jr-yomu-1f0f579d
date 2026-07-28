@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>大声说日文 7 · 『猫の動画』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">初级</span>『<ruby>猫<rt>ねこ</rt></ruby>の<ruby>動画<rt>どうが</rt></ruby>』</h1>
+<div class="src">来源:Elsa の放送「跟我一起大聲說日文 #7」视频语音整理 · 初级口语短文 · 分类:生活/会话</div>
+<div class="guide">📖 <b>学习+背诵指引</b>:第一遍听整篇音频通读抓大意 → 第二遍逐句点读<b>大声跟读</b>、对照中文 → 第三遍关掉中文只出声读日文 → <b>第四遍(背诵)</b>连假名也关掉,看汉字原文出声背,卡壳就点那一句再听。</div>
+
+<audio controls preload="metadata" src="media/s7.mp3"></audio>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+
+<h2>本文(逐句中日对照 · 点句朗读)</h2>
+
+<span class="sent" data-jp="皆さんはYouTubeで何を見ますか。"><ruby>皆<rt>みな</rt></ruby>さんはYouTubeで<ruby>何<rt>なに</rt></ruby>を<ruby>見<rt>み</rt></ruby>ますか。<span class="zh">大家在YouTube上都看些什么?</span></span>
+
+<span class="sent" data-jp="私はよく猫の動画を見ます。"><ruby>私<rt>わたし</rt></ruby>はよく<ruby>猫<rt>ねこ</rt></ruby>の<ruby>動画<rt>どうが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます。<span class="zh">我经常看猫的视频。</span></span>
+
+<span class="sent" data-jp="猫を飼いたいですが、"><ruby>猫<rt>ねこ</rt></ruby>を<ruby>飼<rt>か</rt></ruby>いたいですが、<span class="zh">我很想养猫,</span></span>
+
+<span class="sent" data-jp="母は猫が好きじゃありません。"><ruby>母<rt>はは</rt></ruby>は<ruby>猫<rt>ねこ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きじゃありません。<span class="zh">可我妈妈不喜欢猫。</span></span>
+
+<span class="sent" data-jp="だから、私はYouTubeで猫の動画を見ています。">だから、<ruby>私<rt>わたし</rt></ruby>はYouTubeで<ruby>猫<rt>ねこ</rt></ruby>の<ruby>動画<rt>どうが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ています。<span class="zh">所以我就只能在YouTube上看猫。</span></span>
+
+<span class="sent" data-jp="YouTubeでは世界中の猫の動画が見られます。">YouTubeでは<ruby>世界中<rt>せかいじゅう</rt></ruby>の<ruby>猫<rt>ねこ</rt></ruby>の<ruby>動画<rt>どうが</rt></ruby>が<ruby>見<rt>み</rt></ruby>られます。<span class="zh">在YouTube上全世界的猫都看得到。</span></span>
+
+<span class="sent" data-jp="町にいる猫や公園にいる猫、"><ruby>町<rt>まち</rt></ruby>にいる<ruby>猫<rt>ねこ</rt></ruby>や<ruby>公園<rt>こうえん</rt></ruby>にいる<ruby>猫<rt>ねこ</rt></ruby>、<span class="zh">街上的猫、公园里的猫,</span></span>
+
+<span class="sent" data-jp="プールで泳いでいる猫なども見られます。">プールで<ruby>泳<rt>およ</rt></ruby>いでいる<ruby>猫<rt>ねこ</rt></ruby>なども<ruby>見<rt>み</rt></ruby>られます。<span class="zh">连在泳池里游泳的猫都能看到。</span></span>
+
+<span class="sent" data-jp="毎日たくさんの猫が見られて、私は幸せです。"><ruby>毎日<rt>まいにち</rt></ruby>たくさんの<ruby>猫<rt>ねこ</rt></ruby>が<ruby>見<rt>み</rt></ruby>られて、<ruby>私<rt>わたし</rt></ruby>は<ruby>幸<rt>しあわ</rt></ruby>せです。<span class="zh">每天能看到这么多猫,我很幸福。</span></span>
+
+<span class="sent" data-jp="でも、見るだけじゃなくて、ちゃんと触りたいので、">でも、<ruby>見<rt>み</rt></ruby>るだけじゃなくて、ちゃんと<ruby>触<rt>さわ</rt></ruby>りたいので、<span class="zh">不过光看还不够,我想实实在在摸一摸,</span></span>
+
+<span class="sent" data-jp="週末は猫カフェに行こうと思います。"><ruby>週末<rt>しゅうまつ</rt></ruby>は<ruby>猫<rt>ねこ</rt></ruby>カフェに<ruby>行<rt>い</rt></ruby>こうと<ruby>思<rt>おも</rt></ruby>います。<span class="zh">所以这周末打算去猫咖啡厅。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="猫">▶</button></td><td class="jp">猫</td><td>ねこ</td><td>名</td><td>猫⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="動画">▶</button></td><td class="jp">動画</td><td>どうが</td><td>名</td><td>视频⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="よく">▶</button></td><td class="jp">よく</td><td>よく</td><td>副</td><td>经常⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="飼う">▶</button></td><td class="jp">飼う</td><td>かう</td><td>动Ⅰ</td><td>饲养</td></tr>
+<tr><td><button class="spk" data-jp="母">▶</button></td><td class="jp">母</td><td>はは</td><td>名</td><td>(我)妈妈⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="世界中">▶</button></td><td class="jp">世界中</td><td>せかいじゅう</td><td>名</td><td>全世界</td></tr>
+<tr><td><button class="spk" data-jp="町">▶</button></td><td class="jp">町</td><td>まち</td><td>名</td><td>城镇、街上⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="公園">▶</button></td><td class="jp">公園</td><td>こうえん</td><td>名</td><td>公园⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="泳ぐ">▶</button></td><td class="jp">泳ぐ</td><td>およぐ</td><td>动Ⅰ</td><td>游泳</td></tr>
+<tr><td><button class="spk" data-jp="幸せ">▶</button></td><td class="jp">幸せ</td><td>しあわせ</td><td>形动</td><td>幸福⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="〜だけじゃなくて">▶</button></td><td class="jp">〜だけじゃなくて</td><td>だけじゃなくて</td><td>句型</td><td>不只是…⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="触る">▶</button></td><td class="jp">触る</td><td>さわる</td><td>动Ⅰ</td><td>摸、碰⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="週末">▶</button></td><td class="jp">週末</td><td>しゅうまつ</td><td>名</td><td>周末⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="猫カフェ">▶</button></td><td class="jp">猫カフェ</td><td>ねこカフェ</td><td>名</td><td>猫咖啡厅</td></tr>
+</table>
+
+<h2>语法(本文出现的语法点 · 例句自造)</h2>
+<div class="card"><b>①可能形「<ruby>見<rt>み</rt></ruby>られます」</b>(能看到)——Ⅱ类动词去る+られる。本文出现3次,是全篇的骨架。<br><span class="jp"><ruby>世界中<rt>せかいじゅう</rt></ruby>の<ruby>猫<rt>ねこ</rt></ruby>の<ruby>動画<rt>どうが</rt></ruby>が<b><ruby>見<rt>み</rt></ruby>られます</b></span>注意:可能句的宾语常用「が」。<span class="eg">例:ここでは<ruby>日本<rt>にほん</rt></ruby>の<ruby>番組<rt>ばんぐみ</rt></ruby>が<b><ruby>見<rt>み</rt></ruby>られます</b>。(在这儿能看到日本的节目。)</span></div>
+<div class="card"><b>②〜たいですが</b>(想…但是)——愿望和现实的落差,口语里天天用。<br><span class="jp"><ruby>猫<rt>ねこ</rt></ruby>を<ruby>飼<rt>か</rt></ruby>い<b>たいですが</b>、<ruby>母<rt>はは</rt></ruby>は…</span><span class="eg">例:<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>き<b>たいですが</b>、お<ruby>金<rt>かね</rt></ruby>がありません。(想去旅行,可是没钱。)</span></div>
+<div class="card"><b>③〜だけじゃなくて</b>(不只是…)——口语版的「〜だけでなく」,后面接更进一步的要求。<br><span class="jp"><ruby>見<rt>み</rt></ruby>る<b>だけじゃなくて</b>、<ruby>触<rt>さわ</rt></ruby>りたい</span><span class="eg">例:<ruby>読<rt>よ</rt></ruby>む<b>だけじゃなくて</b>、<ruby>声<rt>こえ</rt></ruby>に<ruby>出<rt>だ</rt></ruby>して<ruby>読<rt>よ</rt></ruby>みましょう。(不要光看,要出声念。)</span></div>
+<div class="card"><b>④〜ので(因为)</b>——比「から」柔和、客观,说明理由时更礼貌。<br><span class="jp"><ruby>触<rt>さわ</rt></ruby>りたい<b>ので</b>、<ruby>猫<rt>ねこ</rt></ruby>カフェに<ruby>行<rt>い</rt></ruby>きます</span><span class="eg">例:<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れた<b>ので</b>、<ruby>遅刻<rt>ちこく</rt></ruby>しました。(因为电车晚点,所以迟到了。)</span></div>
+<div class="card"><b>⑤〜(よ)うと<ruby>思<rt>おも</rt></ruby>います</b>(打算…)——比「〜たい」更接近已下决心的计划。<br><span class="jp"><ruby>行<rt>い</rt></ruby><b>こうと<ruby>思<rt>おも</rt></ruby>います</b></span><span class="eg">例:<ruby>来年<rt>らいねん</rt></ruby><ruby>日本<rt>にほん</rt></ruby>へ<ruby>留学<rt>りゅうがく</rt></ruby>し<b>ようと<ruby>思<rt>おも</rt></ruby>います</b>。(我打算明年去日本留学。)</span></div>
+
+<div class="note">📌 版权说明:本页为私人日语学习页,短文整理自 Elsa の放送「跟我一起大聲說日文 #7」视频语音(视频号 3Q8gtU4ZE7o),尽量忠实还原;分句、假名注音、中文翻译、生词表与语法卡为学习管家用 AI 整理所加,仅供本人学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 大声说日文 7 · 朗读=Azure 神经语音 Keita(男声·整篇·逐句·生词全部真人级语音)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/e7s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/e7w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>

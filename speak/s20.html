@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>大声说日文 20 · 『休日の一日』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">初级</span>『<ruby>休日<rt>きゅうじつ</rt></ruby>の<ruby>一日<rt>いちにち</rt></ruby>』</h1>
+<div class="src">来源:Elsa の放送「跟我一起大聲說日文 #20」视频语音整理 · 初级口语短文 · 分类:生活/会话</div>
+<div class="guide">📖 <b>学习+背诵指引</b>:第一遍听整篇音频通读抓大意 → 第二遍逐句点读<b>大声跟读</b>、对照中文 → 第三遍关掉中文只读日文 → <b>第四遍(背诵)</b>连假名也关掉,看汉字原文出声背,卡壳就点那一句再听。</div>
+
+<audio controls preload="metadata" src="media/s20.mp3"></audio>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+
+<h2>本文(逐句中日对照 · 点句朗读)</h2>
+
+<span class="sent" data-jp="今日は特に用事がないので、遅くまで寝てました。"><ruby>今日<rt>きょう</rt></ruby>は<ruby>特<rt>とく</rt></ruby>に<ruby>用事<rt>ようじ</rt></ruby>がないので、<ruby>遅<rt>おそ</rt></ruby>くまで<ruby>寝<rt>ね</rt></ruby>てました。<span class="zh">今天没什么特别的事,就睡到很晚。</span></span>
+
+<span class="sent" data-jp="その後、Netflixでハリーポッターを見ていました。">その<ruby>後<rt>あと</rt></ruby>、Netflixでハリーポッターを<ruby>見<rt>み</rt></ruby>ていました。<span class="zh">之后一直在Netflix上看《哈利波特》。</span></span>
+
+<span class="sent" data-jp="たぶん15年ぶりにハリーポッターと賢者の石を見たのですが、">たぶん15<ruby>年<rt>ねん</rt></ruby>ぶりにハリーポッターと<ruby>賢者<rt>けんじゃ</rt></ruby>の<ruby>石<rt>いし</rt></ruby>を<ruby>見<rt>み</rt></ruby>たのですが、<span class="zh">《哈利波特与魔法石》大概时隔15年才又看一遍,</span></span>
+
+<span class="sent" data-jp="面白くて、この後全シリーズを見たいと思いました。"><ruby>面白<rt>おもしろ</rt></ruby>くて、この<ruby>後<rt>あと</rt></ruby><ruby>全<rt>ぜん</rt></ruby>シリーズを<ruby>見<rt>み</rt></ruby>たいと<ruby>思<rt>おも</rt></ruby>いました。<span class="zh">太好看了,接下来想把整个系列都刷完。</span></span>
+
+<span class="sent" data-jp="さっき夕飯にビビンバを食べました。">さっき<ruby>夕飯<rt>ゆうはん</rt></ruby>にビビンバを<ruby>食<rt>た</rt></ruby>べました。<span class="zh">刚才晚饭吃了石锅拌饭。</span></span>
+
+<span class="sent" data-jp="熱々だけど、ヘルシーな感じでした。"><ruby>熱々<rt>あつあつ</rt></ruby>だけど、ヘルシーな<ruby>感<rt>かん</rt></ruby>じでした。<span class="zh">烫得不行,不过感觉挺健康。</span></span>
+
+<span class="sent" data-jp="これからお風呂入って、ハリーポッターを見たいと思います。">これからお<ruby>風呂<rt>ふろ</rt></ruby><ruby>入<rt>はい</rt></ruby>って、ハリーポッターを<ruby>見<rt>み</rt></ruby>たいと<ruby>思<rt>おも</rt></ruby>います。<span class="zh">接下来打算泡个澡,再接着看《哈利波特》。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="休日">▶</button></td><td class="jp">休日</td><td>きゅうじつ</td><td>名</td><td>休息日⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="特に">▶</button></td><td class="jp">特に</td><td>とくに</td><td>副</td><td>特别、尤其⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="用事">▶</button></td><td class="jp">用事</td><td>ようじ</td><td>名</td><td>要办的事⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="遅くまで">▶</button></td><td class="jp">遅くまで</td><td>おそくまで</td><td>連語</td><td>到很晚⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="その後">▶</button></td><td class="jp">その後</td><td>そのあと</td><td>連語</td><td>之后⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="〜年ぶり">▶</button></td><td class="jp">〜年ぶり</td><td>〜ねんぶり</td><td>接尾</td><td>时隔…年⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="賢者">▶</button></td><td class="jp">賢者</td><td>けんじゃ</td><td>名</td><td>贤者、智者</td></tr>
+<tr><td><button class="spk" data-jp="面白い">▶</button></td><td class="jp">面白い</td><td>おもしろい</td><td>形</td><td>有趣、好看⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="シリーズ">▶</button></td><td class="jp">シリーズ</td><td>シリーズ</td><td>名</td><td>系列</td></tr>
+<tr><td><button class="spk" data-jp="さっき">▶</button></td><td class="jp">さっき</td><td>さっき</td><td>副</td><td>刚才⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="夕飯">▶</button></td><td class="jp">夕飯</td><td>ゆうはん</td><td>名</td><td>晚饭⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="ビビンバ">▶</button></td><td class="jp">ビビンバ</td><td>ビビンバ</td><td>名</td><td>石锅拌饭⭐点餐高频</td></tr>
+<tr><td><button class="spk" data-jp="熱々">▶</button></td><td class="jp">熱々</td><td>あつあつ</td><td>形動</td><td>滚烫⭐点餐高频</td></tr>
+<tr><td><button class="spk" data-jp="ヘルシー">▶</button></td><td class="jp">ヘルシー</td><td>ヘルシー</td><td>形動</td><td>健康的⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="お風呂に入る">▶</button></td><td class="jp">お風呂に入る</td><td>おふろにはいる</td><td>慣用</td><td>洗澡、泡澡⭐生活必备</td></tr>
+</table>
+
+<h2>语法(本文出现的语法点 · 例句自造)</h2>
+<div class="card"><b>①〜ので</b>(因为…)——本文<span class="jp"><ruby>用事<rt>ようじ</rt></ruby>がない<b>ので</b>、<ruby>遅<rt>おそ</rt></ruby>くまで<ruby>寝<rt>ね</rt></ruby>てました</span>。名词·形容动词接续要用「〜な<b>ので</b>」。<span class="eg">例:<ruby>休<rt>やす</rt></ruby>み<b>なので</b>、どこにも<ruby>行<rt>い</rt></ruby>きません。(因为放假,哪儿也不去。)</span></div>
+<div class="card"><b>②〜ぶりに</b>(时隔…)——数量词+ぶり,强调间隔了多久。<span class="jp">15<ruby>年<rt>ねん</rt></ruby><b>ぶりに</b><ruby>見<rt>み</rt></ruby>ました</span>=隔了15年又看了一次。<span class="eg">例:3<ruby>年<rt>ねん</rt></ruby><b>ぶりに</b><ruby>国<rt>くに</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>ります。(时隔三年回国。)</span></div>
+<div class="card"><b>③〜のですが</b>(…,不过/铺垫)——先说明情况再往下讲,是很自然的日语过渡。<span class="jp"><ruby>見<rt>み</rt></ruby>た<b>のですが</b>、<ruby>面白<rt>おもしろ</rt></ruby>くて〜</span>。<span class="eg">例:<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>している<b>のですが</b>、まだ<ruby>下手<rt>へた</rt></ruby>です。(我在学日语,不过还很差。)</span></div>
+<div class="card"><b>④〜たいと<ruby>思<rt>おも</rt></ruby>います</b>(我想…、打算…)——比单说「〜たい」委婉,宣布计划时常用。<span class="jp"><ruby>見<rt>み</rt></ruby><b>たいと<ruby>思<rt>おも</rt></ruby>います</b></span>。<span class="eg">例:<ruby>来年<rt>らいねん</rt></ruby><ruby>日本<rt>にほん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>き<b>たいと<ruby>思<rt>おも</rt></ruby>います</b>。(我打算明年去日本。)</span></div>
+<div class="card"><b>⑤〜だけど</b>(虽然…但)——「ですが」的口语版,接在简体后面。<span class="jp"><ruby>熱々<rt>あつあつ</rt></ruby><b>だけど</b>、ヘルシーな<ruby>感<rt>かん</rt></ruby>じでした</span>。<span class="eg">例:<ruby>高<rt>たか</rt></ruby>い<b>けど</b>、<ruby>買<rt>か</rt></ruby>います。(虽然贵,还是买。)</span></div>
+
+<div class="note">📌 版权说明:本页为私人日语学习页,短文整理自 Elsa の放送「跟我一起大聲說日文 #20」视频语音(视频号 ULxTUMhN6aI),尽量忠实还原;分句、假名注音、中文翻译、生词表与语法卡为学习管家用 AI 整理所加,仅供本人学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 大声说日文 20 · 朗读=Azure 神经语音 Keita(男声·整篇·逐句·生词全部真人级语音)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/e20s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/e20w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>

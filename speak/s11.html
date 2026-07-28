@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>大声说日文 11 · 『魚と野菜』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">初级</span>『<ruby>魚<rt>さかな</rt></ruby>と<ruby>野菜<rt>やさい</rt></ruby>』</h1>
+<div class="src">来源:Elsa の放送「跟我一起大聲說日文 #11」视频语音整理 · 初级口语短文 · 分类:生活/会话</div>
+<div class="guide">📖 <b>学习+背诵指引</b>:第一遍听整篇音频通读抓大意 → 第二遍逐句点读<b>大声跟读</b>、对照中文 → 第三遍关掉中文只出声读日文 → <b>第四遍(背诵)</b>连假名也关掉,看汉字原文出声背,卡壳就点那一句再听。</div>
+
+<audio controls preload="metadata" src="media/s11.mp3"></audio>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+
+<h2>本文(逐句中日对照 · 点句朗读)</h2>
+
+<span class="sent" data-jp="最近、私は食べるものを変えました。"><ruby>最近<rt>さいきん</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>食<rt>た</rt></ruby>べるものを<ruby>変<rt>か</rt></ruby>えました。<span class="zh">最近我把吃的东西换掉了。</span></span>
+
+<span class="sent" data-jp="以前はハンバーガーやコーラなどばかりでした。"><ruby>以前<rt>いぜん</rt></ruby>はハンバーガーやコーラなどばかりでした。<span class="zh">以前净是汉堡、可乐之类的。</span></span>
+
+<span class="sent" data-jp="ファストフードが大好きでした。">ファストフードが<ruby>大好<rt>だいす</rt></ruby>きでした。<span class="zh">我超爱快餐。</span></span>
+
+<span class="sent" data-jp="油や甘いものが大好きでした。"><ruby>油<rt>あぶら</rt></ruby>や<ruby>甘<rt>あま</rt></ruby>いものが<ruby>大好<rt>だいす</rt></ruby>きでした。<span class="zh">油腻的、甜的东西也爱得不行。</span></span>
+
+<span class="sent" data-jp="でも、だんだん太ってきてしまいました。">でも、だんだん<ruby>太<rt>ふと</rt></ruby>ってきてしまいました。<span class="zh">可结果人就一点点胖起来了。</span></span>
+
+<span class="sent" data-jp="だから、最近は魚や野菜を食べています。">だから、<ruby>最近<rt>さいきん</rt></ruby>は<ruby>魚<rt>さかな</rt></ruby>や<ruby>野菜<rt>やさい</rt></ruby>を<ruby>食<rt>た</rt></ruby>べています。<span class="zh">所以最近我改吃鱼和蔬菜。</span></span>
+
+<span class="sent" data-jp="毎日自分で料理をしています。"><ruby>毎日<rt>まいにち</rt></ruby><ruby>自分<rt>じぶん</rt></ruby>で<ruby>料理<rt>りょうり</rt></ruby>をしています。<span class="zh">每天都自己做饭。</span></span>
+
+<span class="sent" data-jp="朝、お弁当も作っています。"><ruby>朝<rt>あさ</rt></ruby>、お<ruby>弁当<rt>べんとう</rt></ruby>も<ruby>作<rt>つく</rt></ruby>っています。<span class="zh">早上还顺手做个便当。</span></span>
+
+<span class="sent" data-jp="少し痩せてきましたし、"><ruby>少<rt>すこ</rt></ruby>し<ruby>痩<rt>や</rt></ruby>せてきましたし、<span class="zh">人瘦下来一点了,</span></span>
+
+<span class="sent" data-jp="食費もかからなくなりました。"><ruby>食費<rt>しょくひ</rt></ruby>もかからなくなりました。<span class="zh">伙食费也省了。</span></span>
+
+<span class="sent" data-jp="食事を変えたら、いいことがたくさんありました。"><ruby>食事<rt>しょくじ</rt></ruby>を<ruby>変<rt>か</rt></ruby>えたら、いいことがたくさんありました。<span class="zh">一改饮食,好事就来了一大堆。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="野菜">▶</button></td><td class="jp">野菜</td><td>やさい</td><td>名</td><td>蔬菜⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="以前">▶</button></td><td class="jp">以前</td><td>いぜん</td><td>名·副</td><td>以前</td></tr>
+<tr><td><button class="spk" data-jp="ハンバーガー">▶</button></td><td class="jp">ハンバーガー</td><td>ハンバーガー</td><td>名</td><td>汉堡⭐点餐必备</td></tr>
+<tr><td><button class="spk" data-jp="〜ばかり">▶</button></td><td class="jp">〜ばかり</td><td>ばかり</td><td>助</td><td>净是…、老是…⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="ファストフード">▶</button></td><td class="jp">ファストフード</td><td>ファストフード</td><td>名</td><td>快餐</td></tr>
+<tr><td><button class="spk" data-jp="油">▶</button></td><td class="jp">油</td><td>あぶら</td><td>名</td><td>油</td></tr>
+<tr><td><button class="spk" data-jp="甘い">▶</button></td><td class="jp">甘い</td><td>あまい</td><td>形</td><td>甜⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="だんだん">▶</button></td><td class="jp">だんだん</td><td>だんだん</td><td>副</td><td>渐渐地⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="太る">▶</button></td><td class="jp">太る</td><td>ふとる</td><td>动Ⅰ</td><td>发胖⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="痩せる">▶</button></td><td class="jp">痩せる</td><td>やせる</td><td>动Ⅱ</td><td>变瘦⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="自分で">▶</button></td><td class="jp">自分で</td><td>じぶんで</td><td>词组</td><td>自己动手⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="お弁当">▶</button></td><td class="jp">お弁当</td><td>おべんとう</td><td>名</td><td>便当⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="食費">▶</button></td><td class="jp">食費</td><td>しょくひ</td><td>名</td><td>伙食费⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="かかる">▶</button></td><td class="jp">かかる</td><td>かかる</td><td>动Ⅰ</td><td>花费(钱、时间)⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="食事">▶</button></td><td class="jp">食事</td><td>しょくじ</td><td>名·サ変</td><td>饮食、吃饭⭐生活高频</td></tr>
+</table>
+
+<h2>语法(本文出现的语法点 · 例句自造)</h2>
+<div class="card"><b>①〜てきました</b>(逐渐变得…)——变化从过去持续到现在,常和「だんだん・<ruby>少<rt>すこ</rt></ruby>し」搭配。<br><span class="jp"><ruby>太<rt>ふと</rt></ruby>っ<b>てきて</b>/<ruby>痩<rt>や</rt></ruby>せ<b>てきました</b></span><span class="eg">例:<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かっ<b>てきました</b>。(日语渐渐听得懂了。)</span></div>
+<div class="card"><b>②〜てしまいました</b>(不小心…了/遗憾)——本文和「<ruby>太<rt>ふと</rt></ruby>る」连用,把「胖了」说得又懊恼又好笑。<span class="eg">例:ケーキを<ruby>全部<rt>ぜんぶ</rt></ruby><ruby>食<rt>た</rt></ruby>べ<b>てしまいました</b>。(不小心把蛋糕全吃光了。)</span></div>
+<div class="card"><b>③〜ばかり</b>(净是…)——表示只有这一类,带「太偏了」的负面语气。<br><span class="jp">ハンバーガーやコーラなど<b>ばかり</b>でした</span><span class="eg">例:<ruby>弟<rt>おとうと</rt></ruby>はゲーム<b>ばかり</b>しています。(弟弟成天就知道打游戏。)</span></div>
+<div class="card"><b>④〜し(并列理由)</b>——列出好几条理由,暗示「还不止这些」。<br><span class="jp"><ruby>痩<rt>や</rt></ruby>せてきました<b>し</b>、<ruby>食費<rt>しょくひ</rt></ruby>もかからなくなりました</span><span class="eg">例:この<ruby>店<rt>みせ</rt></ruby>は<ruby>安<rt>やす</rt></ruby>い<b>し</b>、<ruby>美味<rt>おい</rt></ruby>しいです。(这店又便宜又好吃。)</span></div>
+<div class="card"><b>⑤〜たら</b>(如果…就/…之后发现)——本文是「一改变就发现好处很多」,属于「たら」的发现用法。<br><span class="jp"><ruby>食事<rt>しょくじ</rt></ruby>を<ruby>変<rt>か</rt></ruby>え<b>たら</b>、いいことがたくさんありました</span><span class="eg">例:<ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>け<b>たら</b>、<ruby>雪<rt>ゆき</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っていました。(打开窗一看,外面在下雪。)</span></div>
+
+<div class="note">📌 版权说明:本页为私人日语学习页,短文整理自 Elsa の放送「跟我一起大聲說日文 #11」视频语音(视频号 44hM1Gdc2ho),尽量忠实还原;分句、假名注音、中文翻译、生词表与语法卡为学习管家用 AI 整理所加,仅供本人学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 大声说日文 11 · 朗读=Azure 神经语音 Keita(男声·整篇·逐句·生词全部真人级语音)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/e11s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/e11w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>

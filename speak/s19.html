@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>大声说日文 19 · 『有意義な一日』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">初级</span>『<ruby>有意義<rt>ゆういぎ</rt></ruby>な<ruby>一日<rt>いちにち</rt></ruby>』</h1>
+<div class="src">来源:Elsa の放送「跟我一起大聲說日文 #19」视频语音整理 · 初级口语短文 · 分类:生活/会话</div>
+<div class="guide">📖 <b>学习+背诵指引</b>:第一遍听整篇音频通读抓大意 → 第二遍逐句点读<b>大声跟读</b>、对照中文 → 第三遍关掉中文只读日文 → <b>第四遍(背诵)</b>连假名也关掉,看汉字原文出声背,卡壳就点那一句再听。</div>
+
+<audio controls preload="metadata" src="media/s19.mp3"></audio>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+
+<h2>本文(逐句中日对照 · 点句朗读)</h2>
+
+<span class="sent" data-jp="今日は会社の先輩とドライブに行ってきました。"><ruby>今日<rt>きょう</rt></ruby>は<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>先輩<rt>せんぱい</rt></ruby>とドライブに<ruby>行<rt>い</rt></ruby>ってきました。<span class="zh">今天和公司的前辈开车兜风去了。</span></span>
+
+<span class="sent" data-jp="お昼に天丼を食べました。">お<ruby>昼<rt>ひる</rt></ruby>に<ruby>天丼<rt>てんどん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べました。<span class="zh">中午吃了天妇罗盖饭。</span></span>
+
+<span class="sent" data-jp="小盛りにしたけど、結構お腹いっぱいでした。"><ruby>小盛<rt>こも</rt></ruby>りにしたけど、<ruby>結構<rt>けっこう</rt></ruby>お<ruby>腹<rt>なか</rt></ruby>いっぱいでした。<span class="zh">虽然点的是小份,还是吃得挺饱。</span></span>
+
+<span class="sent" data-jp="天ぷらといえば、エビの天ぷらが好きです。"><ruby>天<rt>てん</rt></ruby>ぷらといえば、エビの<ruby>天<rt>てん</rt></ruby>ぷらが<ruby>好<rt>す</rt></ruby>きです。<span class="zh">说到天妇罗,我最喜欢炸虾。</span></span>
+
+<span class="sent" data-jp="天丼超おいしかったし、誰もいない海はめちゃくちゃ綺麗だった。"><ruby>天丼<rt>てんどん</rt></ruby><ruby>超<rt>ちょう</rt></ruby>おいしかったし、<ruby>誰<rt>だれ</rt></ruby>もいない<ruby>海<rt>うみ</rt></ruby>はめちゃくちゃ<ruby>綺麗<rt>きれい</rt></ruby>だった。<span class="zh">天丼超好吃,而且空无一人的海边美得不行。</span></span>
+
+<span class="sent" data-jp="すごく有意義な一日でした。">すごく<ruby>有意義<rt>ゆういぎ</rt></ruby>な<ruby>一日<rt>いちにち</rt></ruby>でした。<span class="zh">真是非常有意义的一天。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="有意義">▶</button></td><td class="jp">有意義</td><td>ゆういぎ</td><td>形動</td><td>有意义</td></tr>
+<tr><td><button class="spk" data-jp="先輩">▶</button></td><td class="jp">先輩</td><td>せんぱい</td><td>名</td><td>前辈、老同事⭐职场高频</td></tr>
+<tr><td><button class="spk" data-jp="ドライブ">▶</button></td><td class="jp">ドライブ</td><td>ドライブ</td><td>名·サ変</td><td>兜风、开车出游⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="天丼">▶</button></td><td class="jp">天丼</td><td>てんどん</td><td>名</td><td>天妇罗盖饭⭐点餐高频</td></tr>
+<tr><td><button class="spk" data-jp="小盛り">▶</button></td><td class="jp">小盛り</td><td>こもり</td><td>名</td><td>小份⭐点餐高频</td></tr>
+<tr><td><button class="spk" data-jp="結構">▶</button></td><td class="jp">結構</td><td>けっこう</td><td>副</td><td>相当、挺⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="お腹いっぱい">▶</button></td><td class="jp">お腹いっぱい</td><td>おなかいっぱい</td><td>慣用</td><td>吃饱了⭐点餐必备</td></tr>
+<tr><td><button class="spk" data-jp="〜といえば">▶</button></td><td class="jp">〜といえば</td><td>〜といえば</td><td>連語</td><td>说到…⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="エビ">▶</button></td><td class="jp">エビ</td><td>エビ</td><td>名</td><td>虾⭐点餐高频</td></tr>
+<tr><td><button class="spk" data-jp="超">▶</button></td><td class="jp">超</td><td>ちょう</td><td>接頭</td><td>超、非常(口语)⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="めちゃくちゃ">▶</button></td><td class="jp">めちゃくちゃ</td><td>めちゃくちゃ</td><td>副</td><td>超级、非常(口语)⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="綺麗">▶</button></td><td class="jp">綺麗</td><td>きれい</td><td>形動</td><td>漂亮、干净⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="すごく">▶</button></td><td class="jp">すごく</td><td>すごく</td><td>副</td><td>非常⭐口语高频</td></tr>
+</table>
+
+<h2>语法(本文出现的语法点 · 例句自造)</h2>
+<div class="card"><b>①〜に<ruby>行<rt>い</rt></ruby>ってきました</b>(去…了一趟回来)——「行ってくる」强调去了又回来,日记体常用。<span class="jp">ドライブ<b>に<ruby>行<rt>い</rt></ruby>ってきました</b></span>。<span class="eg">例:コンビニ<b>に<ruby>行<rt>い</rt></ruby>ってきます</b>。(我去趟便利店就回来。)</span></div>
+<div class="card"><b>②〜にする</b>(选定为…)——点餐、做选择的固定说法。<span class="jp"><ruby>小盛<rt>こも</rt></ruby>り<b>にした</b>けど</span>=(饭量)选了小份。<span class="eg">例:<ruby>私<rt>わたし</rt></ruby>はコーヒー<b>にします</b>。(我要咖啡。)</span></div>
+<div class="card"><b>③〜といえば</b>(说到…)——顺着话题引出自己的联想。<span class="jp"><ruby>天<rt>てん</rt></ruby>ぷら<b>といえば</b>、エビの<ruby>天<rt>てん</rt></ruby>ぷらが<ruby>好<rt>す</rt></ruby>きです</span>。<span class="eg">例:<ruby>日本<rt>にほん</rt></ruby><b>といえば</b>、<ruby>富士山<rt>ふじさん</rt></ruby>ですね。(说到日本,就想到富士山。)</span></div>
+<div class="card"><b>④〜し(列举)</b>——并列若干理由或好处,后面常省略结论。<span class="jp">おいしかった<b>し</b>、<ruby>海<rt>うみ</rt></ruby>は<ruby>綺麗<rt>きれい</rt></ruby>だった</span>=又好吃、海又漂亮。<span class="eg">例:<ruby>安<rt>やす</rt></ruby>い<b>し</b>、<ruby>近<rt>ちか</rt></ruby>い<b>し</b>、この<ruby>店<rt>みせ</rt></ruby>が<ruby>一番<rt>いちばん</rt></ruby>です。(又便宜又近,这家店最好。)</span></div>
+
+<div class="note">📌 版权说明:本页为私人日语学习页,短文整理自 Elsa の放送「跟我一起大聲說日文 #19」视频语音(视频号 8fOz15HzUV0),尽量忠实还原;分句、假名注音、中文翻译、生词表与语法卡为学习管家用 AI 整理所加,仅供本人学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 大声说日文 19 · 朗读=Azure 神经语音 Keita(男声·整篇·逐句·生词全部真人级语音)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/e19s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/e19w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>

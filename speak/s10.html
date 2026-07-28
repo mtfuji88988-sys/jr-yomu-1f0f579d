@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>大声说日文 10 · 『お昼休みはマクドナルドへ』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">初级</span>『お<ruby>昼休<rt>ひるやす</rt></ruby>みはマクドナルドへ』</h1>
+<div class="src">来源:Elsa の放送「跟我一起大聲說日文 #10」视频语音整理 · 初级口语短文 · 分类:生活/会话</div>
+<div class="guide">📖 <b>学习+背诵指引</b>:第一遍听整篇音频通读抓大意 → 第二遍逐句点读<b>大声跟读</b>、对照中文 → 第三遍关掉中文只出声读日文 → <b>第四遍(背诵)</b>连假名也关掉,看汉字原文出声背,卡壳就点那一句再听。</div>
+
+<audio controls preload="metadata" src="media/s10.mp3"></audio>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+
+<h2>本文(逐句中日对照 · 点句朗读)</h2>
+
+<span class="sent" data-jp="会社の昼休みには、よくマクドナルドに行きます。"><ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>昼休<rt>ひるやす</rt></ruby>みには、よくマクドナルドに<ruby>行<rt>い</rt></ruby>きます。<span class="zh">公司午休时,我常去麦当劳。</span></span>
+
+<span class="sent" data-jp="会社から歩いて1分くらいのところにあります。"><ruby>会社<rt>かいしゃ</rt></ruby>から<ruby>歩<rt>ある</rt></ruby>いて<ruby>1分<rt>いっぷん</rt></ruby>くらいのところにあります。<span class="zh">它就在离公司走路一分钟左右的地方。</span></span>
+
+<span class="sent" data-jp="私はいつもビッグマックのセットを注文しています。"><ruby>私<rt>わたし</rt></ruby>はいつもビッグマックのセットを<ruby>注文<rt>ちゅうもん</rt></ruby>しています。<span class="zh">我固定点巨无霸套餐。</span></span>
+
+<span class="sent" data-jp="セットの飲み物はコーヒーにしています。">セットの<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>はコーヒーにしています。<span class="zh">套餐里的饮料我一律选咖啡。</span></span>
+
+<span class="sent" data-jp="コーヒーを飲むと、午後の仕事は眠くならないからです。">コーヒーを<ruby>飲<rt>の</rt></ruby>むと、<ruby>午後<rt>ごご</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>は<ruby>眠<rt>ねむ</rt></ruby>くならないからです。<span class="zh">因为喝了咖啡,下午干活就不犯困。</span></span>
+
+<span class="sent" data-jp="最近のマクドナルドはテーブルにコンセントもついていますから、"><ruby>最近<rt>さいきん</rt></ruby>のマクドナルドはテーブルにコンセントもついていますから、<span class="zh">现在的麦当劳桌上还带插座,</span></span>
+
+<span class="sent" data-jp="スマホの充電もできて、とても便利です。">スマホの<ruby>充電<rt>じゅうでん</rt></ruby>もできて、とても<ruby>便利<rt>べんり</rt></ruby>です。<span class="zh">手机也能顺便充电,太方便了。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="昼休み">▶</button></td><td class="jp">昼休み</td><td>ひるやすみ</td><td>名</td><td>午休⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="会社">▶</button></td><td class="jp">会社</td><td>かいしゃ</td><td>名</td><td>公司⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="マクドナルド">▶</button></td><td class="jp">マクドナルド</td><td>マクドナルド</td><td>名</td><td>麦当劳</td></tr>
+<tr><td><button class="spk" data-jp="歩く">▶</button></td><td class="jp">歩く</td><td>あるく</td><td>动Ⅰ</td><td>走路⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="〜くらい">▶</button></td><td class="jp">〜くらい</td><td>くらい</td><td>助</td><td>大约…⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="ところ">▶</button></td><td class="jp">ところ</td><td>ところ</td><td>名</td><td>地方⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="セット">▶</button></td><td class="jp">セット</td><td>セット</td><td>名</td><td>套餐⭐点餐必备</td></tr>
+<tr><td><button class="spk" data-jp="注文">▶</button></td><td class="jp">注文</td><td>ちゅうもん</td><td>名·サ変</td><td>点单、订购⭐点餐必备</td></tr>
+<tr><td><button class="spk" data-jp="飲み物">▶</button></td><td class="jp">飲み物</td><td>のみもの</td><td>名</td><td>饮料⭐点餐必备</td></tr>
+<tr><td><button class="spk" data-jp="午後">▶</button></td><td class="jp">午後</td><td>ごご</td><td>名</td><td>下午⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="眠い">▶</button></td><td class="jp">眠い</td><td>ねむい</td><td>形</td><td>困⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="コンセント">▶</button></td><td class="jp">コンセント</td><td>コンセント</td><td>名</td><td>插座⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="充電">▶</button></td><td class="jp">充電</td><td>じゅうでん</td><td>名·サ変</td><td>充电⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="便利">▶</button></td><td class="jp">便利</td><td>べんり</td><td>形动</td><td>方便⭐口语高频</td></tr>
+</table>
+
+<h2>语法(本文出现的语法点 · 例句自造)</h2>
+<div class="card"><b>①〜にしています</b>(固定选…)——「〜にする」是从选项里挑一个,加上「ています」就成了长期的习惯。<br><span class="jp"><ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>はコーヒー<b>にしています</b></span><span class="eg">例:<ruby>私<rt>わたし</rt></ruby>はいつも<ruby>窓側<rt>まどがわ</rt></ruby>の<ruby>席<rt>せき</rt></ruby><b>にしています</b>。(我总是选靠窗的座位。)</span></div>
+<div class="card"><b>②〜と(一…就…)</b>——前项成立必然导致后项,讲道理、讲规律时用。<br><span class="jp">コーヒーを<ruby>飲<rt>の</rt></ruby>む<b>と</b>、<ruby>眠<rt>ねむ</rt></ruby>くならない</span><span class="eg">例:<ruby>春<rt>はる</rt></ruby>になる<b>と</b>、<ruby>桜<rt>さくら</rt></ruby>が<ruby>咲<rt>さ</rt></ruby>きます。(一到春天樱花就开。)</span></div>
+<div class="card"><b>③〜くらい / 〜ところにあります</b>(大概…的地方)——说位置的万能公式:<ruby>歩<rt>ある</rt></ruby>いて+时间+くらいのところにあります。<span class="eg">例:<ruby>駅<rt>えき</rt></ruby>は<ruby>家<rt>いえ</rt></ruby>から<ruby>歩<rt>ある</rt></ruby>いて<ruby>5分<rt>ごふん</rt></ruby><b>くらいのところにあります</b>。(车站离家走路大概5分钟。)</span></div>
+<div class="card"><b>④〜ています(状态)</b>——「ついています」不是正在装,是「(已经)装着」的状态。这类自动词+ています表示眼前的状态。<span class="eg">例:<ruby>窓<rt>まど</rt></ruby>が<ruby>開<rt>あ</rt></ruby>い<b>ています</b>。(窗户开着。)</span></div>
+<div class="card"><b>⑤〜くならない</b>(不会变…)——い形容词去い+くなる的否定形,本文用来说咖啡的效果。<span class="eg">例:このお<ruby>店<rt>みせ</rt></ruby>は<ruby>夜<rt>よる</rt></ruby>も<ruby>高<rt>たか</rt></ruby>く<b>ならない</b>です。(这家店晚上也不涨价。)</span></div>
+
+<div class="note">📌 版权说明:本页为私人日语学习页,短文整理自 Elsa の放送「跟我一起大聲說日文 #10」视频语音(视频号 CBh5i8w7UMg),尽量忠实还原;分句、假名注音、中文翻译、生词表与语法卡为学习管家用 AI 整理所加,仅供本人学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 大声说日文 10 · 朗读=Azure 神经语音 Keita(男声·整篇·逐句·生词全部真人级语音)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/e10s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/e10w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>

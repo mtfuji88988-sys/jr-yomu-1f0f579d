@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>大声说日文 12 · 『朝の時間』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">初级</span>『<ruby>朝<rt>あさ</rt></ruby>の<ruby>時間<rt>じかん</rt></ruby>』</h1>
+<div class="src">来源:Elsa の放送「跟我一起大聲說日文 #12」视频语音整理 · 初级口语短文 · 分类:生活/会话</div>
+<div class="guide">📖 <b>学习+背诵指引</b>:第一遍听整篇音频通读抓大意 → 第二遍逐句点读<b>大声跟读</b>、对照中文 → 第三遍关掉中文只出声读日文 → <b>第四遍(背诵)</b>连假名也关掉,看汉字原文出声背,卡壳就点那一句再听。</div>
+
+<audio controls preload="metadata" src="media/s12.mp3"></audio>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+
+<h2>本文(逐句中日对照 · 点句朗读)</h2>
+
+<span class="sent" data-jp="ここ最近の半年間は、">ここ<ruby>最近<rt>さいきん</rt></ruby>の<ruby>半年間<rt>はんとしかん</rt></ruby>は、<span class="zh">最近这半年,</span></span>
+
+<span class="sent" data-jp="朝ごはんにパンを食べています。"><ruby>朝<rt>あさ</rt></ruby>ごはんにパンを<ruby>食<rt>た</rt></ruby>べています。<span class="zh">我早饭都是吃面包。</span></span>
+
+<span class="sent" data-jp="朝ごはんの時間はだいたい8時くらいです。"><ruby>朝<rt>あさ</rt></ruby>ごはんの<ruby>時間<rt>じかん</rt></ruby>はだいたい<ruby>8時<rt>はちじ</rt></ruby>くらいです。<span class="zh">吃早饭的时间大概在八点左右。</span></span>
+
+<span class="sent" data-jp="いつもご飯を食べながら、">いつもご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べながら、<span class="zh">我总是一边吃饭,</span></span>
+
+<span class="sent" data-jp="日本語の勉強をしたり、日記を書いたりしています。"><ruby>日本語<rt>にほんご</rt></ruby>の<ruby>勉強<rt>べんきょう</rt></ruby>をしたり、<ruby>日記<rt>にっき</rt></ruby>を<ruby>書<rt>か</rt></ruby>いたりしています。<span class="zh">一边学日语、写写日记。</span></span>
+
+<span class="sent" data-jp="あと、毎朝絶対ブラックコーヒーを飲みます。">あと、<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>絶対<rt>ぜったい</rt></ruby>ブラックコーヒーを<ruby>飲<rt>の</rt></ruby>みます。<span class="zh">另外,每天早上必喝一杯黑咖啡。</span></span>
+
+<span class="sent" data-jp="そうしないと、頭が働きません。">そうしないと、<ruby>頭<rt>あたま</rt></ruby>が<ruby>働<rt>はたら</rt></ruby>きません。<span class="zh">不这么干,脑子根本转不动。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="半年間">▶</button></td><td class="jp">半年間</td><td>はんとしかん</td><td>名</td><td>半年</td></tr>
+<tr><td><button class="spk" data-jp="だいたい">▶</button></td><td class="jp">だいたい</td><td>だいたい</td><td>副</td><td>大概⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="〜くらい">▶</button></td><td class="jp">〜くらい</td><td>くらい</td><td>助</td><td>…左右⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="〜ながら">▶</button></td><td class="jp">〜ながら</td><td>ながら</td><td>句型</td><td>一边…一边…⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="日記">▶</button></td><td class="jp">日記</td><td>にっき</td><td>名</td><td>日记</td></tr>
+<tr><td><button class="spk" data-jp="あと">▶</button></td><td class="jp">あと</td><td>あと</td><td>接续</td><td>另外、还有⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="毎朝">▶</button></td><td class="jp">毎朝</td><td>まいあさ</td><td>名·副</td><td>每天早上⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="絶対">▶</button></td><td class="jp">絶対</td><td>ぜったい</td><td>副</td><td>绝对、一定⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="ブラックコーヒー">▶</button></td><td class="jp">ブラックコーヒー</td><td>ブラックコーヒー</td><td>名</td><td>黑咖啡⭐点餐必备</td></tr>
+<tr><td><button class="spk" data-jp="頭">▶</button></td><td class="jp">頭</td><td>あたま</td><td>名</td><td>头、脑子⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="働く">▶</button></td><td class="jp">働く</td><td>はたらく</td><td>动Ⅰ</td><td>工作、(脑子)运转⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="そうしないと">▶</button></td><td class="jp">そうしないと</td><td>そうしないと</td><td>词组</td><td>不那样的话⭐口语高频</td></tr>
+</table>
+
+<h2>语法(本文出现的语法点 · 例句自造)</h2>
+<div class="card"><b>①〜ながら</b>(一边…一边…)——ます形去ます+ながら,前面是次要动作,后面是主要动作。<br><span class="jp">ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べ<b>ながら</b>、<ruby>勉強<rt>べんきょう</rt></ruby>をします</span><span class="eg">例:<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>き<b>ながら</b><ruby>運動<rt>うんどう</rt></ruby>します。(一边听音乐一边运动。)</span></div>
+<div class="card"><b>②〜たり〜たりしています</b>(又是…又是…)——早晨做的几件事举两件当代表。<span class="eg">例:<ruby>週末<rt>しゅうまつ</rt></ruby>は<ruby>掃除<rt>そうじ</rt></ruby>し<b>たり</b><ruby>洗濯<rt>せんたく</rt></ruby>し<b>たりします</b>。(周末打扫打扫、洗洗衣服。)</span></div>
+<div class="card"><b>③〜ないと(…不行)</b>——「そうしないと」=不那样做的话(就糟了),后半句必是负面结果。<br><span class="jp"><b>そうしないと</b>、<ruby>頭<rt>あたま</rt></ruby>が<ruby>働<rt>はたら</rt></ruby>きません</span><span class="eg">例:<ruby>早<rt>はや</rt></ruby>く<ruby>出<rt>で</rt></ruby><b>ないと</b>、<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>いません。(不早点出门就赶不上电车了。)</span></div>
+<div class="card"><b>④だいたい〜くらい</b>(大概…左右)——两个模糊词一起用,是日语说时间最自然的方式。<span class="eg">例:うちから<ruby>駅<rt>えき</rt></ruby>まで<b>だいたい</b><ruby>10分<rt>じゅっぷん</rt></ruby><b>くらい</b>です。(从家到车站大概十分钟左右。)</span></div>
+<div class="card"><b>⑤〜ています(近来持续)</b>——配合「ここ<ruby>最近<rt>さいきん</rt></ruby>の<ruby>半年間<rt>はんとしかん</rt></ruby>」,表示这段时间一直如此。<span class="eg">例:ここ<ruby>一年<rt>いちねん</rt></ruby>、<ruby>毎日<rt>まいにち</rt></ruby><ruby>走<rt>はし</rt></ruby>っ<b>ています</b>。(这一年来我每天都跑步。)</span></div>
+
+<div class="note">📌 版权说明:本页为私人日语学习页,短文整理自 Elsa の放送「跟我一起大聲說日文 #12」视频语音(视频号 GHMwvAmNYjA),尽量忠实还原;分句、假名注音、中文翻译、生词表与语法卡为学习管家用 AI 整理所加,仅供本人学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 大声说日文 12 · 朗读=Azure 神经语音 Keita(男声·整篇·逐句·生词全部真人级语音)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/e12s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/e12w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>

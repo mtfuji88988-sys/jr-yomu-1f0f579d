@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>大声说日文 16 · 『初めての地震』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">初级</span>『<ruby>初<rt>はじ</rt></ruby>めての<ruby>地震<rt>じしん</rt></ruby>』</h1>
+<div class="src">来源:Elsa の放送「跟我一起大聲說日文 #16」视频语音整理 · 初级口语短文 · 分类:生活/会话</div>
+<div class="guide">📖 <b>学习+背诵指引</b>:第一遍听整篇音频通读抓大意 → 第二遍逐句点读<b>大声跟读</b>、对照中文 → 第三遍关掉中文只读日文 → <b>第四遍(背诵)</b>连假名也关掉,看汉字原文出声背,卡壳就点那一句再听。</div>
+
+<audio controls preload="metadata" src="media/s16.mp3"></audio>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+
+<h2>本文(逐句中日对照 · 点句朗读)</h2>
+
+<span class="sent" data-jp="昨日の夜、寝ている時に地震がありました。"><ruby>昨日<rt>きのう</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>、<ruby>寝<rt>ね</rt></ruby>ている<ruby>時<rt>とき</rt></ruby>に<ruby>地震<rt>じしん</rt></ruby>がありました。<span class="zh">昨天夜里,我睡觉的时候发生了地震。</span></span>
+
+<span class="sent" data-jp="突然ベッドが揺れたので、びっくりして目が覚めました。"><ruby>突然<rt>とつぜん</rt></ruby>ベッドが<ruby>揺<rt>ゆ</rt></ruby>れたので、びっくりして<ruby>目<rt>め</rt></ruby>が<ruby>覚<rt>さ</rt></ruby>めました。<span class="zh">床突然晃了起来,我吓一跳就醒了。</span></span>
+
+<span class="sent" data-jp="ベッドから降りてテレビをつけると、">ベッドから<ruby>降<rt>お</rt></ruby>りてテレビをつけると、<span class="zh">我下床打开电视,</span></span>
+
+<span class="sent" data-jp="ニュースで地震について話していました。">ニュースで<ruby>地震<rt>じしん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>していました。<span class="zh">新闻里正在说这次地震的事。</span></span>
+
+<span class="sent" data-jp="震度3でしたから、あまり大きい地震じゃなかったそうです。"><ruby>震度<rt>しんど</rt></ruby>3でしたから、あまり<ruby>大<rt>おお</rt></ruby>きい<ruby>地震<rt>じしん</rt></ruby>じゃなかったそうです。<span class="zh">说是震度3级,所以并不算很大的地震。</span></span>
+
+<span class="sent" data-jp="でも、私の国では全然地震がありません。">でも、<ruby>私<rt>わたし</rt></ruby>の<ruby>国<rt>くに</rt></ruby>では<ruby>全然<rt>ぜんぜん</rt></ruby><ruby>地震<rt>じしん</rt></ruby>がありません。<span class="zh">可是在我的国家,几乎完全不地震。</span></span>
+
+<span class="sent" data-jp="日本に来て初めて地震を経験しましたから、とても怖かったです。"><ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby>て<ruby>初<rt>はじ</rt></ruby>めて<ruby>地震<rt>じしん</rt></ruby>を<ruby>経験<rt>けいけん</rt></ruby>しましたから、とても<ruby>怖<rt>こわ</rt></ruby>かったです。<span class="zh">来了日本才第一次经历地震,所以特别害怕。</span></span>
+
+<h2>生词</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="地震">▶</button></td><td class="jp">地震</td><td>じしん</td><td>名</td><td>地震⭐日本生活必备</td></tr>
+<tr><td><button class="spk" data-jp="突然">▶</button></td><td class="jp">突然</td><td>とつぜん</td><td>副</td><td>突然⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="揺れる">▶</button></td><td class="jp">揺れる</td><td>ゆれる</td><td>動Ⅱ</td><td>摇晃、震动⭐防灾必备</td></tr>
+<tr><td><button class="spk" data-jp="びっくりする">▶</button></td><td class="jp">びっくりする</td><td>びっくりする</td><td>動Ⅲ</td><td>吓一跳⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="目が覚める">▶</button></td><td class="jp">目が覚める</td><td>めがさめる</td><td>慣用</td><td>醒来⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="降りる">▶</button></td><td class="jp">降りる</td><td>おりる</td><td>動Ⅱ</td><td>下(床/车)⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="つける">▶</button></td><td class="jp">つける</td><td>つける</td><td>動Ⅱ</td><td>打开(电器)⭐生活高频</td></tr>
+<tr><td><button class="spk" data-jp="ニュース">▶</button></td><td class="jp">ニュース</td><td>ニュース</td><td>名</td><td>新闻</td></tr>
+<tr><td><button class="spk" data-jp="〜について">▶</button></td><td class="jp">〜について</td><td>〜について</td><td>連語</td><td>关于…</td></tr>
+<tr><td><button class="spk" data-jp="震度">▶</button></td><td class="jp">震度</td><td>しんど</td><td>名</td><td>震度(日本地震烈度)⭐防灾必备</td></tr>
+<tr><td><button class="spk" data-jp="全然">▶</button></td><td class="jp">全然</td><td>ぜんぜん</td><td>副</td><td>完全(不)⭐口语高频</td></tr>
+<tr><td><button class="spk" data-jp="経験">▶</button></td><td class="jp">経験</td><td>けいけん</td><td>名·サ変</td><td>经历、体验</td></tr>
+<tr><td><button class="spk" data-jp="怖い">▶</button></td><td class="jp">怖い</td><td>こわい</td><td>形</td><td>可怕、害怕⭐口语高频</td></tr>
+</table>
+
+<h2>语法(本文出现的语法点 · 例句自造)</h2>
+<div class="card"><b>①〜ている<ruby>時<rt>とき</rt></ruby>に</b>(正在…的时候)——用「ている」表示动作正在进行的那个时点。<span class="jp"><ruby>寝<rt>ね</rt></ruby>ている<b><ruby>時<rt>とき</rt></ruby>に</b><ruby>地震<rt>じしん</rt></ruby>がありました</span>。<span class="eg">例:シャワーを<ruby>浴<rt>あ</rt></ruby>びている<b><ruby>時<rt>とき</rt></ruby>に</b><ruby>電話<rt>でんわ</rt></ruby>が<ruby>来<rt>き</rt></ruby>ました。(洗澡的时候来电话了。)</span></div>
+<div class="card"><b>②〜ので</b>(因为…)——比「から」客气、客观,叙述原因最稳的说法。<span class="jp">ベッドが<ruby>揺<rt>ゆ</rt></ruby>れた<b>ので</b>、びっくりしました</span>。<span class="eg">例:<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>い<b>ので</b>、<ruby>今日<rt>きょう</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みます。(因为头疼,今天请假。)</span></div>
+<div class="card"><b>③〜と(一…就发现)</b>——本文「テレビをつける<b>と</b>、〜<ruby>話<rt>はな</rt></ruby>していました」=一打开电视,发现正在讲。<span class="eg">例:<ruby>家<rt>いえ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>る<b>と</b>、<ruby>猫<rt>ねこ</rt></ruby>が<ruby>寝<rt>ね</rt></ruby>ていました。(一到家,发现猫在睡觉。)</span></div>
+<div class="card"><b>④〜そうです(伝聞)</b>(听说…)——普通形+そうです,转述别人/新闻的说法。注意与④「様態そう」写法不同。<span class="jp"><ruby>大<rt>おお</rt></ruby>きい<ruby>地震<rt>じしん</rt></ruby>じゃなかった<b>そうです</b></span>=听说不算大地震。<span class="eg">例:<ruby>明日<rt>あした</rt></ruby>は<ruby>台風<rt>たいふう</rt></ruby>が<ruby>来<rt>く</rt></ruby>る<b>そうです</b>。(听说明天有台风。)</span></div>
+<div class="card"><b>⑤<ruby>初<rt>はじ</rt></ruby>めて〜</b>(第一次…)——「〜て<ruby>初<rt>はじ</rt></ruby>めて」表示做了某事之后才头一回…。<span class="jp"><ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby>て<b><ruby>初<rt>はじ</rt></ruby>めて</b><ruby>地震<rt>じしん</rt></ruby>を<ruby>経験<rt>けいけん</rt></ruby>しました</span>。<span class="eg">例:<ruby>納豆<rt>なっとう</rt></ruby>を<b><ruby>初<rt>はじ</rt></ruby>めて</b><ruby>食<rt>た</rt></ruby>べました。(第一次吃纳豆。)</span></div>
+
+<div class="note">📌 版权说明:本页为私人日语学习页,短文整理自 Elsa の放送「跟我一起大聲說日文 #16」视频语音(视频号 lLWfifQw8vQ),尽量忠实还原;分句、假名注音、中文翻译、生词表与语法卡为学习管家用 AI 整理所加,仅供本人学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 大声说日文 16 · 朗读=Azure 神经语音 Keita(男声·整篇·逐句·生词全部真人级语音)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/e16s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/e16w'+(i+1)+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>
