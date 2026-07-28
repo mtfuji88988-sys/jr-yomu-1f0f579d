@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>标日中级 第9课 · 『フロントで』+『出張三日目の記録』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">中级</span>『フロントで』</h1>
+<div class="src">标日中级伴学 · 第9课「トラブル・旅の記録」对应自写文 · 覆盖本课全部语法点与核心词汇 · 配合教材使用</div>
+<div class="guide">📖 <b>伴学用法</b>:先学教材第9课 → 用本页自写文做二遍活用:第一遍听整篇 → 第二遍逐句点读跟读 → 第三遍关中文 → 第四遍关假名出声读;语法卡=本课句型换例句再巩固。</div>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+<h2>会話『フロントで』(场景:出差第一晚,王さん发现酒店房间和预订的不一样,在前台与工作人员山口さん交涉)</h2>
+<audio controls preload="metadata" src="media/k9a.mp3"></audio>
+
+<span class="sent c" data-jp="すみません、予約どおりの部屋になっていないようなのですが。"><b><ruby>王<rt>おう</rt></ruby>:</b>すみません、<ruby>予約<rt>よやく</rt></ruby>どおりの<ruby>部屋<rt>へや</rt></ruby>になっていないようなのですが。<span class="zh">不好意思,房间好像和预订的不一样。</span></span>
+
+<span class="sent c" data-jp="大変申し訳ございません。すぐにお調べいたします。"><b><ruby>山口<rt>やまぐち</rt></ruby>:</b><ruby>大変<rt>たいへん</rt></ruby><ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません。すぐにお<ruby>調<rt>しら</rt></ruby>べいたします。<span class="zh">非常抱歉。我马上为您查。</span></span>
+
+<span class="sent c" data-jp="会社の名前で、禁煙のツインを二部屋、お願いしてあったはずです。"><b><ruby>王<rt>おう</rt></ruby>:</b><ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>で、<ruby>禁煙<rt>きんえん</rt></ruby>のツインを<ruby>二部屋<rt>ふたへや</rt></ruby>、お<ruby>願<rt>ねが</rt></ruby>いしてあったはずです。<span class="zh">应该是用公司名义订了两间无烟双床房。</span></span>
+
+<span class="sent c" data-jp="はい、確かに二部屋いただいております。ただ、一部屋が喫煙のお部屋になっておりまして。"><b><ruby>山口<rt>やまぐち</rt></ruby>:</b>はい、<ruby>確<rt>たし</rt></ruby>かに<ruby>二部屋<rt>ふたへや</rt></ruby>いただいております。ただ、<ruby>一部屋<rt>ひとへや</rt></ruby>が<ruby>喫煙<rt>きつえん</rt></ruby>のお<ruby>部屋<rt>へや</rt></ruby>になっておりまして。<span class="zh">是的,确实收到了两间的预订。只是有一间成了吸烟房。</span></span>
+
+<span class="sent c" data-jp="実は、同行の者が煙が苦手なんです。"><b><ruby>王<rt>おう</rt></ruby>:</b><ruby>実<rt>じつ</rt></ruby>は、<ruby>同行<rt>どうこう</rt></ruby>の<ruby>者<rt>もの</rt></ruby>が<ruby>煙<rt>けむり</rt></ruby>が<ruby>苦手<rt>にがて</rt></ruby>なんです。<span class="zh">其实,同行的人受不了烟味。</span></span>
+
+<span class="sent c" data-jp="承知いたしました。よろしければ、上の階のツインにお移りいただけますが、いかがでしょうか。"><b><ruby>山口<rt>やまぐち</rt></ruby>:</b><ruby>承知<rt>しょうち</rt></ruby>いたしました。よろしければ、<ruby>上<rt>うえ</rt></ruby>の<ruby>階<rt>かい</rt></ruby>のツインにお<ruby>移<rt>うつ</rt></ruby>りいただけますが、いかがでしょうか。<span class="zh">明白了。如果方便的话,可以请您换到楼上的双床房,您看如何?</span></span>
+
+<span class="sent c" data-jp="料金は変わりますか。"><b><ruby>王<rt>おう</rt></ruby>:</b><ruby>料金<rt>りょうきん</rt></ruby>は<ruby>変<rt>か</rt></ruby>わりますか。<span class="zh">房费会变吗?</span></span>
+
+<span class="sent c" data-jp="いいえ、今回はご案内どおりの料金で結構でございます。"><b><ruby>山口<rt>やまぐち</rt></ruby>:</b>いいえ、<ruby>今回<rt>こんかい</rt></ruby>はご<ruby>案内<rt>あんない</rt></ruby>どおりの<ruby>料金<rt>りょうきん</rt></ruby>で<ruby>結構<rt>けっこう</rt></ruby>でございます。<span class="zh">不,这次按当初告知的价格就可以。</span></span>
+
+<span class="sent c" data-jp="助かります。荷物はもうロビーに置いてあります。"><b><ruby>王<rt>おう</rt></ruby>:</b><ruby>助<rt>たす</rt></ruby>かります。<ruby>荷物<rt>にもつ</rt></ruby>はもうロビーに<ruby>置<rt>お</rt></ruby>いてあります。<span class="zh">那太好了。行李已经放在大厅了。</span></span>
+
+<span class="sent c" data-jp="かしこまりました。後ほど、係の者がお部屋までお運びいたします。"><b><ruby>山口<rt>やまぐち</rt></ruby>:</b>かしこまりました。<ruby>後<rt>のち</rt></ruby>ほど、<ruby>係<rt>かかり</rt></ruby>の<ruby>者<rt>もの</rt></ruby>がお<ruby>部屋<rt>へや</rt></ruby>までお<ruby>運<rt>はこ</rt></ruby>びいたします。<span class="zh">好的。稍后会有工作人员为您送到房间。</span></span>
+
+<span class="sent c" data-jp="ありがとうございます。明日の朝食は何時からでしょうか。"><b><ruby>王<rt>おう</rt></ruby>:</b>ありがとうございます。<ruby>明日<rt>あす</rt></ruby>の<ruby>朝食<rt>ちょうしょく</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>からでしょうか。<span class="zh">谢谢。明天的早餐几点开始?</span></span>
+
+<span class="sent c" data-jp="六時半からでございます。お泊まりの方は、こちらのカードをお持ちください。"><b><ruby>山口<rt>やまぐち</rt></ruby>:</b><ruby>六時半<rt>ろくじはん</rt></ruby>からでございます。お<ruby>泊<rt>と</rt></ruby>まりの<ruby>方<rt>かた</rt></ruby>は、こちらのカードをお<ruby>持<rt>も</rt></ruby>ちください。<span class="zh">从六点半开始。住宿的客人请带上这张卡。</span></span>
+
+<span class="sent c" data-jp="分かりました。鍵は先に受け取っておきます。"><b><ruby>王<rt>おう</rt></ruby>:</b><ruby>分<rt>わ</rt></ruby>かりました。<ruby>鍵<rt>かぎ</rt></ruby>は<ruby>先<rt>さき</rt></ruby>に<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>っておきます。<span class="zh">明白了。钥匙我先领了。</span></span>
+
+<span class="sent c" data-jp="はい、こちらでございます。フロントは二十四時間、お待ちしております。"><b><ruby>山口<rt>やまぐち</rt></ruby>:</b>はい、こちらでございます。フロントは<ruby>二十四時間<rt>にじゅうよじかん</rt></ruby>、お<ruby>待<rt>ま</rt></ruby>ちしております。<span class="zh">好的,给您。前台二十四小时恭候。</span></span>
+
+<h2>読解『<ruby>出張<rt>しゅっちょう</rt></ruby><ruby>三日目<rt>みっかめ</rt></ruby>の<ruby>記録<rt>きろく</rt></ruby>』(<ruby>王<rt>おう</rt></ruby>さんの<ruby>出張日記<rt>しゅっちょうにっき</rt></ruby>)</h2>
+<audio controls preload="metadata" src="media/k9b.mp3"></audio>
+
+<span class="sent r" data-jp="十月十日、快晴。"><ruby>十月<rt>じゅうがつ</rt></ruby><ruby>十日<rt>とおか</rt></ruby>、<ruby>快晴<rt>かいせい</rt></ruby>。<span class="zh">10月10日,晴。</span></span>
+
+<span class="sent r" data-jp="朝六時に起き、予定どおり七時のバスで工場へ向かった。"><ruby>朝<rt>あさ</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>き、<ruby>予定<rt>よてい</rt></ruby>どおり<ruby>七時<rt>しちじ</rt></ruby>のバスで<ruby>工場<rt>こうじょう</rt></ruby>へ<ruby>向<rt>む</rt></ruby>かった。<span class="zh">早上六点起床,按预定坐七点的巴士去工厂。</span></span>
+
+<span class="sent r" data-jp="前の晩に資料をかばんに入れておいたので、朝はあわてずにすんだ。"><ruby>前<rt>まえ</rt></ruby>の<ruby>晩<rt>ばん</rt></ruby>に<ruby>資料<rt>しりょう</rt></ruby>をかばんに<ruby>入<rt>い</rt></ruby>れておいたので、<ruby>朝<rt>あさ</rt></ruby>はあわてずにすんだ。<span class="zh">前一晚就把资料装进包里了,所以早上没手忙脚乱。</span></span>
+
+<span class="sent r" data-jp="工場の入り口には、日本語と中国語で案内が書いてあった。"><ruby>工場<rt>こうじょう</rt></ruby>の<ruby>入<rt>い</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby>には、<ruby>日本語<rt>にほんご</rt></ruby>と<ruby>中国語<rt>ちゅうごくご</rt></ruby>で<ruby>案内<rt>あんない</rt></ruby>が<ruby>書<rt>か</rt></ruby>いてあった。<span class="zh">工厂入口处用日语和中文写着指示牌。</span></span>
+
+<span class="sent r" data-jp="会議室では、人数分の資料がきれいに並べてあった。"><ruby>会議室<rt>かいぎしつ</rt></ruby>では、<ruby>人数分<rt>にんずうぶん</rt></ruby>の<ruby>資料<rt>しりょう</rt></ruby>がきれいに<ruby>並<rt>なら</rt></ruby>べてあった。<span class="zh">会议室里,按人数摆好了资料,整整齐齐。</span></span>
+
+<span class="sent r" data-jp="説明は一時間の予定だったが、質問が多く、三十分延びた。"><ruby>説明<rt>せつめい</rt></ruby>は<ruby>一時間<rt>いちじかん</rt></ruby>の<ruby>予定<rt>よてい</rt></ruby>だったが、<ruby>質問<rt>しつもん</rt></ruby>が<ruby>多<rt>おお</rt></ruby>く、<ruby>三十分<rt>さんじゅっぷん</rt></ruby><ruby>延<rt>の</rt></ruby>びた。<span class="zh">说明原定一小时,但提问太多,延长了三十分钟。</span></span>
+
+<span class="sent r" data-jp="昼食は工場の食堂。メニューは日替わりで、この日は魚だった。"><ruby>昼食<rt>ちゅうしょく</rt></ruby>は<ruby>工場<rt>こうじょう</rt></ruby>の<ruby>食堂<rt>しょくどう</rt></ruby>。メニューは<ruby>日替<rt>ひが</rt></ruby>わりで、この<ruby>日<rt>ひ</rt></ruby>は<ruby>魚<rt>さかな</rt></ruby>だった。<span class="zh">午饭在工厂食堂。菜单每天换,这天是鱼。</span></span>
+
+<span class="sent r" data-jp="午後は倉庫を見学し、写真を何枚か撮っておいた。"><ruby>午後<rt>ごご</rt></ruby>は<ruby>倉庫<rt>そうこ</rt></ruby>を<ruby>見学<rt>けんがく</rt></ruby>し、<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>何枚<rt>なんまい</rt></ruby>か<ruby>撮<rt>と</rt></ruby>っておいた。<span class="zh">下午参观仓库,先拍了几张照片备用。</span></span>
+
+<span class="sent r" data-jp="ホテルに戻ると、部屋の空気清浄機が静かに動いていた。">ホテルに<ruby>戻<rt>もど</rt></ruby>ると、<ruby>部屋<rt>へや</rt></ruby>の<ruby>空気清浄機<rt>くうきせいじょうき</rt></ruby>が<ruby>静<rt>しず</rt></ruby>かに<ruby>動<rt>うご</rt></ruby>いていた。<span class="zh">回到酒店,房间的空气净化器正安静地开着。</span></span>
+
+<span class="sent r" data-jp="昨日のトラブルは、思ったより早く片づいた。"><ruby>昨日<rt>きのう</rt></ruby>のトラブルは、<ruby>思<rt>おも</rt></ruby>ったより<ruby>早<rt>はや</rt></ruby>く<ruby>片<rt>かた</rt></ruby>づいた。<span class="zh">昨天那桩麻烦,比想象中更快就解决了。</span></span>
+
+<span class="sent r" data-jp="報告書は明日書く。今日はもう寝ることにする。"><ruby>報告書<rt>ほうこくしょ</rt></ruby>は<ruby>明日<rt>あした</rt></ruby><ruby>書<rt>か</rt></ruby>く。<ruby>今日<rt>きょう</rt></ruby>はもう<ruby>寝<rt>ね</rt></ruby>ることにする。<span class="zh">报告明天写。今天就睡了。</span></span>
+
+<h2>生词(本课核心15词)</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="トラブル">▶</button></td><td class="jp">トラブル</td><td>トラブル</td><td>名</td><td>麻烦、纠纷⭐本课课题</td></tr>
+<tr><td><button class="spk" data-jp="申し訳ございません">▶</button></td><td class="jp">申し訳ございません</td><td>もうしわけございません</td><td>惯用</td><td>非常抱歉⭐郑重道歉</td></tr>
+<tr><td><button class="spk" data-jp="よろしければ">▶</button></td><td class="jp">よろしければ</td><td>よろしければ</td><td>惯用</td><td>如果方便的话⭐铺垫神句</td></tr>
+<tr><td><button class="spk" data-jp="〜どおり">▶</button></td><td class="jp">〜どおり</td><td>どおり</td><td>接尾</td><td>按照…、与…一致⭐</td></tr>
+<tr><td><button class="spk" data-jp="後ほど">▶</button></td><td class="jp">後ほど</td><td>のちほど</td><td>副</td><td>稍后、随后⭐比「後で」郑重</td></tr>
+<tr><td><button class="spk" data-jp="お泊まり">▶</button></td><td class="jp">お泊まり</td><td>おとまり</td><td>名</td><td>住宿(尊他语)</td></tr>
+<tr><td><button class="spk" data-jp="係">▶</button></td><td class="jp">係</td><td>かかり</td><td>名</td><td>负责人员、专职人员</td></tr>
+<tr><td><button class="spk" data-jp="承知">▶</button></td><td class="jp">承知</td><td>しょうち</td><td>名·サ変</td><td>知道、领会⭐承知いたしました</td></tr>
+<tr><td><button class="spk" data-jp="禁煙">▶</button></td><td class="jp">禁煙</td><td>きんえん</td><td>名·サ変</td><td>禁烟、无烟</td></tr>
+<tr><td><button class="spk" data-jp="喫煙">▶</button></td><td class="jp">喫煙</td><td>きつえん</td><td>名·サ変</td><td>吸烟</td></tr>
+<tr><td><button class="spk" data-jp="同行">▶</button></td><td class="jp">同行</td><td>どうこう</td><td>名·サ変</td><td>同行、一起前往</td></tr>
+<tr><td><button class="spk" data-jp="料金">▶</button></td><td class="jp">料金</td><td>りょうきん</td><td>名</td><td>费用、收费</td></tr>
+<tr><td><button class="spk" data-jp="ロビー">▶</button></td><td class="jp">ロビー</td><td>ロビー</td><td>名</td><td>大厅、休息厅</td></tr>
+<tr><td><button class="spk" data-jp="見学">▶</button></td><td class="jp">見学</td><td>けんがく</td><td>名·サ変</td><td>参观、见习</td></tr>
+<tr><td><button class="spk" data-jp="日替わり">▶</button></td><td class="jp">日替わり</td><td>ひがわり</td><td>名</td><td>每天更换(的)</td></tr>
+</table>
+<h2>语法卡(本课句型 · 例句自造)</h2>
+<div class="card"><b>①お詫び・応対の敬語表現</b>——面对客人时,道歉用「<ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません」(比「すみません」郑重得多),领会用「<ruby>承知<rt>しょうち</rt></ruby>いたしました/かしこまりました」。正文第2·6·10句。<span class="eg"><button class="spk" data-g="1">▶</button> 例:<ruby>大変<rt>たいへん</rt></ruby><b><ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません</b>。すぐに<ruby>確認<rt>かくにん</rt></ruby>いたします。</span></div>
+<div class="card"><b>②〜ば・〜たら(铺垫用法)「よろしければ」</b>——在提出建议前先加一句假定,把话说软。「よろしければ」=如果您方便/愿意的话。<span class="eg"><button class="spk" data-g="2">▶</button> 例:<b>よろしければ</b>、こちらの<ruby>席<rt>せき</rt></ruby>へどうぞ。(方便的话,请到这边的座位。)</span></div>
+<div class="card"><b>③〜てある / 〜ている / 〜ておく</b>——他动词+てある=有目的地做完后留下的状态;自动词+ている=单纯状态;〜ておく=为将来先做好。正文「<ruby>置<rt>お</rt></ruby>いてあります」「<ruby>動<rt>うご</rt></ruby>いていた」「<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>っておきます」。<span class="eg"><button class="spk" data-g="3">▶</button> 例:<ruby>窓<rt>まど</rt></ruby>が<ruby>開<rt>あ</rt></ruby><b>けてある</b>(有人特意开着)/ <ruby>窓<rt>まど</rt></ruby>が<ruby>開<rt>あ</rt></ruby>い<b>ている</b>(就那么开着)/ <ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>け<b>ておく</b>(先开着备用)。</span></div>
+<div class="card"><b>④〜どおり</b>——名词+どおり(浊化)、动词+とおり,表示「与…一致、照…那样」。正文「<ruby>予約<rt>よやく</rt></ruby><b>どおり</b>」「ご<ruby>案内<rt>あんない</rt></ruby><b>どおり</b>」「<ruby>予定<rt>よてい</rt></ruby><b>どおり</b>」。<span class="eg"><button class="spk" data-g="4">▶</button> 例:<ruby>計画<rt>けいかく</rt></ruby><b>どおり</b>に<ruby>進<rt>すす</rt></ruby>んでいます。(正按计划推进。)</span></div>
+<div class="card"><b>⑤お〜しております(自谦语+ている)</b>——「お〜する」的自谦+「〜ている」的自谦「〜ております」,表示持续的谦恭状态。正文「お<ruby>待<rt>ま</rt></ruby>ちしております」,以及「いただいております」。<span class="eg"><button class="spk" data-g="5">▶</button> 例:ご<ruby>連絡<rt>れんらく</rt></ruby>を<b>お<ruby>待<rt>ま</rt></ruby>ちしております</b>。(恭候您的联系。)</span></div>
+<div class="card"><b>⑥後ほど</b>——「过一会儿、稍后」,比「<ruby>後<rt>あと</rt></ruby>で」郑重,商务·服务场合专用。正文第10句。<span class="eg"><button class="spk" data-g="6">▶</button> 例:<b><ruby>後<rt>のち</rt></ruby>ほど</b>あらためてご<ruby>連絡<rt>れんらく</rt></ruby>いたします。(稍后再与您联系。)</span></div>
+<div class="card"><b>⑦お泊まりの+名词(尊他语的名词用法)</b>——动词的尊他语「お+ます形」可当名词用,后接名词时要加「の」。正文「<b>お<ruby>泊<rt>と</rt></ruby>まりの</b><ruby>方<rt>かた</rt></ruby>」。<span class="eg"><button class="spk" data-g="7">▶</button> 例:<b>お<ruby>帰<rt>かえ</rt></ruby>りの</b><ruby>際<rt>さい</rt></ruby>は、<ruby>受付<rt>うけつけ</rt></ruby>にお<ruby>寄<rt>よ</rt></ruby>りください。(回去时请到接待处一下。)</span></div>
+<div class="card"><b>⑧日記·記録文の文体(書き言葉)</b>——日记、记录用「だ·である」体;可用「体言止め」(以名词收尾)和「連用中止」(〜し、〜き)让文字更紧凑。正文読解第1·2·7·8句就是范例。<span class="eg"><button class="spk" data-g="8">▶</button> 例:<ruby>五月<rt>ごがつ</rt></ruby><ruby>三日<rt>みっか</rt></ruby>、<ruby>晴<rt>は</rt></ruby>れ。<ruby>朝<rt>あさ</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>き、<ruby>川<rt>かわ</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>いた。</span></div>
+<div class="note">📌 版权说明:本页为私人日语学习页。正文会話与読解文均为按《新版中日交流标准日本语 中级》第9课的语法点与词汇范围<b>原创写作</b>的自写文,非教材原文;生词表与语法点条目为知识性内容,例句自造。仅供本人配合正版教材学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 标日中级伴学 第9课 · 朗读=Azure 神经语音 Keita(男声·山口さん/読解/生词)+ Nanami(女声·王さん)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent.c').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/k9s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.sent.r').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/k9r'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk:not([data-g])').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/k9w'+(i+1)+'.mp3')}));
+document.querySelectorAll('.spk[data-g]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/k9g'+b.dataset.g+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>

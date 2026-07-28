@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>标日中级 第7课 · 『打ち合わせの午後』+『送信ボタンを押す前に』</title>
+<style>
+:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
+h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
+.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
+.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
+.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
+.guide b{color:var(--terra)}
+audio{width:100%;margin:6px 0 2px}
+.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
+.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
+h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
+.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
+.sent.playing{background:var(--hl);border-color:var(--terra)}
+.sent.paused{border-style:dashed;border-color:var(--terra)}
+.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
+body.nozh .sent .zh{display:none}
+body.noruby rt{visibility:hidden}
+rt{font-size:9.5px;color:var(--terra)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
+th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
+td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
+.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
+.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
+.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1><span class="lv">中级</span>『<ruby>打<rt>う</rt></ruby>ち<ruby>合<rt>あ</rt></ruby>わせの<ruby>午後<rt>ごご</rt></ruby>』</h1>
+<div class="src">标日中级伴学 · 第7课「打ち合わせ・メールの作法」对应自写文 · 覆盖本课全部语法点与核心词汇 · 配合教材使用</div>
+<div class="guide">📖 <b>伴学用法</b>:先学教材第7课 → 用本页自写文做二遍活用:第一遍听整篇 → 第二遍逐句点读跟读 → 第三遍关中文 → 第四遍关假名出声读;语法卡=本课句型换例句再巩固。</div>
+<div class="btns">
+<button class="btn on" id="bRuby">假名:开</button>
+<button class="btn on" id="bZh">中文:开</button>
+</div>
+<h2>会話『<ruby>打<rt>う</rt></ruby>ち<ruby>合<rt>あ</rt></ruby>わせの<ruby>午後<rt>ごご</rt></ruby>』(场景:王さん与田中さん就下月「面向中国的线上说明会」碰头,边定时长边聊商品口碑)</h2>
+<audio controls preload="metadata" src="media/k7a.mp3"></audio>
+
+<span class="sent c" data-jp="王さん、来月の中国向けオンライン説明会の件、少し打ち合わせをしたいんですが。"><b><ruby>田中<rt>たなか</rt></ruby>:</b><ruby>王<rt>おう</rt></ruby>さん、<ruby>来月<rt>らいげつ</rt></ruby>の<ruby>中国向<rt>ちゅうごくむ</rt></ruby>けオンライン<ruby>説明会<rt>せつめいかい</rt></ruby>の<ruby>件<rt>けん</rt></ruby>、<ruby>少<rt>すこ</rt></ruby>し<ruby>打<rt>う</rt></ruby>ち<ruby>合<rt>あ</rt></ruby>わせをしたいんですが。<span class="zh">王さん,关于下个月面向中国的线上说明会,想跟你碰一下。</span></span>
+
+<span class="sent c" data-jp="はい。資料はもうできています。ご意見をいただければ、参考にします。"><b><ruby>王<rt>おう</rt></ruby>:</b>はい。<ruby>資料<rt>しりょう</rt></ruby>はもうできています。ご<ruby>意見<rt>いけん</rt></ruby>をいただければ、<ruby>参考<rt>さんこう</rt></ruby>にします。<span class="zh">好的。资料已经做好了。您给点意见的话,我会拿来参考。</span></span>
+
+<span class="sent c" data-jp="拝見しました。とても分かりやすいし、写真の使い方も参考になりました。"><b><ruby>田中<rt>たなか</rt></ruby>:</b><ruby>拝見<rt>はいけん</rt></ruby>しました。とても<ruby>分<rt>わ</rt></ruby>かりやすいし、<ruby>写真<rt>しゃしん</rt></ruby>の<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>も<ruby>参考<rt>さんこう</rt></ruby>になりました。<span class="zh">我看过了。非常好懂,照片的用法也很有参考价值。</span></span>
+
+<span class="sent c" data-jp="ありがとうございます。ただ、時間が長すぎるだろうと思って、少し迷っています。"><b><ruby>王<rt>おう</rt></ruby>:</b>ありがとうございます。ただ、<ruby>時間<rt>じかん</rt></ruby>が<ruby>長<rt>なが</rt></ruby>すぎるだろうと<ruby>思<rt>おも</rt></ruby>って、<ruby>少<rt>すこ</rt></ruby>し<ruby>迷<rt>まよ</rt></ruby>っています。<span class="zh">谢谢。不过我觉得时间可能太长了,有点犹豫。</span></span>
+
+<span class="sent c" data-jp="一時間なら長くないですが、二時間なら長いでしょうね。"><b><ruby>田中<rt>たなか</rt></ruby>:</b><ruby>一時間<rt>いちじかん</rt></ruby>なら<ruby>長<rt>なが</rt></ruby>くないですが、<ruby>二時間<rt>にじかん</rt></ruby>なら<ruby>長<rt>なが</rt></ruby>いでしょうね。<span class="zh">一小时的话不算长,两小时的话就长了吧。</span></span>
+
+<span class="sent c" data-jp="なるほど。では、前半だけ話して、後半は資料の配布にします。"><b><ruby>王<rt>おう</rt></ruby>:</b>なるほど。では、<ruby>前半<rt>ぜんはん</rt></ruby>だけ<ruby>話<rt>はな</rt></ruby>して、<ruby>後半<rt>こうはん</rt></ruby>は<ruby>資料<rt>しりょう</rt></ruby>の<ruby>配布<rt>はいふ</rt></ruby>にします。<span class="zh">原来如此。那就只讲前半部分,后半部分改成发资料。</span></span>
+
+<span class="sent c" data-jp="いいですね。それから、この商品、中国のSNSで話題になっているそうですよ。"><b><ruby>田中<rt>たなか</rt></ruby>:</b>いいですね。それから、この<ruby>商品<rt>しょうひん</rt></ruby>、<ruby>中国<rt>ちゅうごく</rt></ruby>のSNSで<ruby>話題<rt>わだい</rt></ruby>になっているそうですよ。<span class="zh">好啊。还有,听说这个产品在中国的社交媒体上成了话题。</span></span>
+
+<span class="sent c" data-jp="ええ。先週は、大きなニュースサイトにも取り上げられました。"><b><ruby>王<rt>おう</rt></ruby>:</b>ええ。<ruby>先週<rt>せんしゅう</rt></ruby>は、<ruby>大<rt>おお</rt></ruby>きなニュースサイトにも<ruby>取<rt>と</rt></ruby>り<ruby>上<rt>あ</rt></ruby>げられました。<span class="zh">是的。上周还被一家大新闻网站报道了。</span></span>
+
+<span class="sent c" data-jp="評判がいいうちに、説明会をやったほうがいいですね。"><b><ruby>田中<rt>たなか</rt></ruby>:</b><ruby>評判<rt>ひょうばん</rt></ruby>がいいうちに、<ruby>説明会<rt>せつめいかい</rt></ruby>をやったほうがいいですね。<span class="zh">趁着口碑好的时候办说明会比较好呢。</span></span>
+
+<span class="sent c" data-jp="そうですね。日にちは、来月の第二週でどうでしょうか。"><b><ruby>王<rt>おう</rt></ruby>:</b>そうですね。<ruby>日<rt>ひ</rt></ruby>にちは、<ruby>来月<rt>らいげつ</rt></ruby>の<ruby>第二週<rt>だいにしゅう</rt></ruby>でどうでしょうか。<span class="zh">是啊。日期定在下个月第二周怎么样?</span></span>
+
+<span class="sent c" data-jp="うん、それでいこう。あ、失礼、つい普通の言い方になってしまって。"><b><ruby>田中<rt>たなか</rt></ruby>:</b>うん、それでいこう。あ、<ruby>失礼<rt>しつれい</rt></ruby>、つい<ruby>普通<rt>ふつう</rt></ruby>の<ruby>言<rt>い</rt></ruby>い<ruby>方<rt>かた</rt></ruby>になってしまって。<span class="zh">嗯,就那么定。啊,失礼了,不知不觉说成随便的说法了。</span></span>
+
+<span class="sent c" data-jp="いえ、大丈夫ですよ。打ち合わせでは、そのほうが話が早いですよね。"><b><ruby>王<rt>おう</rt></ruby>:</b>いえ、<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ。<ruby>打<rt>う</rt></ruby>ち<ruby>合<rt>あ</rt></ruby>わせでは、そのほうが<ruby>話<rt>はなし</rt></ruby>が<ruby>早<rt>はや</rt></ruby>いですよね。<span class="zh">没关系的。碰头会上那样反而说得快,是吧。</span></span>
+
+<span class="sent c" data-jp="では、細かい進め方は、明日メールで送りますね。"><b><ruby>田中<rt>たなか</rt></ruby>:</b>では、<ruby>細<rt>こま</rt></ruby>かい<ruby>進<rt>すす</rt></ruby>め<ruby>方<rt>かた</rt></ruby>は、<ruby>明日<rt>あした</rt></ruby>メールで<ruby>送<rt>おく</rt></ruby>りますね。<span class="zh">那么具体怎么推进,我明天邮件发给你。</span></span>
+
+<span class="sent c" data-jp="お願いします。こちらも、質問の例をまとめておきます。"><b><ruby>王<rt>おう</rt></ruby>:</b>お<ruby>願<rt>ねが</rt></ruby>いします。こちらも、<ruby>質問<rt>しつもん</rt></ruby>の<ruby>例<rt>れい</rt></ruby>をまとめておきます。<span class="zh">拜托了。我这边也把提问的例子整理好。</span></span>
+
+<h2>読解『<ruby>送信<rt>そうしん</rt></ruby>ボタンを<ruby>押<rt>お</rt></ruby>す<ruby>前<rt>まえ</rt></ruby>に』(<ruby>王<rt>おう</rt></ruby>さんの<ruby>随筆<rt>ずいひつ</rt></ruby>)</h2>
+<audio controls preload="metadata" src="media/k7b.mp3"></audio>
+
+<span class="sent r" data-jp="日本で働くうえで、いちばん気をつけているのが電子メールだ。"><ruby>日本<rt>にほん</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>くうえで、いちばん<ruby>気<rt>き</rt></ruby>をつけているのが<ruby>電子<rt>でんし</rt></ruby>メールだ。<span class="zh">在日本工作,我最留意的就是电子邮件。</span></span>
+
+<span class="sent r" data-jp="中国語のメールなら、用件だけ書いても失礼にならないことが多い。"><ruby>中国語<rt>ちゅうごくご</rt></ruby>のメールなら、<ruby>用件<rt>ようけん</rt></ruby>だけ<ruby>書<rt>か</rt></ruby>いても<ruby>失礼<rt>しつれい</rt></ruby>にならないことが<ruby>多<rt>おお</rt></ruby>い。<span class="zh">如果是中文邮件,很多时候只写事由也不算失礼。</span></span>
+
+<span class="sent r" data-jp="しかし日本語のメールには作法があり、件名さえ見れば内容が分かるように書くのがよいとされる。">しかし<ruby>日本語<rt>にほんご</rt></ruby>のメールには<ruby>作法<rt>さほう</rt></ruby>があり、<ruby>件名<rt>けんめい</rt></ruby>さえ<ruby>見<rt>み</rt></ruby>れば<ruby>内容<rt>ないよう</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かるように<ruby>書<rt>か</rt></ruby>くのがよいとされる。<span class="zh">但日语邮件有它的规矩,一般认为最好写成只看标题就能明白内容。</span></span>
+
+<span class="sent r" data-jp="先月、わたしは「例の件、よろしく」などというメールを取引先に送ってしまった。"><ruby>先月<rt>せんげつ</rt></ruby>、わたしは「<ruby>例<rt>れい</rt></ruby>の<ruby>件<rt>けん</rt></ruby>、よろしく」などというメールを<ruby>取引先<rt>とりひきさき</rt></ruby>に<ruby>送<rt>おく</rt></ruby>ってしまった。<span class="zh">上个月,我给客户发了一封“那件事,拜托了”之类的邮件。</span></span>
+
+<span class="sent r" data-jp="相手はきっと困っただろうと思う。"><ruby>相手<rt>あいて</rt></ruby>はきっと<ruby>困<rt>こま</rt></ruby>っただろうと<ruby>思<rt>おも</rt></ruby>う。<span class="zh">对方一定很为难吧。</span></span>
+
+<span class="sent r" data-jp="田中さんに相談したら、「件名は短く、本文は用件ごとに行を変えるといい」と教えてくれた。"><ruby>田中<rt>たなか</rt></ruby>さんに<ruby>相談<rt>そうだん</rt></ruby>したら、「<ruby>件名<rt>けんめい</rt></ruby>は<ruby>短<rt>みじか</rt></ruby>く、<ruby>本文<rt>ほんぶん</rt></ruby>は<ruby>用件<rt>ようけん</rt></ruby>ごとに<ruby>行<rt>ぎょう</rt></ruby>を<ruby>変<rt>か</rt></ruby>えるといい」と<ruby>教<rt>おし</rt></ruby>えてくれた。<span class="zh">我找田中先生商量,他告诉我“标题写短,正文按事项分行比较好”。</span></span>
+
+<span class="sent r" data-jp="それ以来、送信ボタンを押す前に必ずもう一度読み返すようにしている。">それ<ruby>以来<rt>いらい</rt></ruby>、<ruby>送信<rt>そうしん</rt></ruby>ボタンを<ruby>押<rt>お</rt></ruby>す<ruby>前<rt>まえ</rt></ruby>に<ruby>必<rt>かなら</rt></ruby>ずもう<ruby>一度<rt>いちど</rt></ruby><ruby>読<rt>よ</rt></ruby>み<ruby>返<rt>かえ</rt></ruby>すようにしている。<span class="zh">从那以后,我一定在按发送键前再读一遍。</span></span>
+
+<span class="sent r" data-jp="相手の名前、日にち、場所。この三つさえ間違えなければ、大きな失敗はしない。"><ruby>相手<rt>あいて</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>、<ruby>日<rt>ひ</rt></ruby>にち、<ruby>場所<rt>ばしょ</rt></ruby>。この<ruby>三<rt>みっ</rt></ruby>つさえ<ruby>間違<rt>まちが</rt></ruby>えなければ、<ruby>大<rt>おお</rt></ruby>きな<ruby>失敗<rt>しっぱい</rt></ruby>はしない。<span class="zh">对方姓名、日期、地点。只要这三样不弄错,就不会出大错。</span></span>
+
+<span class="sent r" data-jp="敬語も、メールのうえでは話す時より丁寧にしたほうが安心だ。"><ruby>敬語<rt>けいご</rt></ruby>も、メールのうえでは<ruby>話<rt>はな</rt></ruby>す<ruby>時<rt>とき</rt></ruby>より<ruby>丁寧<rt>ていねい</rt></ruby>にしたほうが<ruby>安心<rt>あんしん</rt></ruby>だ。<span class="zh">敬语在邮件上也比当面说话时更客气些,才让人放心。</span></span>
+
+<span class="sent r" data-jp="最近は、返事が早いと評判がいいらしい。"><ruby>最近<rt>さいきん</rt></ruby>は、<ruby>返事<rt>へんじ</rt></ruby>が<ruby>早<rt>はや</rt></ruby>いと<ruby>評判<rt>ひょうばん</rt></ruby>がいいらしい。<span class="zh">最近好像因为回信快,口碑还不错。</span></span>
+
+<span class="sent r" data-jp="小さなことだが、こういう積み重ねが信用になるのだろうと思う。"><ruby>小<rt>ちい</rt></ruby>さなことだが、こういう<ruby>積<rt>つ</rt></ruby>み<ruby>重<rt>かさ</rt></ruby>ねが<ruby>信用<rt>しんよう</rt></ruby>になるのだろうと<ruby>思<rt>おも</rt></ruby>う。<span class="zh">虽是小事,但我想这样的积累会变成信用吧。</span></span>
+
+<h2>生词(本课核心15词)</h2>
+<table>
+<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
+<tr><td><button class="spk" data-jp="打ち合わせ">▶</button></td><td class="jp">打ち合わせ</td><td>うちあわせ</td><td>名·サ変</td><td>碰头、事先商量⭐本课课题</td></tr>
+<tr><td><button class="spk" data-jp="参考">▶</button></td><td class="jp">参考</td><td>さんこう</td><td>名</td><td>参考⭐</td></tr>
+<tr><td><button class="spk" data-jp="評判">▶</button></td><td class="jp">評判</td><td>ひょうばん</td><td>名</td><td>评价、口碑⭐</td></tr>
+<tr><td><button class="spk" data-jp="話題">▶</button></td><td class="jp">話題</td><td>わだい</td><td>名</td><td>话题⭐</td></tr>
+<tr><td><button class="spk" data-jp="取り上げる">▶</button></td><td class="jp">取り上げる</td><td>とりあげる</td><td>动2</td><td>(媒体)报道;拿起⭐</td></tr>
+<tr><td><button class="spk" data-jp="なるほど">▶</button></td><td class="jp">なるほど</td><td>なるほど</td><td>叹</td><td>原来如此⭐应答神句</td></tr>
+<tr><td><button class="spk" data-jp="配布">▶</button></td><td class="jp">配布</td><td>はいふ</td><td>名·サ変</td><td>分发、散发</td></tr>
+<tr><td><button class="spk" data-jp="作法">▶</button></td><td class="jp">作法</td><td>さほう</td><td>名</td><td>礼法、规矩⭐</td></tr>
+<tr><td><button class="spk" data-jp="件名">▶</button></td><td class="jp">件名</td><td>けんめい</td><td>名</td><td>(邮件)标题、主题</td></tr>
+<tr><td><button class="spk" data-jp="用件">▶</button></td><td class="jp">用件</td><td>ようけん</td><td>名</td><td>事由、事情</td></tr>
+<tr><td><button class="spk" data-jp="本文">▶</button></td><td class="jp">本文</td><td>ほんぶん</td><td>名</td><td>正文</td></tr>
+<tr><td><button class="spk" data-jp="相手">▶</button></td><td class="jp">相手</td><td>あいて</td><td>名</td><td>对方⭐</td></tr>
+<tr><td><button class="spk" data-jp="敬語">▶</button></td><td class="jp">敬語</td><td>けいご</td><td>名</td><td>敬语</td></tr>
+<tr><td><button class="spk" data-jp="読み返す">▶</button></td><td class="jp">読み返す</td><td>よみかえす</td><td>动1</td><td>重读、再读一遍</td></tr>
+<tr><td><button class="spk" data-jp="信用">▶</button></td><td class="jp">信用</td><td>しんよう</td><td>名·サ変</td><td>信用、信赖⭐</td></tr>
+</table>
+<h2>语法卡(本课句型 · 例句自造)</h2>
+<div class="card"><b>①文体②(敬体·簡体の混用)と応答の「なるほど」</b>——正式场合以敬体为主,关系熟了以后会偶尔混入简体;说漏了嘴就像正文第11句那样补一句「<ruby>失礼<rt>しつれい</rt></ruby>」。「なるほど」是表示领会、赞同的应答词。<span class="eg"><button class="spk" data-g="1">▶</button> 例:そうですね、それでいこう。—あ、<ruby>失礼<rt>しつれい</rt></ruby>しました。(是啊,就那么办。—啊,失礼了。)</span></div>
+<div class="card"><b>②参考にする / 参考になる</b>——「<ruby>参考<rt>さんこう</rt></ruby>にする」=他动词,把它拿来当判断依据;「<ruby>参考<rt>さんこう</rt></ruby>になる」=自动词,它本身有参考价值。正文第2·3句正好成对。<span class="eg"><button class="spk" data-g="2">▶</button> 例:<ruby>先輩<rt>せんぱい</rt></ruby>の<ruby>意見<rt>いけん</rt></ruby>を<b><ruby>参考<rt>さんこう</rt></ruby>にしました</b>。/ <ruby>先輩<rt>せんぱい</rt></ruby>の<ruby>話<rt>はなし</rt></ruby>はとても<b><ruby>参考<rt>さんこう</rt></ruby>になりました</b>。</span></div>
+<div class="card"><b>③〜だろうと思う</b>——推测「だろう」+个人见解「と<ruby>思<rt>おも</rt></ruby>う」,把话说得更委婉。正文「<ruby>長<rt>なが</rt></ruby>すぎる<b>だろうと<ruby>思<rt>おも</rt></ruby>って</b>」。<span class="eg"><button class="spk" data-g="3">▶</button> 例:<ruby>彼<rt>かれ</rt></ruby>はもう<ruby>帰<rt>かえ</rt></ruby>った<b>だろうと<ruby>思<rt>おも</rt></ruby>います</b>。(我想他大概已经回去了。)</span></div>
+<div class="card"><b>④〜なら〜、〜なら〜</b>——并列两个假定,做对比。正文「<ruby>一時間<rt>いちじかん</rt></ruby><b>なら</b>…<ruby>二時間<rt>にじかん</rt></ruby><b>なら</b>…」。<span class="eg"><button class="spk" data-g="4">▶</button> 例:<ruby>電車<rt>でんしゃ</rt></ruby><b>なら</b><ruby>三十分<rt>さんじゅっぷん</rt></ruby>、バス<b>なら</b><ruby>一時間<rt>いちじかん</rt></ruby>かかります。(坐电车三十分钟,坐巴士要一小时。)</span></div>
+<div class="card"><b>⑤話題になる・取り上げる</b>——「<ruby>話題<rt>わだい</rt></ruby>になる」=成为大家谈论的对象;「<ruby>取<rt>と</rt></ruby>り<ruby>上<rt>あ</rt></ruby>げる」本义是拿起,引申为媒体「报道、选作题材」,多用被动。<span class="eg"><button class="spk" data-g="5">▶</button> 例:この<ruby>映画<rt>えいが</rt></ruby>は<ruby>若<rt>わか</rt></ruby>い<ruby>人<rt>ひと</rt></ruby>の<ruby>間<rt>あいだ</rt></ruby>で<b><ruby>話題<rt>わだい</rt></ruby>になっている</b>。/ <ruby>新聞<rt>しんぶん</rt></ruby>に<b><ruby>取<rt>と</rt></ruby>り<ruby>上<rt>あ</rt></ruby>げられた</b>。</span></div>
+<div class="card"><b>⑥〜のうえで(の)</b>——表示范围、方面,「在…上」。正文「<ruby>働<rt>はたら</rt></ruby>く<b>うえで</b>」「メール<b>のうえでは</b>」。<span class="eg"><button class="spk" data-g="6">▶</button> 例:<ruby>仕事<rt>しごと</rt></ruby><b>のうえでの</b><ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>いです。(是工作上的往来。)</span></div>
+<div class="card"><b>⑦〜さえ〜ば</b>——只要满足这一个最低条件,后项就成立。正文「<ruby>件名<rt>けんめい</rt></ruby><b>さえ</b><ruby>見<rt>み</rt></ruby>れ<b>ば</b>」「この<ruby>三<rt>みっ</rt></ruby>つ<b>さえ</b><ruby>間違<rt>まちが</rt></ruby>えなけれ<b>ば</b>」。<span class="eg"><button class="spk" data-g="7">▶</button> 例:<ruby>薬<rt>くすり</rt></ruby><b>さえ</b><ruby>飲<rt>の</rt></ruby>め<b>ば</b>、すぐ<ruby>治<rt>なお</rt></ruby>ります。(只要吃了药,马上就好。)</span></div>
+<div class="card"><b>⑧〜などという</b>——举出一个代表性例子,暗示同类还有别的,常带轻微评价。正文「「<ruby>例<rt>れい</rt></ruby>の<ruby>件<rt>けん</rt></ruby>、よろしく」<b>などという</b>メール」。<span class="eg"><button class="spk" data-g="8">▶</button> 例:「<ruby>知<rt>し</rt></ruby>らない」<b>などという</b><ruby>返事<rt>へんじ</rt></ruby>では<ruby>困<rt>こま</rt></ruby>ります。(回一句“不知道”之类的可不行。)</span></div>
+<div class="card"><b>⑨〜といい</b>——动词基本形+といい,语气较弱的建议、劝告。正文「<ruby>行<rt>ぎょう</rt></ruby>を<ruby>変<rt>か</rt></ruby>える<b>といい</b>」。<span class="eg"><button class="spk" data-g="9">▶</button> 例:<ruby>困<rt>こま</rt></ruby>ったときは、<ruby>先輩<rt>せんぱい</rt></ruby>に<ruby>相談<rt>そうだん</rt></ruby>する<b>といい</b>。(为难的时候,找前辈商量比较好。)</span></div>
+<div class="card"><b>⑩〜ごとに</b>——有规则地反复时的间隔,或「每当…」。正文「<ruby>用件<rt>ようけん</rt></ruby><b>ごとに</b><ruby>行<rt>ぎょう</rt></ruby>を<ruby>変<rt>か</rt></ruby>える」。<span class="eg"><button class="spk" data-g="10">▶</button> 例:<ruby>一年<rt>いちねん</rt></ruby><b>ごとに</b><ruby>契約<rt>けいやく</rt></ruby>を<ruby>更新<rt>こうしん</rt></ruby>します。(每一年续一次合同。)</span></div>
+<div class="note">📌 版权说明:本页为私人日语学习页。正文会話与読解文均为按《新版中日交流标准日本语 中级》第7课的语法点与词汇范围<b>原创写作</b>的自写文,非教材原文;生词表与语法点条目为知识性内容,例句自造。仅供本人配合正版教材学习使用,请勿分享链接。</div>
+<div class="foot">学习管家 · 标日中级伴学 第7课 · 朗读=Azure 神经语音 Keita(男声·田中さん/読解/生词)+ Nanami(女声·王さん)</div>
+</div>
+
+<script>
+let cur=null,curEl=null;
+function play(src,el){
+  if(el&&el===curEl&&cur){
+    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
+    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
+  if(cur){cur.pause();cur=null}
+  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
+  cur=new Audio(src);curEl=el||null;
+  if(el)el.classList.add('playing');
+  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
+  cur.play();}
+document.querySelectorAll('.sent.c').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/k7s'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.sent.r').forEach((s,i)=>s.addEventListener('click',()=>play('media/tts/k7r'+(i+1)+'.mp3',s)));
+document.querySelectorAll('.spk:not([data-g])').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/k7w'+(i+1)+'.mp3')}));
+document.querySelectorAll('.spk[data-g]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();play('media/tts/k7g'+b.dataset.g+'.mp3')}));
+document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
+document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+</script>
+</body>
+</html>
