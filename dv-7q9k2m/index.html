@@ -14,10 +14,16 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 .wrap{max-width:520px;margin:0 auto}
-header{margin-bottom:26px}
+header{margin-bottom:26px;position:relative}
 h1{font-size:24px;font-weight:700;letter-spacing:.5px;color:#3d3a34}
 h1::after{content:"";display:block;width:44px;height:3px;background:#C15F3C;border-radius:2px;margin-top:10px}
 .hi{margin-top:12px;font-size:13.5px;color:#8d8579}
+#editBtn{
+  position:absolute;right:0;top:2px;
+  font-size:13px;color:#C15F3C;background:none;border:1px solid #E3C9BB;
+  border-radius:14px;padding:4px 14px;font-family:inherit;
+}
+body.edit #editBtn{background:#C15F3C;color:#FFFDF9;border-color:#C15F3C}
 .card{
   display:block;text-decoration:none;color:inherit;
   background:#FFFDF9;border:1px solid #EBE2D4;border-radius:16px;
@@ -37,6 +43,24 @@ h1::after{content:"";display:block;width:44px;height:3px;background:#C15F3C;bord
   position:absolute;left:0;top:18px;bottom:18px;width:4px;
   background:#C15F3C;border-radius:0 3px 3px 0;
 }
+.card .ops{display:none}
+body.edit .card .arrow{display:none}
+body.edit .card{padding-right:130px}
+body.edit .card .ops{
+  display:flex;gap:8px;position:absolute;right:14px;top:50%;transform:translateY(-50%);
+}
+.ops button{
+  width:34px;height:34px;border-radius:10px;border:1px solid #EBE2D4;
+  background:#FAF6EF;color:#3d3a34;font-size:16px;font-family:inherit;line-height:1;
+}
+.ops button:active{background:#EFE7DA}
+.ops .del{color:#B04A2E;border-color:#E3C9BB}
+#resetRow{display:none;text-align:center;margin-top:18px}
+body.edit #resetRow{display:block}
+#resetRow button{
+  font-size:12.5px;color:#8d8579;background:none;border:none;
+  text-decoration:underline;font-family:inherit;padding:6px 10px;
+}
 footer{margin-top:30px;text-align:center;font-size:11.5px;color:#b0a698;letter-spacing:.3px}
 @media (min-width:480px){
   body{padding-top:44px}
@@ -51,38 +75,107 @@ footer{margin-top:30px;text-align:center;font-size:11.5px;color:#b0a698;letter-s
   <header>
     <h1>随身专区</h1>
     <div class="hi">David 的手机端总入口 · 点开即达</div>
+    <button id="editBtn" type="button">整理</button>
   </header>
 
-  <a class="card" href="../dm-4h7p2x/">
-    <span class="bar"></span>
-    <div class="t">随身页</div>
-    <div class="s">管家发到手机的路线 / 清单 / 备忘</div>
-    <span class="arrow">›</span>
-  </a>
+  <div id="cards">
 
-  <a class="card" href="../sl-9k2x4v/">
-    <span class="bar"></span>
-    <div class="t">购物清单</div>
-    <div class="s">随时加、买完勾</div>
-    <span class="arrow">›</span>
-  </a>
-
-  <a class="card" href="../hub/">
-    <span class="bar"></span>
-    <div class="t">学习总入口</div>
-    <div class="s">日语学习全部入口</div>
-    <span class="arrow">›</span>
-  </a>
-
-  <a class="card" href="../hc-k7m3x9/">
+  <a class="card" data-id="hc" href="../hc-k7m3x9/">
     <span class="bar"></span>
     <div class="t">健康打卡</div>
     <div class="s">每日打卡 · 30天热力图</div>
     <span class="arrow">›</span>
+    <span class="ops"><button type="button" class="up">↑</button><button type="button" class="down">↓</button><button type="button" class="del">✕</button></span>
   </a>
+
+  <a class="card" data-id="hub" href="../hub/">
+    <span class="bar"></span>
+    <div class="t">学习总入口</div>
+    <div class="s">日语学习全部入口</div>
+    <span class="arrow">›</span>
+    <span class="ops"><button type="button" class="up">↑</button><button type="button" class="down">↓</button><button type="button" class="del">✕</button></span>
+  </a>
+
+  <a class="card" data-id="sl" href="../sl-9k2x4v/">
+    <span class="bar"></span>
+    <div class="t">购物清单</div>
+    <div class="s">随时加、买完勾</div>
+    <span class="arrow">›</span>
+    <span class="ops"><button type="button" class="up">↑</button><button type="button" class="down">↓</button><button type="button" class="del">✕</button></span>
+  </a>
+
+  <a class="card" data-id="dm" href="../dm-4h7p2x/">
+    <span class="bar"></span>
+    <div class="t">随身页</div>
+    <div class="s">管家发到手机的路线 / 清单 / 备忘</div>
+    <span class="arrow">›</span>
+    <span class="ops"><button type="button" class="up">↑</button><button type="button" class="down">↓</button><button type="button" class="del">✕</button></span>
+  </a>
+
+  </div>
+
+  <div id="resetRow"><button id="resetBtn" type="button">恢复默认排列(找回已删的卡)</button></div>
 
   <footer>仅供本人使用 · 不收录搜索</footer>
 
 </div>
+<script>
+(function(){
+  var KEY='dv_layout_v1';
+  var box=document.getElementById('cards');
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return{}}}
+  function save(st){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+  function state(){
+    var st=load();
+    if(!(st.order instanceof Array))st.order=[];
+    if(!(st.hidden instanceof Array))st.hidden=[];
+    return st;
+  }
+  function apply(){
+    var st=state();
+    var cards={};
+    Array.prototype.forEach.call(box.querySelectorAll('.card'),function(c){cards[c.dataset.id]=c});
+    var ids=Object.keys(cards);
+    var order=st.order.filter(function(id){return cards[id]});
+    ids.forEach(function(id){if(order.indexOf(id)<0)order.push(id)});
+    order.forEach(function(id){box.appendChild(cards[id])});
+    ids.forEach(function(id){
+      cards[id].style.display = st.hidden.indexOf(id)>=0 && !document.body.classList.contains('edit') ? 'none':'block';
+      cards[id].style.opacity = st.hidden.indexOf(id)>=0 ? '.45':'1';
+    });
+  }
+  function currentOrder(){
+    return Array.prototype.map.call(box.querySelectorAll('.card'),function(c){return c.dataset.id});
+  }
+  document.getElementById('editBtn').addEventListener('click',function(){
+    document.body.classList.toggle('edit');
+    this.textContent=document.body.classList.contains('edit')?'完成':'整理';
+    apply();
+  });
+  document.getElementById('resetBtn').addEventListener('click',function(){
+    try{localStorage.removeItem(KEY)}catch(e){}
+    apply();
+  });
+  box.addEventListener('click',function(ev){
+    var btn=ev.target.closest?ev.target.closest('button'):null;
+    if(document.body.classList.contains('edit')){
+      ev.preventDefault();
+      if(!btn)return;
+      var card=btn.closest('.card'),st=state();
+      st.order=currentOrder();
+      var id=card.dataset.id;
+      if(btn.classList.contains('up')||btn.classList.contains('down')){
+        var i=st.order.indexOf(id),j=btn.classList.contains('up')?i-1:i+1;
+        if(j>=0&&j<st.order.length){st.order[i]=st.order[j];st.order[j]=id}
+      }else if(btn.classList.contains('del')){
+        var h=st.hidden.indexOf(id);
+        if(h>=0)st.hidden.splice(h,1);else st.hidden.push(id);
+      }
+      save(st);apply();
+    }
+  });
+  apply();
+})();
+</script>
 </body>
 </html>
