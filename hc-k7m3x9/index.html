@@ -48,7 +48,7 @@ h2{font-size:14px;color:var(--sageInk);margin:18px 0 8px}
 <div class="wrap">
 <h1>🌿 健康打卡</h1>
 <div class="date" id="today"></div>
-<div class="date" id="syncst" style="margin-top:-12px;cursor:pointer">⚪ 双机同步未配置(点我)</div>
+<div class="date" id="syncst" style="margin-top:-12px;cursor:pointer">🔄 同步中…</div>
 
 <h2>📅 最近30天</h2>
 <div class="cal">
@@ -187,72 +187,51 @@ document.getElementById('bExport').addEventListener('click',()=>{
 document.getElementById('today').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'});
 renderItems();renderStats();renderCal();
 
-/* ===== 双机同步(GitHub私仓 hc-data-9x2m) ===== */
-const GH_API='https://api.github.com/repos/mtfuji88988-sys/hc-data-9x2m/contents/hc.json';
+/* ===== 双机同步(零配置·Cloudflare私有落点) ===== */
+const EP='https://autumn-leaf-bdac.mtfuji88988.workers.dev/d-7kq4x9mf2t8w';
 const stEl=document.getElementById('syncst');
-let remoteSha=null,pushTimer=null,pushing=false;
-function tok(){return localStorage.getItem('hcToken')||''}
+let pushTimer=null,pushing=false;
 function setSt(icon,msg){stEl.textContent=icon+' '+msg}
-function b64e(s){return btoa(unescape(encodeURIComponent(s)))}
-function b64d(s){return decodeURIComponent(escape(atob(s.replace(/\n/g,''))))}
 function mergeRemote(rd){
-  let changed=false;
+  let localAhead=false,changed=false;
   const dates=new Set([...Object.keys(rd),...Object.keys(data)]);
   dates.forEach(ds=>{
     const r=rd[ds],l=data[ds];
     if(r&&!l){data[ds]=r;changed=true}
+    else if(!r&&l){localAhead=true}
     else if(r&&l){
       const rt=r._ts||0,lt=l._ts||0;
       if(rt>lt){data[ds]=r;changed=true}
+      else if(lt>rt){localAhead=true}
+      else if(JSON.stringify(r)!==JSON.stringify(l)){localAhead=true}
     }
   });
   if(changed){save(data);renderItems();renderStats();renderCal()}
-  return changed;
+  return localAhead;
 }
 async function pull(){
-  if(!tok())return setSt('⚪','双机同步未配置(点我)');
   setSt('🔄','同步中…');
   try{
-    const r=await fetch(GH_API,{headers:{Authorization:'token '+tok(),Accept:'application/vnd.github+json'},cache:'no-store'});
-    if(r.status===401||r.status===403)return setSt('🔴','令牌无效(点我重设)');
-    if(!r.ok)return setSt('🟡','离线·仅本机记录');
-    const j=await r.json();remoteSha=j.sha;
-    const rd=(JSON.parse(b64d(j.content)).data)||{};
-    mergeRemote(rd);
-    // 本地比远端多的内容推上去
-    if(JSON.stringify(rd)!==JSON.stringify(data)){schedPush(0)}
-    else setSt('🟢','已同步');
-  }catch(e){setSt('🟡','离线·仅本机记录')}
+    const r=await fetch(EP,{cache:'no-store'});
+    if(!r.ok)return setSt('🟡','离线·仅本机记录,联网自动补');
+    const rd=(await r.json()).data||{};
+    const localAhead=mergeRemote(rd);
+    if(localAhead)schedPush(0);else setSt('🟢','已同步');
+  }catch(e){setSt('🟡','离线·仅本机记录,联网自动补')}
 }
-function schedPush(delay){
-  if(!tok())return;
-  clearTimeout(pushTimer);
-  pushTimer=setTimeout(doPush,delay===0?200:2000);
-}
-async function doPush(retry){
-  if(!tok()||pushing)return;
+function schedPush(delay){clearTimeout(pushTimer);pushTimer=setTimeout(doPush,delay===0?200:1500)}
+async function doPush(){
+  if(pushing)return schedPush();
   pushing=true;setSt('🔄','同步中…');
   try{
-    const body=JSON.stringify({message:'sync '+new Date().toISOString().slice(0,16),
-      content:b64e(JSON.stringify({v:1,data})),sha:remoteSha||undefined});
-    const r=await fetch(GH_API,{method:'PUT',headers:{Authorization:'token '+tok(),Accept:'application/vnd.github+json'},body});
-    if(r.ok){const j=await r.json();remoteSha=j.content.sha;setSt('🟢','已同步')}
-    else if((r.status===409||r.status===422)&&!retry){
-      // 另一台机先推了:拉下来合并再推一次
-      pushing=false;await pull();pushing=true;
-      return doPush(true);
-    }
-    else setSt('🟡','同步失败·数据在本机没丢');
-  }catch(e){setSt('🟡','离线·仅本机记录')}
+    const r=await fetch(EP,{cache:'no-store'});
+    if(r.ok)mergeRemote((await r.json()).data||{});
+    const w=await fetch(EP,{method:'PUT',body:JSON.stringify({v:1,data})});
+    setSt(w.ok?'🟢':'🟡',w.ok?'已同步':'同步失败·数据在本机没丢');
+  }catch(e){setSt('🟡','离线·仅本机记录,联网自动补')}
   pushing=false;
 }
-stEl.addEventListener('click',()=>{
-  const cur=tok();
-  const t=prompt(cur?'重新粘贴同步令牌(留空=清除):':'粘贴同步令牌(管家给您的那串,粘一次就好):');
-  if(t===null)return;
-  if(t.trim()===''){localStorage.removeItem('hcToken');setSt('⚪','双机同步未配置(点我)')}
-  else{localStorage.setItem('hcToken',t.trim());pull()}
-});
+stEl.addEventListener('click',pull);
 pull();
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)pull()});
 </script>
