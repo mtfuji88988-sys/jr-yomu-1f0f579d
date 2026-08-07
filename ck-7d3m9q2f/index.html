@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>出差前四件事 · 每日打卡</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#FAF6F0;color:#2B2620;font-family:"Songti SC","Noto Serif SC",Georgia,serif;padding:26px 16px 70px;line-height:1.7}
+.wrap{max-width:560px;margin:0 auto}
+h1{font-size:21px;border-bottom:3px solid #C15F3C;padding-bottom:8px}
+.sub{color:#8A7F72;font-size:11.5px;margin:6px 0 2px}
+#syncst{color:#8A7F72;font-size:11.5px;margin-bottom:10px;cursor:pointer}
+.today{background:#F3E9DE;border-radius:10px;padding:11px 14px;font-size:14px;margin:10px 0 16px}
+.today b{color:#9C4A2E}
+.card{background:#fff;border:1px solid #E5DCD0;border-radius:12px;padding:14px 15px;margin:11px 0}
+.tname{font-size:16px;font-weight:700}
+.tmeta{font-size:11.5px;color:#8A7F72;margin:2px 0 10px}
+.bar{height:7px;background:#F1E7DA;border-radius:99px;overflow:hidden;margin-bottom:12px}
+.bar i{display:block;height:100%;background:#C15F3C;border-radius:99px;transition:width .25s}
+.segs{display:flex;flex-wrap:wrap;gap:9px}
+.seg{width:64px;min-height:52px;border:1.5px solid #D8C9B6;border-radius:10px;background:#FDFBF7;text-align:center;padding:6px 2px 5px;cursor:pointer;user-select:none;-webkit-user-select:none}
+.seg .m{font-size:18px;line-height:1.2;color:#C9BBA8}
+.seg .d{font-size:10px;color:#8A7F72;margin-top:2px;min-height:13px}
+.seg.on{border-color:#4C7A5E;background:#EDF3EE}
+.seg.on .m{color:#4C7A5E}
+.seg.wide{width:100%;display:flex;align-items:center;gap:10px;text-align:left;padding:9px 12px}
+.seg.wide .m{font-size:17px;flex:none}
+.seg.wide .lbl{font-size:13.5px;flex:1}
+.seg.wide .d{margin-top:0;flex:none}
+.donebadge{display:inline-block;font-size:11px;background:#EDF3EE;color:#4C7A5E;border-radius:99px;padding:1px 10px;margin-left:6px;font-weight:700}
+.mut{color:#B5AB9E;font-size:11px;margin-top:20px;text-align:center}
+.back{display:inline-block;font-size:12px;color:#C15F3C;text-decoration:none;margin-bottom:6px}
+</style></head><body><div class="wrap">
+<a class="back" href="../dm-4h7p2x/">← David 随身页</a>
+<h1>出差前四件事 · 每日打卡</h1>
+<div class="sub">每天做一份就点亮一格 · 全亮=可以放心出差</div>
+<div id="syncst">🔄 同步中…</div>
+<div class="today" id="today"></div>
+<div id="tasks"></div>
+<div class="mut">点错再点一下即取消 · 网址即钥匙请勿转发</div>
+</div>
+<script>
+const EP='https://autumn-leaf-bdac.mtfuji88988.workers.dev/ck-7d3m9q2f';
+const KEY='ckTrip';
+const TASKS=[
+ {id:'t1',name:'1 · AI房间',n:4,note:'每天做四分之一 · 4格'},
+ {id:'t2',name:'2 · 各产品陆续上线',n:6,note:'每天做六分之一 · 6格'},
+ {id:'t3',name:'3 · 隧道 + Mac mini 出差可用',n:3,note:'按步骤点亮 · 3步',labels:['mini装机+克隆','无人值守+MacBook配置','外网蜂窝实测遥控']},
+ {id:'t4',name:'4 · X',n:5,note:'每天做五分之一 · 5格'}
+];
+let items={};try{items=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const stEl=document.getElementById('syncst');
+let pushTimer=null,pushing=false,synced=false;
+function setSt(s){stEl.textContent=s}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(items))}catch(e){}}
+function todayStr(){const d=new Date();return String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function render(){
+ const tEl=document.getElementById('tasks');tEl.innerHTML='';
+ const today=todayStr();const behind=[];
+ TASKS.forEach(t=>{
+  let done=0,todayHit=false;
+  const card=document.createElement('div');card.className='card';
+  let segsHtml='';
+  for(let i=1;i<=t.n;i++){
+   const it=items[t.id+'s'+i];
+   const on=it&&it.done&&!it.del;
+   if(on){done++;if(it.d===today)todayHit=true}
+   if(t.labels){
+    segsHtml+=`<div class="seg wide${on?' on':''}" data-k="${t.id}s${i}"><span class="m">${on?'✓':'○'}</span><span class="lbl">${t.labels[i-1]}</span><span class="d">${on?(it.d||''):''}</span></div>`;
+   }else{
+    segsHtml+=`<div class="seg${on?' on':''}" data-k="${t.id}s${i}"><div class="m">${on?'✓':'○'}</div><div class="d">${on?(it.d||''):''}</div></div>`;
+   }
+  }
+  const pct=Math.round(done/t.n*100);
+  const full=done===t.n;
+  if(!full&&!todayHit)behind.push(t.name.replace(/^\d+ · /,''));
+  card.innerHTML=`<div class="tname">${t.name}${full?'<span class="donebadge">完成 🎉</span>':''}</div><div class="tmeta">${t.note} · 已完成 ${done}/${t.n}</div><div class="bar"><i style="width:${pct}%"></i></div><div class="segs">${segsHtml}</div>`;
+  tEl.appendChild(card);
+ });
+ tEl.querySelectorAll('.seg').forEach(el=>{
+  el.onclick=()=>{
+   const k=el.dataset.k;const it=items[k];
+   if(it&&it.done&&!it.del){it.done=false;it.del=true;it.ts=Date.now()}
+   else{items[k]={done:true,del:false,d:todayStr(),ts:Date.now()}}
+   save();render();schedPush();
+  };
+ });
+ const allDone=TASKS.every(t=>{let d=0;for(let i=1;i<=t.n;i++){const it=items[t.id+'s'+i];if(it&&it.done&&!it.del)d++}return d===t.n});
+ const td=document.getElementById('today');
+ if(allDone){td.innerHTML='<b>四件事全部完成 🎉</b> 可以放心出差了';}
+ else if(behind.length){td.innerHTML='今天 <b>'+today+'</b> · 还没打卡:<b>'+behind.join('、')+'</b>';}
+ else{td.innerHTML='今天 <b>'+today+'</b> · 今日各项都打过卡了 ✓ 明天继续';}
+}
+function mergeRemote(ri){
+ let localAhead=false,changed=false;
+ const ids=new Set([...Object.keys(ri),...Object.keys(items)]);
+ ids.forEach(id=>{
+  const r=ri[id],l=items[id];
+  if(r&&!l){items[id]=r;changed=true}
+  else if(!r&&l){localAhead=true}
+  else if(r&&l){
+   if((r.ts||0)>(l.ts||0)){items[id]=r;changed=true}
+   else if((l.ts||0)>(r.ts||0)){localAhead=true}
+   else if(JSON.stringify(r)!==JSON.stringify(l)){localAhead=true}
+  }
+ });
+ if(changed){save();render()}
+ return localAhead;
+}
+async function pull(){
+ setSt('🔄 同步中…');
+ try{
+  const r=await fetch(EP,{cache:'no-store'});
+  if(r.status===404)return setSt('🟡 云端钥匙待开通 · 先记在本机,不会丢');
+  if(!r.ok)return setSt('🟡 离线 · 仅本机记录,联网自动补');
+  synced=true;
+  const localAhead=mergeRemote((await r.json()).items||{});
+  if(localAhead)schedPush(0);else setSt('🟢 已同步');
+ }catch(e){setSt('🟡 离线 · 仅本机记录,联网自动补')}
+}
+function schedPush(d){clearTimeout(pushTimer);pushTimer=setTimeout(doPush,d===0?200:1200)}
+async function doPush(){
+ if(pushing)return schedPush();
+ pushing=true;
+ try{
+  const r=await fetch(EP,{cache:'no-store'});
+  if(r.status===404){setSt('🟡 云端钥匙待开通 · 先记在本机,不会丢');pushing=false;return}
+  if(r.ok)mergeRemote((await r.json()).items||{});
+  const w=await fetch(EP,{method:'PUT',body:JSON.stringify({v:1,items})});
+  setSt(w.ok?'🟢 已同步':'🟡 同步失败 · 数据在本机没丢');
+ }catch(e){setSt('🟡 离线 · 仅本机记录,联网自动补')}
+ pushing=false;
+}
+stEl.onclick=pull;
+render();pull();
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)pull()});
+</script>
+</body></html>
