@@ -1,39 +1,127 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>小说连载『月島食堂』 · 学习管家</title>
-<style>
-:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--card:#fff;--sky:#EAF2F5}
-@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--card:#2A241E;--sky:#26313A}}
+<meta name="referrer" content="no-referrer">
+<title>私人学习空间</title>
+<style>:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--line:#E8DDCD;--muted:#8A7F72;--card:#fff}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--line:#3C342B;--muted:#A79A8B;--card:#2A241E}}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:1.85;padding:34px 16px 60px}
-.wrap{max-width:640px;margin:0 auto}
-h1{font-size:23px;color:var(--terra);border-bottom:3px solid var(--terra);padding-bottom:10px}
-.intro{background:var(--sky);border:1px solid var(--line);border-radius:10px;padding:12px 15px;font-size:13.5px;margin:14px 0 20px}
-.intro b{color:var(--terra)}
-a.card{display:block;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--terra);border-radius:12px;padding:15px 17px;margin:12px 0;text-decoration:none;color:var(--ink)}
-a.card:active{opacity:.7}
-.tag{display:inline-block;background:var(--soft);color:var(--terra);font-size:11.5px;padding:2px 9px;border-radius:20px;margin-right:6px}
-.ti{font-size:16.5px;font-weight:700;margin:5px 0 4px;line-height:1.4}
-.meta{font-size:12px;color:var(--muted)}
-.foot{color:var(--muted);font-size:12px;margin-top:22px;padding-top:12px;border-top:1px solid var(--line)}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;-webkit-text-size-adjust:100%}
+#jrxGate{visibility:hidden;min-height:100%;display:flex;align-items:center;justify-content:center;padding:30px 18px}
+.jrxCard{width:100%;max-width:330px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--terra);border-radius:14px;padding:30px 24px 26px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.jrxLock{font-size:34px;line-height:1}
+.jrxCard h1{font-size:19px;color:var(--terra);margin:12px 0 6px;font-weight:600}
+.jrxHint{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+#jrxPw{width:100%;padding:13px 14px;font-size:17px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:10px;text-align:center;letter-spacing:2px;outline:none;-webkit-appearance:none}
+#jrxPw:focus{border-color:var(--terra)}
+#jrxGo{width:100%;margin-top:14px;padding:13px;font-size:16px;font-family:inherit;letter-spacing:4px;color:#fff;background:var(--terra);border:0;border-radius:10px;cursor:pointer}
+#jrxGo:disabled{opacity:.55}
+#jrxGo:active{opacity:.8}
+#jrxErr{min-height:20px;margin-top:12px;font-size:13px;color:#C0392B}
+@media(prefers-color-scheme:dark){#jrxErr{color:#E8877A}}
+.jrxFoot{margin-top:18px;font-size:11.5px;color:var(--muted);line-height:1.7}
+.jrxHidden{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1>📚 小说连载『月島食堂』</h1>
-<div class="intro">学习管家<b>原创连载学习小说</b>:东京·月島小巷里,上海夫妇周さん与美玲さん的七席小食堂,一位客人一段故事。<b>难度从 Lv.1(N5-N4)起步,两课升一级</b>;每课 14 句、一课一屏、课课留钩子,读完就点「▶ 下一课」。会话双声线朗读(美玲·佐々木=Nanami,周·劉·山田=Keita)。</div>
+<div id="jrxGate"><form class="jrxCard" id="jrxForm">
+<div class="jrxLock">&#128274;</div>
+<h1>私人学习空间</h1>
+<p class="jrxHint">本页内容已加密<br>请输入访问密码</p>
+<input class="jrxHidden" type="text" name="username" value="jr-yomu" autocomplete="username" tabindex="-1" aria-hidden="true">
+<input type="password" id="jrxPw" name="password" autocomplete="current-password" placeholder="访问密码" aria-label="访问密码">
+<button type="submit" id="jrxGo">进 入</button>
+<div id="jrxErr" role="alert"></div>
+<div class="jrxFoot">解锁一次后本设备记住<br>之后翻页不再询问</div>
+</form></div>
+<script type="application/json" id="jrxData">{"v":1,"n":250000,"s":"dctSebvjkf1/mRMxh7XtQ3VAOZQX5fh45wM6tiPJWR8=","i":"5dMyPkyvtAu4mV1l","c":"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"}</script>
+<script>(function(){
+"use strict";
+function el(id){return document.getElementById(id);}
+var node=el("jrxData"),D;
+try{D=JSON.parse(node.textContent);}catch(e){D=null;}
+if(!D){document.documentElement.innerHTML="<p style=\"padding:40px;font:16px sans-serif\">页面数据损坏，请联系维护者。</p>";return;}
+var CK="jrx.k."+D.s.substring(0,10);
 
-<a class="card" href="ts1.html"><span class="tag">第1课</span><span class="tag">Lv.1</span><div class="ti">『雨の夜のチャーハン』</div><div class="meta">雨夜打烊前,佐々木さん又点了那份蛋炒饭 · 14句 · 生词12 · 语法卡4</div></a>
-<a class="card" href="ts2.html"><span class="tag">第2课</span><span class="tag">Lv.1</span><div class="ti">『いつもの味』</div><div class="meta">加班的烦恼,和一小碟没点过的汤 · 14句 · 生词12 · 语法卡4</div></a>
-<a class="card" href="ts3.html"><span class="tag">第3课</span><span class="tag">Lv.2</span><div class="ti">『おばあちゃんの台所』</div><div class="meta">外婆的厨房,记忆里的那个味道 · 14句 · 生词12 · 语法卡4</div></a>
-<a class="card" href="ts4.html"><span class="tag">第4课</span><span class="tag">Lv.2</span><div class="ti">『写真の中の店』</div><div class="meta">一张三十年前的老照片,认出了这条巷子 · 14句 · 生词12 · 语法卡4</div></a>
-<a class="card" href="ts5.html"><span class="tag">第5课</span><span class="tag">Lv.3</span><div class="ti">『留学生の悩み』</div><div class="meta">劉君说,这饺子的味道不对 · 14句 · 生词12 · 语法卡4</div></a>
-<a class="card" href="ts6.html"><span class="tag">第6课</span><span class="tag">Lv.3</span><div class="ti">『春節の約束』</div><div class="meta">周さん教包饺子,美玲さん宣布了一件事 · 14句 · 生词12 · 语法卡4</div></a>
+function toBuf(a){var s=atob(a),u=new Uint8Array(s.length),i;for(i=0;i<s.length;i++){u[i]=s.charCodeAt(i);}return u;}
+function toB64(b){var u=new Uint8Array(b),s="",i;for(i=0;i<u.length;i++){s+=String.fromCharCode(u[i]);}return btoa(s);}
 
-<div class="foot">学习管家 · 原创连载学习小说『月島食堂』(第1批6课 · 第7课起连载中)· 人物情节纯属虚构 · 仅供本人学习使用,请勿分享链接。</div>
-</div>
+var store=null;
+try{localStorage.setItem("jrx.t","1");localStorage.removeItem("jrx.t");store=localStorage;}catch(e){}
+if(!store){try{sessionStorage.setItem("jrx.t","1");sessionStorage.removeItem("jrx.t");store=sessionStorage;}catch(e){}}
+function sGet(k){try{return store?store.getItem(k):null;}catch(e){return null;}}
+function sSet(k,v){try{if(store){store.setItem(k,v);}}catch(e){}}
+function sDel(k){try{if(store){store.removeItem(k);}}catch(e){}}
+
+function whenReady(fn){
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",fn);}
+  else{fn();}
+}
+function showGate(msg){
+  whenReady(function(){
+    var g=el("jrxGate");
+    if(g){g.style.visibility="visible";}
+    if(msg){var e2=el("jrxErr");if(e2){e2.textContent=msg;}}
+  });
+}
+function reveal(html){
+  whenReady(function(){
+    try{document.open();document.write(html);document.close();}
+    catch(e){document.documentElement.innerHTML=html;}
+  });
+}
+
+if(!window.crypto||!window.crypto.subtle){
+  showGate("此浏览器无法解密：请确认用 https:// 网址打开本页。");
+  return;
+}
+var SUB=window.crypto.subtle;
+
+function importAes(raw){return SUB.importKey("raw",raw,{name:"AES-GCM"},true,["decrypt"]);}
+function decryptWith(key){
+  return SUB.decrypt({name:"AES-GCM",iv:toBuf(D.i)},key,toBuf(D.c)).then(function(buf){
+    return new TextDecoder("utf-8").decode(buf);
+  });
+}
+function derive(pw){
+  return SUB.importKey("raw",new TextEncoder().encode(pw),{name:"PBKDF2"},false,["deriveKey"]).then(function(base){
+    return SUB.deriveKey({name:"PBKDF2",salt:toBuf(D.s),iterations:D.n,hash:"SHA-256"},base,{name:"AES-GCM",length:256},true,["decrypt"]);
+  });
+}
+
+var cached=sGet(CK);
+if(cached){
+  importAes(toBuf(cached)).then(decryptWith).then(reveal).catch(function(){sDel(CK);showGate("");});
+}else{
+  showGate("");
+}
+
+whenReady(function(){
+  var f=el("jrxForm");
+  if(!f){return;}
+  f.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var input=el("jrxPw"),btn=el("jrxGo"),err=el("jrxErr");
+    var pw=input.value||"";
+    if(!pw){err.textContent="请输入密码";return;}
+    btn.disabled=true;btn.textContent="解密中…";err.textContent="";
+    derive(pw).then(function(key){
+      return decryptWith(key).then(function(html){
+        return SUB.exportKey("raw",key).then(function(raw){sSet(CK,toB64(raw));return html;});
+      });
+    }).then(reveal).catch(function(){
+      btn.disabled=false;btn.textContent="进 入";
+      err.textContent="密码不对，请再试一次";
+      input.value="";
+      try{input.focus();}catch(e){}
+    });
+  });
+});
+})();
+</script>
 </body>
 </html>

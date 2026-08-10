@@ -1,111 +1,127 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>NHK原声伴读 7 · 『フランス 子どもがSNSを使えないようにする』</title>
-<style>
-:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--ok:#4C7A5E;--hl:#FDEBD3;--card:#fff;--sky:#EAF2F5}
-@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--ok:#8FBEA3;--hl:#4A392B;--card:#2A241E;--sky:#26313A}}
+<meta name="referrer" content="no-referrer">
+<title>私人学习空间</title>
+<style>:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--line:#E8DDCD;--muted:#8A7F72;--card:#fff}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--line:#3C342B;--muted:#A79A8B;--card:#2A241E}}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:2;padding:0 0 60px}
-.wrap{max-width:720px;margin:0 auto;padding:20px 16px}
-h1{font-size:19px;color:var(--terra);text-align:center;line-height:1.5}
-.lv{display:inline-block;background:var(--terra);color:#fff;font-size:12px;padding:2px 10px;border-radius:20px;vertical-align:3px;margin-right:6px}
-.src{color:var(--muted);font-size:12.5px;text-align:center;margin:8px 0 2px}
-.guide{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font-size:12.5px;color:var(--ink);margin:12px 0}
-.guide b{color:var(--terra)}
-.btns{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
-.btn{font-family:inherit;font-size:13.5px;padding:7px 13px;border:1.5px solid var(--terra);background:var(--card);color:var(--terra);border-radius:20px;cursor:pointer}
-.btn.on{background:var(--terra);color:#fff}.btn:active{transform:scale(.96)}
-h2{font-size:16px;color:var(--terra);margin:26px 0 10px;padding-left:9px;border-left:4px solid var(--terra)}
-.lead{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px;font-family:"Songti SC",serif;line-height:1.9}
-.lead p{margin-bottom:6px}.lead p:last-child{margin-bottom:0}
-.dan{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:8px 14px;margin:7px 0;font-size:13.5px;font-family:"Songti SC",serif;line-height:1.8}
-.dan b{color:var(--terra);margin-right:8px;font-family:"Songti SC",serif}
-.sent{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:9px 0;cursor:pointer;font-size:18px}
-.sent.playing{background:var(--hl);border-color:var(--terra)}
-.sent.paused{border-style:dashed;border-color:var(--terra)}
-.sent .zh{display:block;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:7px;padding-top:6px;font-family:"Songti SC",serif;line-height:1.7}
-body.nozh .sent .zh{display:none}
-body.noruby rt{visibility:hidden}
-rt{font-size:9.5px;color:var(--terra)}
-table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);margin:8px 0}
-th{background:var(--soft);text-align:left;padding:7px 10px;border:1px solid var(--line);font-size:12.5px;white-space:nowrap}
-td{padding:7px 10px;border:1px solid var(--line);vertical-align:top}
-.jp{font-size:15px}.spk{border:none;background:var(--soft);color:var(--terra);border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:9px 0;font-size:14px}
-.card b{color:var(--terra)}.card .eg{display:block;background:var(--sky);border-radius:7px;padding:6px 10px;margin-top:6px;font-size:14px}
-.card .eg .zh{color:var(--muted);font-size:12.5px;font-family:"Songti SC",serif}
-.note{background:var(--sky);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-size:12px;color:var(--muted);margin:14px 0}
-.foot{color:var(--muted);font-size:12px;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;-webkit-text-size-adjust:100%}
+#jrxGate{visibility:hidden;min-height:100%;display:flex;align-items:center;justify-content:center;padding:30px 18px}
+.jrxCard{width:100%;max-width:330px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--terra);border-radius:14px;padding:30px 24px 26px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.jrxLock{font-size:34px;line-height:1}
+.jrxCard h1{font-size:19px;color:var(--terra);margin:12px 0 6px;font-weight:600}
+.jrxHint{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+#jrxPw{width:100%;padding:13px 14px;font-size:17px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:10px;text-align:center;letter-spacing:2px;outline:none;-webkit-appearance:none}
+#jrxPw:focus{border-color:var(--terra)}
+#jrxGo{width:100%;margin-top:14px;padding:13px;font-size:16px;font-family:inherit;letter-spacing:4px;color:#fff;background:var(--terra);border:0;border-radius:10px;cursor:pointer}
+#jrxGo:disabled{opacity:.55}
+#jrxGo:active{opacity:.8}
+#jrxErr{min-height:20px;margin-top:12px;font-size:13px;color:#C0392B}
+@media(prefers-color-scheme:dark){#jrxErr{color:#E8877A}}
+.jrxFoot{margin-top:18px;font-size:11.5px;color:var(--muted);line-height:1.7}
+.jrxHidden{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1><span class="lv">原声</span>『フランス　<ruby>子<rt>こ</rt></ruby>どもがSNSを<ruby>使<rt>つか</rt></ruby>えないようにする』</h1>
-<div class="src">NHK News Web Easy · 2026-07-22 · 播音员原声在官方页 · 分类:国际/科技社会</div>
-<div style="text-align:center;margin:14px 0"><a class="btn on" style="text-decoration:none;font-size:15px;padding:12px 20px" href="https://www3.nhk.or.jp/news/easy/ne2026072212505/ne2026072212505.html" target="_blank">📻 去 NHK 官方页:原文 + 播音员原声</a></div>
-<div class="guide">📖 <b>伴读用法</b>:①先在本页看导读、分段大意和生词混个脸熟 → ②点大按钮去 NHK 页,听播音员原声读 2 遍(官方页自带假名开关),<b>听每段前先扫一眼本页该段大意</b> → ③回本页过语法卡、跟读练习句 → ④再去听 1 遍,应能全懂。原声=标准读法,放心模仿。</div>
-<div class="btns"><button class="btn on" id="bRuby">假名:开</button><button class="btn on" id="bZh">中文:开</button></div>
-<h2>中文导读(原创)</h2>
-<div class="lead"><p>法国立法了:不满 15 岁的孩子不能用社交媒体。今年 9 月起不能新注册,明年 1 月起连已经在用的账号也要停。</p><p>总统在表态里把这件事定性为「保护孩子和年轻人」,措辞是防守型的,不是管制型的。</p><p>这不是一国孤例——澳大利亚已经有类似法律,欧盟也想在今年秋天前拿出方向,「儿童与社交媒体」正在成为各国共同的立法题目。</p><p>语言上这篇集中了三个表禁止与变化的句型:〜てはいけない / 〜ようにする / 〜ことができなくなる,是政策类新闻的通用零件。</p></div>
-<h2>分段大意(听每段前先扫一眼)</h2>
-<div class="dan"><b>第1段</b>先把题目放到国际背景里:孩子怎么用社交媒体,在多个国家都成了问题。</div>
-<div class="dan"><b>第2段</b>给出法国的核心做法:以年龄为界,划一条禁止线。</div>
-<div class="dan"><b>第3段</b>拆出两个时间点,分别对应新开账号和已有账号。</div>
-<div class="dan"><b>第4段</b>引总统的表态,点明立法的自我定位是「保护」。</div>
-<div class="dan"><b>第5段</b>做横向对照:已经立法的国家,以及欧盟正在推进的时间表。</div>
-<h2>生词(12)</h2>
-<table>
-<tr><th></th><th>词</th><th>读音</th><th>词性</th><th>中文</th></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">子ども</td><td>こども</td><td>名</td><td>孩子⭐生活高频</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">使い方</td><td>つかいかた</td><td>名</td><td>用法、使用方式⭐</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">問題になる</td><td>もんだいになる</td><td>惯用</td><td>成为问题⭐新闻高频</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">歳</td><td>さい</td><td>量词</td><td>岁⭐</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">法律</td><td>ほうりつ</td><td>名</td><td>法律</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">できる</td><td>できる</td><td>动Ⅱ</td><td>(法律、设施)建成、制定出来⭐</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">新しく</td><td>あたらしく</td><td>副</td><td>重新、新地⭐</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">大統領</td><td>だいとうりょう</td><td>名</td><td>总统</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">守る</td><td>まもる</td><td>动Ⅰ</td><td>保护;遵守⭐一词两义</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">若い人</td><td>わかいひと</td><td>名</td><td>年轻人⭐</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">このような</td><td>このような</td><td>连体</td><td>像这样的⭐书面高频</td></tr>
-<tr><td><button class="spk" data-w="1">▶</button></td><td class="jp">決める</td><td>きめる</td><td>动Ⅱ</td><td>决定⭐口语高频</td></tr>
-</table>
-<h2>语法卡(本文出现的句型 · 例句全部自造)</h2>
-<div class="card"><b>①〜てはいけません</b>——明确的禁止。规章、告示、法律条文的标准说法,口语里也说「〜ちゃだめ」。<span class="eg"><button class="spk" data-g="1">▶</button> ここでたばこを<ruby>吸<rt>す</rt></ruby><b>ってはいけません</b>。<br><span class="zh">这里不能抽烟。</span></span></div>
-<div class="card"><b>②〜ようにする</b>——设法让某种状态成立。主语是人时=努力做到;像本篇标题那样用时=(通过制度)使之不能…。<span class="eg"><button class="spk" data-g="2">▶</button> <ruby>毎日<rt>まいにち</rt></ruby><ruby>野菜<rt>やさい</rt></ruby>を<ruby>食<rt>た</rt></ruby>べる<b>ようにしています</b>。<br><span class="zh">我尽量每天吃蔬菜。</span></span></div>
-<div class="card"><b>③〜ことができなくなる</b>——「ことができる」的否定+なる:从能变成不能,强调制度带来的变化。<span class="eg"><button class="spk" data-g="3">▶</button> <ruby>雨<rt>あめ</rt></ruby>で、<ruby>外<rt>そと</rt></ruby>で<ruby>遊<rt>あそ</rt></ruby>ぶ<b>ことができなくなりました</b>。<br><span class="zh">因为下雨,不能在外面玩了。</span></span></div>
-<div class="card"><b>④〜たいと考えています</b>——比「〜たいです」更正式,机构、政府表达意向时的标准说法。<span class="eg"><button class="spk" data-g="4">▶</button> <ruby>来年<rt>らいねん</rt></ruby>、<ruby>日本<rt>にほん</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>き<b>たいと<ruby>考<rt>かんが</rt></ruby>えています</b>。<br><span class="zh">打算明年在日本工作。</span></span></div>
-<h2>跟读练习句(原创 · 点句朗读)</h2>
-<div class="dan">用本篇生词和句型写的短句,每句都短,张嘴就能跟。点一下播放,再点暂停。</div>
-<span class="sent"><ruby>子<rt>こ</rt></ruby>どものSNSが<ruby>問題<rt>もんだい</rt></ruby>になっています。<span class="zh">孩子用社交媒体成了问题。</span></span>
-<span class="sent">15<ruby>歳<rt>さい</rt></ruby>まで<ruby>使<rt>つか</rt></ruby>ってはいけません。<span class="zh">不满15岁不可以用。</span></span>
-<span class="sent"><ruby>新<rt>あたら</rt></ruby>しく<ruby>始<rt>はじ</rt></ruby>めることができません。<span class="zh">不能新开账号。</span></span>
-<span class="sent"><ruby>大統領<rt>だいとうりょう</rt></ruby>が「<ruby>守<rt>まも</rt></ruby>ります」と<ruby>言<rt>い</rt></ruby>いました。<span class="zh">总统说「我们会保护」。</span></span>
-<span class="sent">EUも<ruby>秋<rt>あき</rt></ruby>までに<ruby>決<rt>き</rt></ruby>めたいです。<span class="zh">欧盟也想在秋天前定下来。</span></span>
-<span class="sent">このような<ruby>法律<rt>ほうりつ</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えています。<span class="zh">这类法律在变多。</span></span>
-<div class="note">📌 版权说明:本页为私人日语学习伴读页,不含 NHK 文章正文;原文与播音员朗读请点击按钮前往 NHK News Web Easy 官方页面收听。生词释义、语法卡与练习句为学习管家用 AI 整理/原创,仅供本人学习使用,请勿分享链接。</div>
-<div class="foot">学习管家 · NHK原声新闻伴读 7 · 生词/语法例句/练习句朗读=Azure 神经语音 Keita(男声·假名锁音)</div>
-</div>
-<script>
-let cur=null,curEl=null;
-function play(src,el){
-  if(el&&el===curEl&&cur){
-    if(cur.paused){cur.play();el.classList.remove('paused');el.classList.add('playing')}
-    else{cur.pause();el.classList.add('paused');el.classList.remove('playing')}return;}
-  if(cur){cur.pause();cur=null}
-  document.querySelectorAll('.sent.playing,.sent.paused').forEach(s=>s.classList.remove('playing','paused'));
-  cur=new Audio(src);curEl=el||null;
-  if(el)el.classList.add('playing');
-  cur.onended=()=>{if(el)el.classList.remove('playing','paused');cur=null;curEl=null};
-  cur.play();}
-const MP='media/tts/';
-document.querySelectorAll('.sent').forEach((s,i)=>s.addEventListener('click',()=>play(MP+'e7s'+(i+1)+'.mp3',s)));
-document.querySelectorAll('.spk[data-w]').forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();play(MP+'e7w'+(i+1)+'.mp3')}));
-document.querySelectorAll('.spk[data-g]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();play(MP+'e7g'+b.dataset.g+'.mp3')}));
-document.getElementById('bRuby').addEventListener('click',function(){document.body.classList.toggle('noruby');const on=!document.body.classList.contains('noruby');this.textContent='假名:'+(on?'开':'关');this.classList.toggle('on',on)});
-document.getElementById('bZh').addEventListener('click',function(){document.body.classList.toggle('nozh');const on=!document.body.classList.contains('nozh');this.textContent='中文:'+(on?'开':'关');this.classList.toggle('on',on)});
+<div id="jrxGate"><form class="jrxCard" id="jrxForm">
+<div class="jrxLock">&#128274;</div>
+<h1>私人学习空间</h1>
+<p class="jrxHint">本页内容已加密<br>请输入访问密码</p>
+<input class="jrxHidden" type="text" name="username" value="jr-yomu" autocomplete="username" tabindex="-1" aria-hidden="true">
+<input type="password" id="jrxPw" name="password" autocomplete="current-password" placeholder="访问密码" aria-label="访问密码">
+<button type="submit" id="jrxGo">进 入</button>
+<div id="jrxErr" role="alert"></div>
+<div class="jrxFoot">解锁一次后本设备记住<br>之后翻页不再询问</div>
+</form></div>
+<script type="application/json" id="jrxData">{"v":1,"n":250000,"s":"dctSebvjkf1/mRMxh7XtQ3VAOZQX5fh45wM6tiPJWR8=","i":"xvWAE4ou/lgNWdlD","c":"iKBUinYaSADMt4qvrFD+4AbJFfZbmcK3CMODCx2OZJ71RWPh1Nyxhh/yqcWxwf6E9BY9MeTWhFO77fTu5tvopajk4PjR2e1f5nucQHLvXxA79ageLThdUezLauQYz5tbCAqtcdMS6NIOl+IuAhEJEJRsq/MPzOi2ySENYcgEiBrDBC5Oe87MjzzSw98jQ1Pis3mvRP6dP4EfKYykdbAzbJY3Y/Out/WXKcBFjbeNRv/HdsLy0pGRTw4KgIVlqRj+C1hmyEz6x3Jpr6iHHi3kmAzQqjGgFXbmBSHG4iSDQEsPjTPuFFnyJAKMWeZevZgQ4E0lDMyF1tC3z35M1DY+JYoKmC+LIldNsv7Y3kheQPojij5pio06EhAI6sGgeG1/dthHJB5w3cP5mmwuN7WA9atseRLHMKcFg3StQUDOCX1LTiqyre0ccXvXFoqc8FXPra1wG2YdSqZVfF/reBNbsXgCKPszlCPv3f4UhxIj/qAHYPljQuCzrZ9pxzfVq/o5IFbRtuE8oguqgcxa6bFn42yxmz5u7mLCjL5lWRozmfm/X+EX/YalZp1W3TsmqNxpM6LsufbJmIuhLV5Pp+r22yA9ZxUw3YjznVFeJMwD03mdy5aSN5ka4A5SRCsMlRhJtDnWbsRCNvAQHaHlBK9V4G+J4fvY9VzR4yHMhv/iKJLG9YHFY0fI2pGdlgx/GNLkmEbNhrsY7bczfrhzQwasq9F7tYEUFJeEw33/LyuZf9ZBHmGf5kKXov26e+dJlm1aW7obfI49MMtI6fn8muIznWtQmR9CJTX6brlXKeO3FQgWqGpVVhL4161Zb1CqDHl/D/L6+hS1L8N5dzaaq2wjkgBud/SvMP4Mo4eLZtFTZyEvF14xsNx/ePU+tIxtDrMLphCrHbX2G5jplkH+95+lECOAGnGvKSoFTOgsHC40AeIMjYon6UvA2/EfGr5B6vTB4K0/c/fmEicdbHjD83Y9zifGYa1316g5m6QxYmL4X1gZWz/PXm+X6I+gYnYTlNEnC1hIfqouP8Z84Ltjbk3q8Kfrtn6Le1hPQ+3mhj6vGmKjoZw9jIx9VNRBOrreiN4672mFnphOc4HWQSM9Yg/eAxUcPAfLd+4qAt5+Oo4JXu8i0FInS2K3bxJ5nPVfZ93d3EKAIjM49+xe/Wt2cdfPkxfdwXue6DsWMZo2C1Ak+oEjbYh11NqTp7WohPEtFupE8m7LFc4k8Gp+vqx6tOR39mF+hBO2+ouAaxWnQyFV6HxA6RUbgfkeINKf+653dOC8j9uM8YPeL3B6kveqyXOaPjk7NahHVeGzZ3bKXFwOMYZNbAJ/ycwsuu/R3jrSUKmJA4Kr84bTzfGWNJ18qKN75euc3YBXnJ1ZpO0TbKXQ7FKBkmc/HU4PdxrTLkFTvGtuHU/6pmqb+edaUOVcEfJDjtSvfpB5BgZgdR8QGVrqut2gAdiUtEI53CJXfP/nOGes3bc0Z2fzO6RGJSWR4sr12oDSDo5S5FvYibI9uwunHe4/pf/QI2/8NIp8Xz4Uco9MprhF1fAuwuzSTnq19uAaF6BdsM7sAzVxw6y9/v8MPwYNT3WE1985RDZMNRbAIzCCVg/QqKuY3wCA2v4CkUWg7K9AcTDQ4LxhQPzOnLFkHRBVaqokQvkvf7FvXzjdKf/fCLBmxmdfsvagtClFIVcGbmQTdpp9Vkeo0XY6WydZS6XcCSMkAfXQAi+uV42rheyzHYcQsHBv5S4fdmX/Wh635x//Smki12vOiOrpNiYRmTHEwXFYcXcxn5ODFZXjIv5sfCSPbfdJjeFpSpXw0gZUGv0/+8erhC/vUHEPqdLeC47ZvtpFgUs0rCBeKup+r/G4N6jf4hyujEhnFnHZuVUaJf35S5fmKn/XoN6FwArVzldSlXKOhIswZGkb7SrblLLtlZJBRlvupUzKJXdEbbd+kuLyqbTDUxtQ210X0PAtm3MZ/ubg9T5srzaOD2rRil9tc/5AHAdLz2Z5djktu2P8lzZFqNZw0rR0G5iVezM2Ge8xoQAOCuwpHgSW1SlQzPmcTNYT/eEcBwgbMxzhd7LQydzEFHcvY4LXC342N/gaebu8AsNN/SbGB/X2Du8L1H84D48YpmIqgaii8fRA+t3j/V4FLwy9nnfiUKA7dFlEnUh51UhLVFJfHr+DHx1eXIGBUOXLT7htAIZ64835A4LW1MITOUY1O7UfR12duIP0kfqGRor8+sPILP/rhuG+vx6qhpx/62Fw6RBtuK2oDRsONPYhUT2O+d8eRY3De/nTtgoSqoLPXZTAQFc6z2xImEAtEa/zbGlIFv01bTi5VkfpArimIIKv0zJpVhDsgi5kXRKHNVg8c8S7q4Bntl3mbN+ejTWYAeohGnM8nTbXAbC+Uizfobsz6IdgCObsFtOtln0+UcLeGtmpQo610Fmzg6XOVhPxWKDeKSss84CauH2leu4JOnXgV9e11UQH6SaffxW8jAemKkrqdlRb8T9VhHTl3FysyQIbkYxnXE7NpNpjg9cZNz+C69NPbu3dybmbCqZKh8bI1df7tAqke3MGVoLllanqufvF7cGVW/wfZdIQQdqr58NMECfP0wppO1DECj1Tg3g/WhbOINAYnr8ar6iBKNZ0hqyhCXoidvd2xr+el7JWqiyLY1Wo1Y7kqv/jHWyJn+npg7REu569J0CQhEfp9+DY+2tQ9e22a5nACzrR5Cop2sN8lLd1vY3wSmCl1fZrvVCyHHow3FtUTVN5gmGRqK3YcHpk86HwSPRIX5YQ446WYgCmABsQLLRd9RVrMjDQ4wJg5o9hRvu5DRsVU3n1i0WODwiGULrxG9i0cXSaH53dFK0dgqWk3mRRqkOmbMoq043HgGSW3d3MCjM4+fJ8+8q3XBc94p9Vx1/M1qaPMWWh2bSP683E27rHZ9QF3iwlBxe4bBQsjajhe9BojUa8TpySRX3/uirUgcSkZrGgK512ni6WXpW7K9Cm5kyBwN2dMvLcwAHblsbecOpNw4Y28Jlos3OylDnW3AxfbnH/JfZUMwIOypvGn0cFenqfX1YXPhd6jJ4bRjHos6e1Ny4ZVXBxZHyqMQHouRCr6lhOQt1dKIb8I4gDRY9ov0uV+BIM6VXJEMW1r4WtwB6g4wesheszLFudlK4g4myfIZMQ0mO5JpsHUpBbOwbiLd20ZAiEJe4m0A/l6dJOwhXMACjLdSAbzZ3413GiyuB6kwJR+dQk7bVBScNIZnvR3F2tIK6hDqF9NmHZWh4WvV57ssHoGHXa2a2jpftR0F9+ev1TN5CCKKy58r+yFhL/Cul78UFgutlaP3rXM+oUThhwLF37sLbLDoVOZNQgBhy0MZyCX6VA1j9/XKsa7wD+WjTaAS36OqSzy1I9EoNeL4k2vybrafIpkVPbKuSYMCHXdHQw9DPrB3AfNBylf5FgNFddbztgwKsh5e+Up4N9tEvHi8fAtJ2/vXhIIWHKlXs33y2TSuEFtVQVCCaPiMh5kUAy0RkkFsT/DVj7nXNY6C1ZPTXI8veGvAyDVMiGPt9HnqVdE69OWdpD4HKTyA8W9uinwpo4x7R03pLmGdACZp0ZdwHKrxtIc23D8iSB8xEtIcFiaGiU4D6k4kVVnGpetxtIijGMQfurmzlEp9/XCHtWXTEYTlB/WV/X2GmkXFZ5j5AL+RszRG29qeoPZWFPermOWHwBwRjXpJvCssOHz4lwbKGV/wVn06ZjYpQOq49UN8T8ooJI0Z+qG0F5GAXLaUR58BgLAcAaSN1klnh7qiD3ynbs3sYWjGq/B4dA2D4jf9x8MDg3bLR5PnCFtcNv90NzwuZ8YiCI3bHNUcr12JUdxgXx3wpDVy+BTWEznE05fsfLdHUnkR+C4FZuc1Tzi8wdA/gUwm1VDV27zFLWSbsvhOA/0gzrClWjy5keUkDNwZCWWBZ9F/kIbzQoLT4fTOpPS5R/7BsoEZuKgwZtbuS963pD7FGnHCVJup2XbTMadk/TjvakI10cI+p7t+Man3r6MTUAlLChs1IjrY881GodyM3YMGKF9Gw9gDLJFLnius9OJwzkAK5w3DwT3Aj8oVlryN99T0e6snFSBjHO3oUXTsQ4qhIaeMJCu0ueJpOQECFId23PacKhVLfNfi7jgZxZcGwinDZsbYSiC4p5fmXd5VriiezTqH/00PyGy7oI+JADYP5bBtFEfYgAUISAPMavjZDSVnvTpx8CqXitSaD2H6xR9Y4+/5DBGtRTijCiCv9BIVcZX6Apxg/2qwsX6wjCFTPWNMH7z76ZMVqMBkgiS+eI3SLS2vroD2cggYgM0yPaIJxnsUes+cvxGDVd1hYCyz/tO04B8GCWMJhetWMMJBTFDzZuBb6s23453VoUjXOkPkzF3tiUKcBjGmgjGnS79F1VHvpj/AVdTb7G41yj0+15RWMLGaV9cVpKaxkVMr4gYW4pc8Nx6hw3zOp8oAOZi4si5Cus5rBCUPhP6NsqNnGDulT/wOT8nwmZWfOPq6+gnly8+GC4t9YgxgDwce0Q+qj5XYvzzaaLZEFZBWFH5YCy2YzSCjamkEI5qPcROKhXt6nvTR9SvZ2vlCEXL17Af6lsQYcUQ6u/S8XwIt2uttmD3kuO4+s2nwxk6TNK50MgiTrDs90p7yieiGICGFOUv3fqUsJMxA9kAG1nxU7wAe1iGHskL1oHB+Z/SjuROYYm7eD7hSW2Ov18C19Xkkn0IWozzQC0n6rsCSvtaSTHu6kwH1u1gAQRQoejpmvYh/YYpb/t45kHYyGh6woUxkJBd+vtqP5RA6m2G6tmTEG/Tqj2U3OPNhD9DgNCOkVyxQlknLRyFaDdjYNgnOZ1MHKKfB54dv+Si2ygmnLUjAzME3LpqZ3ZkPS6TEtd+U4w24NVrNAxLrVXPC6aNGO3snQwkQcXGVM4jXdXXcRgw/QxgRXevxA5ybN3qTkc2/zMxgpLvWbi9PEyHMXH6zRrq8OjvhJsLPzdDq25Lqu1hHZ1tjfEMD3StalD0MjjWHK+I2Qaqnzyb4YQYBpGINFnQ8iJod6fJ9GzAYDW5xDFWDdxFXOZouH81cuBNvpB/fhL8JuD3hDXp8oMbCiCSpr0KlhuUg9XaEBI/qov0Hu9v//pR1y3olzOMRaRmWTOFXen72J1D1om2YvM6AIZYf/d+qDYu4dACtmO/DCYZnf7AsfWH+gJ+Kl4NfhuFgw4zNjZ3M5rqvNehYDU6qnpLvkb5hY7am1tUlm57EQAeGYIZ6hGmJNlIEJOmy6NDVivOS/920UBqUuZ1tHiePY8HDhqZC7OAoyod82yM4R8XkusvJ7tVG/OcsIWGvqJq07ic6ugvCE3JlrBXmtCChX9qZC6adcOcaTruiKtpciwKxXdmA8AJzwWthNV56XfqOYbJk4wJETBsd7jPt2wmtk/Klgee7WC/qeYcO8JpYfgOxgn00dlekKAo9qzt6BduPq+20uA6hjqxCZV29KEWHV8cO0z/gj8clOT5KMp8vA1uc/uOn4F4KTkrKNs5RuKOxzxlLgs2NFMas2uwbyIIymFQodX6XwLNJtiVWUA/4eIBGJKIETCY9ccUtyNyFC9uX5rY6KF/Mir1/yg/GQ6mhaUlrBG5mFLLDCuzWRrM3isujB6iLLjiAy1tBHD1Rwl0ARhpRgY0TKpGGc4acGkuWKQjQcBOMN0BgMD1V4/MEYoPR3wx+PlFia2AOqRKOnNIyfzz2uzTHrKie5mF+PESRujc83VVXZUj+8nP9vCtZ7s9pIJ4p18R6vkGKTa7eNJDLTbF0LrBBsAp9e33FQuL9tjlUAt1z8Orsy3HIN4g2fVHG7NYPx3cxUDfnnlf7CFcLXcsayRCEdkhlPTG7RuopgdCy2Z+yyOeakyZx3cIrRjZbC9c79UrxD4bskMF4zvpGgW2BF+Tly5saM6jHT50cYGGkeUhNUsKupiwTOZkYbUAXaJ9GJm+/wT7dj3CQSMPzkULMuc6ySUocx83K4rnduhdM3FRDwbTct6ANOhyL6m+hjle0969dwCDg/S5qDC97seeeZ0OEbmLSSJInXlstRzzewzkVEiZKQ2lE9mgoAU1eb/DXAztNjrm8zB2ektK1jApMBpR2ONqABgVUw8EWrK9R8w41mRyxCgJAdowW3oZMM5xiiZV3px8RsxhBaWwogLEiT1AwVtYtTN/WyXDstZ/vrzLrsCh46nAr/VrbmJnAfiawQsixdd0xCklceARMmf9WCseFhOeHeBhGLJxtGBnILz7zWDv1ooV/3SoXS/dilsuAbCaiTqW86fDIONSIzkBYsWq2STA8burys5SoBaKXon3/oTozllwXgjvc5EhY6a2Yu9rXQjaI25hEkLlAE2HkZwgZ6jhjjC+epO2lls+48I8+Crx9p9UJ3/SPv/UXNygh0fb+qI1e/wMa9LLPrT0uMbcL1vWxajmIlr3yGpYigNyNzEy7xoh62thdjd1NJ0og+/CEVFEpf9UTOTOkc21GaUNliMYOuxu0TGuTRmhBKAjaV+WKPMQW9YeKpgu1TSQDjJONul4VLqeyqfnXoCmK4WPI892B6CWFulnR+ltMHuclQk0OmYb9g74wXgFpiI7vdEq9iYzOo8UgvkbEWuCC5pBtFDK42oZeRSHzJcUAQivLeOYardC1jFrnZWgZ8A9KZLuquGg7oFJ4DU3/RUiWp4Lxatxm9gdY98vfwRVBXreNINrlCo5/yZlEH8+XgOtgmPqsLXEPBSGI2j6kk7Lm2QNhoED1oZE1SOmOg40ElnT924j2MgVS/0TNbSAllJNP6WTVJlCGV4dlEsWhVv1QxU0LaSkUPF0gHueuReRSF7/+JEUSiflJINDdlmnRnGG3Vh5lWOZI2is8AJu4yDONGqB/tL4aXcmAq6yPJ90cnxx7jD+/+/G5JWyy37Lx9RtXLWiS7K+YavC3PgfXuNi4caASRy5SJM4xOb56m1RCsy2kutmdYCNSQ43t17wZ7z8enhysnWqY8SaJHvSohx/getLqSIVMMxYSednoviecOF+6gtUhRpWf/eGmNbn3zK7u51O466QIEasTaujczgsIUV2Yf0CW1WJnhdovkmHyucVNvC2x9+rJ8JFWqKe4QIiB434nHkooNkyCVToEnMYlvm78RnnEu5eulpWY+Mdp+UQ/Y8+ucTdWhPL4EUo/FtNv4SOF/IFFtOhPjz30xEXpGPmBa+WOK2vacF8XK6Sdj5jW+YnndWxSQJ8zngAhqRiM5kd+GL4ywthuAZSB8WsW1jG8VDyRDctlFVNNwrmEuwHmOq4/dVRIvNwidks4c+ZSJauk+3qqgVPBhBc7N+hGXoMiGp/ljyBQgp4UsEU3fKwaFG6/xS3/1D/XaD0JtVN0fWHNeUmH/ND6OP/CBmXFdMeiP7G0vhkB9pzew4n7ASmuiEwxqm1DijyFEbbkSpm91HpblRy9ZadyAZ3Ti5DfTAXYsLWZIvXdbFhmzHDGaaNcujhfDvcrN1rXOvLItZC7dboIZ821IgRSPq7Xif4n6eoDpn2ft16FNXcCVhbi62ZFWHu5TC3af9654HeuVsm9vPhNzPmM9UlwXLHV9r6q3ha5jpLaBEh/6Utelwi1WbFh8TGwcB2Rc8awKDoOyk0bOmRu5nWBFu2GlhIlFaFbNT2B3SQn9xey0jZZOnoIKTyCwIt0VZxVp53Yphv7r/osGgn+pyeSsSd7gPThjx6Z6yL6Wl3UeIhDKISoxADQd8/yhW//ev81RViRpiWUVo8GWP+GsUky6DSpN9dRvBmoVf3pC0YyyOX+2gF7le3Kx66hU3ZxJOdJHtY3wDmX9OPCD1KH8AalRqK6MasLQOaJJQgEbx0mi59DhQxWChUr2X0b36EAmoSoxMgdXfzoNqKtClCBlWF06ZiwqFay3iivjK9GekjNh6LGDBIQE78Wa6o7mmjtx+EMNy+v0YTSaVXktjndOd8TXvaIqNLZK1nnE4JD6lwVnPh4mWdpJsQ/L9IYHYB+G3fai2L7PZf7gv8f7Celo7dhKuSkRShd8oq53VVUZ4MIfiR/rwHcvv+86XnQmVWbnoSu7mVrO5VJVG5MnzBE0mJR8OchuHA7YfpJO+9h1vfU6m+kEAVdmAF/r9Z5vEjy+pya4QaFNDlaUioTDEIHWCx4LPbST3Ov04aq5eWaTMIdbBj4jT/h4OfRPQlbbWkLBqCSsqIH6reksRCIpp3Upy7oOLiO+2lUbZVxzmSstBH+BPkHRMWJk4khruDHTLz+h6hBrpgB+fEpq0BWJZprXj5hLx9KFN24ER8SEhXwoflh8GOZJc4mJj169Be9P+rLRhxb5vBxPAP0MuOyKt5yes6JWSD47WdaqawGAMGYS6J6ZVVzw4mIBpOWw+5ZdFMlUHqan1RZlJFlK5MCs5wrNaL5sRrvi7mJhmfYSjS9Nj6y+9yOzPguakLvqdZ+jQbiqiTTQPDu+VEdrrWNnD2M3rNnTzxfI/DiyenG6DwJqpi7I1Zq2jynY+/PZ6X/KIFRKafUzMRhel0RHq9AiwgT6P2BxDUVFw50EVeOibxnfKhMqRKnD9JxGYQgf7KeP/+bTWQthrs3SS1vvtYkif1X0q/xj1UZ4yCLisNBBPBE4LhNNmaOJdzjhBUsDvbQ87o+aXxEjEikpICO2Mnumx9hLwUHfA8IAuaDWCvWe89lqGndE6NLjJfgYqjIurACTvUhuaqXIf7RYs5wV1mAw0sBJC+wDAOgP2jp+bFOofjTqG4vsrdTiZJ2XpsikIxBnan80mupwnPCroRkB1B/yxaUQtr9uRieREGFIoUEH/DNQfQ7wUSzwTHlfdqMPJYnc+eJnVenOxujBTMeE9wkXeoxwIU8pJVseiFsRJOwho922as+8EwY9KiP8y9LgDNlFi1Qj9rbsNkA71vEd0dCdvWtWZB0rXw2YNDM9v+r+bIA2plt2ipP4cC+WCkuMGMRKRUmEg0NVHuJl6LvkVk3Vjc67hA9F4VlJVnsK1BcvyZidau9iM2Smxw6nvLKTQyVSApaj70IKaJRg7dEl48tPTuHqC750HasQiEjBTmuoPJc4Y91PfvC2/fpBUrzUDr3ZYLsKwvbkz0QnI7L0JVlgntbqqwqaA13qPnzW1F0jec/5bjn+ZwmK8uL3IlP0tT88chBvy7h2/qW1tMrtn2Q4T6Gcx+lHQ9TIya8o/DclzEuEV72kkzfFSPlt7OIhgFuZHFUm1Ro8NkGmimZUDyj7An6MaxqZYOzTFk+oUJIHtSsdV3zi70t3bv9rcZdiKq6qj1rwH63WVcbhtE5Dttig4OayrArnVRSOqhUAHYUAw46sTD3F5Fi1x4BqKzPWdZ7bgfw1RCNyt4/E1rk5TnDfv47TcUiYjlbvShwQ7aHKHcbh3SrD68oQzZIyO6RmQtMiV4kmlLuqT3vOoYz50YUOz+FSiVXtupDz5O2p6swKLHCyGM/8VGxv1izNeb00xHoioBDd9kWcw2HJpYogCeGCdGClzNMi4IGGrXj7SbozresGMO5QnWR7l7Ee82nZPUa2d2Jb5DJQSFWOhrCoMkHpr/Qk7sxYlVH6Sxyg4iZJO8sqoTJ2po+WaTzGxukOlRW5bYJtEgHM/Wo4l75RP8n26IhCNqsYCOZmD0WazWWyP8OA0trTRrPr+iTAtY28I7LHfTTX6yLeVpoj7rzVWKpqFP7Dn3T7gmPdJKeWj+bzgZ7KgECVjpBwkB0iLC9uqalTfyuGyvtAueJ0GifoFmYSxma6fhm3zl0W1ahmelBlsIj8m6tDhlcULg2haD4TaWdo8gpOulDN7J6+uX8Bz1GJtvut4f6p5WTn6SdU10me+4inlxnFPupxOk/s7iYPLke3sj3QYoUnR9DYIeeJ/zpoSVakkGD8fzGOtK+Tl2ARuzWD9i1aUF5umuElwweNBWh/J9bRNnQv644QRDrR87hxMF03qH4sN69CLF9LL/4MUHabc4NtQTthn6H87GmJ8U54EbLQl6jgIXH5FKc01ypbVyVorB/TF1heB2ZML4GMFQyTUnxK6a1lozYnfx4X5eqjTNKqRQNQCMh/kzGQrVfmwpms5sbnEJfmPZwj2eLfdZ8xOKuMjVzxbkNPSb6+/L65K8i0KsnQlrPkAciEV95/Fx3iNuhPjB+V4zMLxjDnCpJ+cD8G2U6ZRLMvd/r038COYrgwvhpQj0DwMPN5b/rR1ar0HJc05/y2dQA7TYDiJi0VpOERVbL2YwR1bAIOETUg1NtsGIAcLDqGXIwihQrUUx2Q9YEpBXZPrbkMdfcIchjvLLuZkyO1tw/qcDUzs5v5lyfPHH/X9FxOVjDX3BJI63RW6n7cp9ohqbAjx+IZVz6JbhCLOsX/PPPujTAApAjQRSqtaUvyvYd9n5qg9Qe0EeQ48cdx+z1qmnO8aZA6+3fTgTh/ahHDzwRPOrie2Wx/fTxWH/PfoI4APdlHgu0HSmcVxzWiaha4SVCVVBf0dJeidBUxQfDf1iFLqFgSmFp+tex067BFQEEXESw5ZQeqraPocOFNo2DxTMvet4Yz84MpiatS7fkCAHeKrt1KMYuoKvgj9Z00lSLtJgc512ZE4WKRS51gFFPiBfa7tna/ka6n/w6VZG0UH9kstLxuZyTyR0MBZzMlxXeugPsoafr9Sl9mSFrbUhH93n/Rra8IlkWeOuoJ/i7R01lNvsPBNwNv26jlHbeI/C3Eq2BM9Ex3sNOyTwV4LOzT4TvvU61UFAQvRxTTnEIWPAtIRE1GHhlNvwz369SoHpcP6g7585CJU43R9NHfYo/Hu0DJV64sJnniuxsnlm85tfvz9X1KD0BsF6A16hjelEGONPjLcYq2TCZ0c0upjCFIPhUESQqpK+POn2mGPnoh+etnFVlELvLNXQEmXrH52e2PRVV//FHjuns6AK5MrYkf360vxhYA32+KFpLGHpBdm+eJw2ZQNegUzYJ9zxKiIdtZsxK+F/zNYVwA7w+NF0qhDh+DbDggRzVb+mKc9jGE1ehm/JKVRLDlVjWpBRO3htmT3Sga+KWVQ221HqH6Di1xxIfz/PpoRzR14TzATfOpu5Ju2ZU1qjxnKjQAuw2p6IvyrBRORp/dGpNhpltB7OPXysTXPCBKGHLTiNfCVl/1HlZhZm+7AN+UD414lsZVtT54STP91UWVn3NVxBTHjLfgcIaCpHlngkDDwzynX6bGXLTU4pRQZAcub7tzUtMbS/AaRoo4sG20lddj4bH1u9uvqQRwa+4m34OQb+POu4CwPR4N120E1O83zNIMWPNul9hha+vZCYfDubtVa6X+0zHBynXCr6vHxTR82SK6ZSyZCTouAMgk1MlpoHzapoNkVzJk0fTXE/yCcerdd7E1n3U9X2vS4IsWClC0RzdY4rzyI5MmlXs7Pssf88aKgaSqTjqKIQIVp5zs6dESWALqGpmF/YqobOkQHEZvOrRsikKBZdpKHfTz5quZP9pzL3zOOuzGQWkMxH/+4++o1AvqjXqSels0B/OaVHzaKGz6YLOweJ1b07JaVGJOXHAvQry58CGHr5ezkRGZTeng8+rvRsaMARWBqFE3CFX5LVsLaEPTBoc/0dgLIJdaWZCpynRyVPQF+qdJi+QE5oK/fF97GlWfyPMohTr3ISOoYTs44YxNod6Zr4JDOvcBxWpqQGdsy6++zZnN2UQXV4ghaz1p/hjDWWm8oCl1PLSz/kHkL/q9tUzh8RR5AxOm/I2fEq/JrI3cRf3YSarNg+136bwkFRBs/xhs6tnuEo2dvzMUdorEZEBs3Ue/SRrwiazj45GPTq3dxBREeTNXfSU3Th3ioreSHg3JiR6M7gCXzUtM2UCaNNf9+MzOdlCVJNSLEmaTPhYb++aVgjFtQfS/OSmme9lPO6TnmpD/llfNM9tOVmQx0bym7TEaqU3Qt/giXN77pNBkE4ioxOWbIP1KUdr9UOKKWtdFnOQLMZQppS6LD369IMqb2LWpEFMhucW0OPECr19UcAtdfRjXHYfiXHn/nI27Zwq3QLyzJiJ1+nC9O5wmluGdxXtRx34njg6sm/OfQc1zDPN7k0hcg5SzPSF6xq7gSfs923veK5DyNuLYGQrZPmyG7GPOcoRCWl1K2VDv+im7e/pEZWdtfKPZ/Knc8Wgqxftr874YFUkwf8IQ5o+pqodS12BAhk4FisNv1TpgvLuEj4lNuSIpooHIMvrQH8A2FVxmGwqwNOmKQ94WIYWKT4lMas7SCQF3UMh46Ml83KUORoNw+E1zNKFLs6rPsKwvyV9KLdvtVtcDNWDE3YEFA41AExWyQs9HCObVKD5/azIDBVW8myoPOgpx/q0uKIGJgIcVXilv73XVOxrVAUNwKdkBmf1oTSRHqdvatOJ041d21YP7vCMdNUZq6fvQK5rQ4/60BDS4vTCL5/evz3k35VMBsMpGqjGUrFe6Zl80mkxA/zjxQVMx+B27uDsBaMSZcjb1ErJNkNt5xfwxll9JXcG//xShg5L4Kv+79jHSWxkMHdn5dN4ImuA59wP69fJSU1G0OJ64uA9hNc6HyPTGPUa8VoRR+MH9XQP6tc50bBRVnt5RHWojpWLm/OUNzexnJDiYD1GpbUGWNDrgyTtEUxVoesRNLuoph2478Cx+Eqwd7FpbGTLWXNHxg5kEY1UEgYGzQyp9fdoBMf9cqAG1qlyz83YYoaySZHLvlcGs5gV/wMN+A2L8aLmv6WFA0XrIVY1r3rVEI02hLaRsFMT4C4QCB/kj7RbH7kMPmcSayzRAhniuHgINE1X3+kSBISNzs+T3zRfGTVFl4O5SgBL9vJAO77BqGAT74+K4h1ZETBKd9Jnv4nUsEhiKCclhqooY7ys0RDJaLhCT+KIdd1FTAX+reaUNTrGULJQP3rQ16qqLhOYGMh7RIhW9PEySxBGDQdMWUOv5n3S0vtoEDIiX44fcMYMgJniiv1+kmZCIJqOS10RKKQewdUJrH4EdJxdR7WDrAJv4REtq/TCjjDgTlS73HtNtqO2hB9rP8hrDoZzSHlHBDRLPwrFSnt7b8AEv8aO6AphrF7/33ZaUyXiCpOQHB0MSY2LnOroI8HORo/dRnkyfo04qF5P0nMz6GuZBfy3Bb0ZBwh1eOQhSMgxe9Wy7PHwD2jLCmS6N/U6H/Bg8z6PRCNkuJQxRbUzs35t2Yxeo9Wg8nIAf8btYuJEO7H6w2b88Nx7hNsokSbvOdv6/UO9ojcLQ9stfQAEwevx/qav6xUYAGkVBePKRfaDeN9burn1U8Jx/8hYqKV1/bCJfuPH93uJvSTrsywZLh/M+2CFkbX2RTm3gkJ0DPUz5WrbGyTlMvkYXaP3J4/TucCI9lUFfvhitUmj67DBRhsJFNa4QJDagKC7ekQ2goGIPb8V4hFQywZESeC5f1SW1k886G48J0n9NLYX9+EIOTQUZzemeajc3UeH8FvZS03dZyqBr2/PLkvX03AwRyoFv/R+90g15avo0gebMBAS5kY3kXXK5IuW9dcN1OKXheDYpwwwRLyCk9WVKW6q1WTD45cjvmbgCvxJAmv4+ww5PxiIXryM0nZPndQhIo6Imm1uZ9Cckycm1qYZejRjCPl2M6XbnLOXNRjvG91g7Mssr0reOouavfe+AOajXZbmPUR0EV1f5JB9ezb72b+ot92Z1CNtOzFDMsTV8gzXiW2owgMP/CuoTaFahieAZw6iYOZWo73ECbR+GF2faHImdzUG3tzjDBFR4htZ5Le+cOSOW7z6rn9xIBECwJ+IbzOj8UUmRKMHNFWuduyy+IHYfhyyN2YHBF6o49K1foBuAu1BUurakr5fPZSXzKiLuzqlZM9nPhkbpOt+JJn0wPmZHENqsqrmQLwBItofqHFGczHVtFEuYdYDrAL60gT5y79CZzonN72/RzmsI/J5J7oZVMWE2k0sjuaptY5SrnDaCsXN+Fb5LpOoif+V4nSQgm2Od+MN8WdQsBB6kDHzPfLRA2zeSN/e0QY9r+xnaaSh/XSj+1O9eS+wxw0mMTuwbalGHzElYGGhs8Rfq22SGs4N0SzNytv+895TBJv3wtgRIQDYmZ0JMOuR//Ab0cEAaZjcLlqu+aSbDPkiiIuS67JBo5L9ITwLEajrFB67N3fA77IOeQCnGv+3mxW+78vRHf/7lpdWBcQgT1kTRvBp7JDfIRE44/ZIrQg7/R2fMhXIIosGxUNiUTDovAu73+/ein8rnKKCdi4EOnT7fa232ccjOUG/veEhyFhVbqiXzwSOiLXD2RTcs8oGEvigwiMywHVEL68hZS/GEcPcXkpfKX1JWSkbnD4NYo7qE0lS0GLnFof8a1a43N5OyQgWgbFVe8OulyCTCU+nLFXDh9eAWyOy//ZMkG2WkLV7aY4vyunE8EbxP3j/Gx/KreqH29vXN/pSKgxgyN833Q1jq0tTxf9inWGx/E8G8cODqCVVe5ocmEU+CsxZ8HJmpN9LMhyN65ZBXHnuUA2WUl7LUGJbQNaW/UV2YPgBdBCOqCeAcfWegOF4MtQLZLgSpVn6Dyq+YvuqUat8RRvxLYZ4I6vUPzW4guYzWUuJuOJLh7DBn6nGf3hAwu7jY25xIAcvUnvVRh6tij3ijOxLwb6FVldhyydCNuF+FcFwThPppNarTHLVlAeJVoPbNG3IpDHOJ0poiqK7J0x6G3pFf2J3LqLYH62xmqvVYDYjtZswsJBOnSaKYMeSj+WroAZROomcVNG+LiQ5fgALGDUlPvNDgZearnw2eVXiDMuyLg8cRcU4C1d9CdtZ2ieRbIaZd4amHAvgd03zgzYmbl6gvaIQ8ScRaPWQ2KhCJkkQxzgo8PqIWOjZSlgNB60TBtcNpTi8bwpATqwd5N+6C4gw6IeXV/POElc3uV0NtshxTpUb3MkK5F7RRj7TlHk/87kdxmCMQIFG6A+nLCk5v//GS9/7N6U8UTJOrGPZ8TY/ZJBV7vLiImfcq+xB3+6zixP07i6Yu4pEcfVsCCQsWpjy6ulVA5bKZVWjIdxitgI2vq44IClolh6Y6lmYNM5Gq20BNZqBrSQ/FJFk8TcH1AB/MSxUXVrh2mHh7bsmk2Tj7zo/Rm+1EFQc01GuVrZmuvUoOhBikA/m2a9NOoEH3Wk8dT0po6RT13ac7v1N3KgvIGyxC/i1UC0+8If63O6PCM+p18IlDMXT+pZxa1cl79wIg6KOfuoJJNKjMNPj4bRcHDv2NELzJHwGfP7WG+7yiqAw80QsBXMPSXJY/dXfF+4jy06nmWh1PD5ReAOukjTxe9cQdU26iHga9ShwBFDAinP1v41oatEf/74c63xksdTGmzzvErdkFsmZHC7wsfY2v9tkPW0sSuPSFUDP199EOIl77AiYFtKaxDREt6vHxsyjl2ueh24sQ7gSWwvzfcHzBb1FhjFEl9W986JLYlmZRq79i3YrBU0N1afcS/3o2Qy1PkeV6moxG2D/yZ9Xxpq237y00PCM3WxVT0OixOjCeMBDxPdb996uZ3G77uFx9jszLzWBXUztbcOVbaNcSsbB0BSa3ueDVycW81ks3MTQDn6xa6pwumiROT3h74rjx3gygbhlZZpoVvmbJMwSzDv+TpuWHXLpVsJKUAMchK13j94zhKYdGjApyN8xiMxMN9R5NlYTjvJPQdavI1bLYAFzAd+yPbUWE+2uQaD25pFtKTTbg6MhYe4M6mUDuE0IksnSdLnxfw9SPgMnYVmNivJooZDFjKqHcKwfIqwDF0fsKLgHrLWAw0t51XQ3QoSg9ztL2wwP4Jx23VkbjzQSovaxiwpLJzEUpQ58nst30U4iIz/PUPvQ92FkveUzP4QP7nY934w7hWWuWlN+zblMchmwsbnvrUIuX+R/q2byJCX8BxxPFyrwWIB8ga0dlihKhyNhnmfgq/evmpdjXVq9RYdMg9vEP50BZBYzu+S55w/s9KjO5t7o2fjpiuIJQUaALsbFu0+64jkGD+vmRj20jTvKEScHf5eXBjk0i/4lV8FMRjBOpqi+rnlc5RfQpeR9bdtODdZtDai+9NuXKnOdiYE5f94EqtGxdUTGHXbyiar7+Eiwno/ayMt5V96uh7omYjAVfkjaMCZ7UMW3N0FFxX9NUAEPNcih3gmd0s4NFzQP36cHv1F7jSY8FqnaLx5NMi9teeQuTVqus5AofH01O8znKbwetrExK31KxWAs/ysCLNggtC57QcRLuIs8oDrx0vPfj9D0nKB4NL/0ae34eytXSSOm/fEmLwqztVW1XppHD/boTHKk4uL9W7AVKM9zRzdw9Xu0JuD0436WrOJXoiW22j7T6rFVof60cJcmQbCrrSOd2LB1ijfI7Xu9yasv4eIZTlB/Afd901XnjXXUxOZYAjICHqDOFNIxf4Fa3PHbpULAGIbtBnzcXUa6y5bIUk2exJKh1mz+ejtCV+gEAUotpbJjFWEkZ4KuHP+JiLWxl9l+vaAwhFtdsSwSCF83IZLjnXoTTRSBRgEpoiRVo5E/DI1oRbW+SuPF3+lvxBTVuOm0DW5eoQiL2JXk5AZGO7Q1A86I+JcJLOwZ7rICog1dlDwW7RbeS3skYVYeZ0l5W/sGqPzegJw+N4r4G5nXupqPqt7uWTGEZly4yMumZBWvCOmHFxeOFubhZEKsrFs+e5GBic0cnU+ek0Bt7sVxrDZU6tBv7BN1B9SCC+C68PHXcSyqoay/FzorErqMbW3eoXVJ1/RrtyVOg7LV0Ibu35dgfVFn7ZPKciinzyEgyg/1taPgbhORjfbr+0yv2LaEkuk+YQb8QPdxYfSPYVwtL+wrDPggm/lfIl/YqiLZG7G5w/fbDTZWJK/pkDJ5TNJXQ8C9e0IpTqcjejQiYUJUly4WSQklW89LdUZq8NhPIn7jh/wQxQAK5kmzbpgEej2vA8WcndE1IYbvsqO3ZDr5Ia9Di0UThFPH1yVquTGqe6/2Xz5LVLygu+xEaaAHsB70rjhEz/3RAgtJcfYLqoFS3ixj9H4GGGJ/WD9bcg/tJkjOjLndEgV73N0Ghc+HChwRcaDSOOiOcqaxiIOSYvpDDz4xl//1GsvfGjXMo9COW8O0RUGeERhHbcEkdUEqqWvwk5Sv0I0/4ZyayLgvWwcs3GooY0K9b3JR91oRHb6XS9d8bKF3iA6rZOSnT5949meuOAX9cFFvUFhHovVX2itzpXxvjQO2l7DfBrt+e6Ycy4xcmSwsJH5GGlc5uXuYKeZB6a3kC8mcPGt+cmDfT6z1ed4kSbecUNc1CJHFhbV8o0LN/sGS8cGekDJ8bRdIZC27Cb/PRdo/K9XOzMkrcfbMr7POJHvPv5ZgOZvIvi9OxhZhzMSNSH+oOAqaMkHoS0dJYE3LEc++9lLPT4LXpyklwrTil3NAyQI2UcDYC4g1+wnq/62WUKIzoLGdw2DWaAEENM2IYjmjH+U0LMDNK0oW25J7U6ifMMvUuWnkMLivHqwYiG9RWpkgxW3fPx5Tj76B3STK6721ElnR8tXzswcX4SU6Z/4MvTPgVQNkPJwm1HC2MGmF5cNUDrJNyhOgNQaBMv8Hb6+a/f/Gjve+2YzZ97ONwiZoRmVeOp/35vSD+CJi+wqmnrX8G3M7sX+OY913OwL8ZTgytBJEnUfeVCSJ8WnrTSKJm5AJpEbmB1D6dlJipQ+IqvS5LRSmig2qtvcCSE7KKvRkwIidoF77B8B20ZvdEny9cboSDm40QgdKhSd4OL3pv4/+RqIs6/PhyOvFTsCcnOrNoZyvCwSiXcQBOUAgFUBg=="}</script>
+<script>(function(){
+"use strict";
+function el(id){return document.getElementById(id);}
+var node=el("jrxData"),D;
+try{D=JSON.parse(node.textContent);}catch(e){D=null;}
+if(!D){document.documentElement.innerHTML="<p style=\"padding:40px;font:16px sans-serif\">页面数据损坏，请联系维护者。</p>";return;}
+var CK="jrx.k."+D.s.substring(0,10);
+
+function toBuf(a){var s=atob(a),u=new Uint8Array(s.length),i;for(i=0;i<s.length;i++){u[i]=s.charCodeAt(i);}return u;}
+function toB64(b){var u=new Uint8Array(b),s="",i;for(i=0;i<u.length;i++){s+=String.fromCharCode(u[i]);}return btoa(s);}
+
+var store=null;
+try{localStorage.setItem("jrx.t","1");localStorage.removeItem("jrx.t");store=localStorage;}catch(e){}
+if(!store){try{sessionStorage.setItem("jrx.t","1");sessionStorage.removeItem("jrx.t");store=sessionStorage;}catch(e){}}
+function sGet(k){try{return store?store.getItem(k):null;}catch(e){return null;}}
+function sSet(k,v){try{if(store){store.setItem(k,v);}}catch(e){}}
+function sDel(k){try{if(store){store.removeItem(k);}}catch(e){}}
+
+function whenReady(fn){
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",fn);}
+  else{fn();}
+}
+function showGate(msg){
+  whenReady(function(){
+    var g=el("jrxGate");
+    if(g){g.style.visibility="visible";}
+    if(msg){var e2=el("jrxErr");if(e2){e2.textContent=msg;}}
+  });
+}
+function reveal(html){
+  whenReady(function(){
+    try{document.open();document.write(html);document.close();}
+    catch(e){document.documentElement.innerHTML=html;}
+  });
+}
+
+if(!window.crypto||!window.crypto.subtle){
+  showGate("此浏览器无法解密：请确认用 https:// 网址打开本页。");
+  return;
+}
+var SUB=window.crypto.subtle;
+
+function importAes(raw){return SUB.importKey("raw",raw,{name:"AES-GCM"},true,["decrypt"]);}
+function decryptWith(key){
+  return SUB.decrypt({name:"AES-GCM",iv:toBuf(D.i)},key,toBuf(D.c)).then(function(buf){
+    return new TextDecoder("utf-8").decode(buf);
+  });
+}
+function derive(pw){
+  return SUB.importKey("raw",new TextEncoder().encode(pw),{name:"PBKDF2"},false,["deriveKey"]).then(function(base){
+    return SUB.deriveKey({name:"PBKDF2",salt:toBuf(D.s),iterations:D.n,hash:"SHA-256"},base,{name:"AES-GCM",length:256},true,["decrypt"]);
+  });
+}
+
+var cached=sGet(CK);
+if(cached){
+  importAes(toBuf(cached)).then(decryptWith).then(reveal).catch(function(){sDel(CK);showGate("");});
+}else{
+  showGate("");
+}
+
+whenReady(function(){
+  var f=el("jrxForm");
+  if(!f){return;}
+  f.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var input=el("jrxPw"),btn=el("jrxGo"),err=el("jrxErr");
+    var pw=input.value||"";
+    if(!pw){err.textContent="请输入密码";return;}
+    btn.disabled=true;btn.textContent="解密中…";err.textContent="";
+    derive(pw).then(function(key){
+      return decryptWith(key).then(function(html){
+        return SUB.exportKey("raw",key).then(function(raw){sSet(CK,toB64(raw));return html;});
+      });
+    }).then(reveal).catch(function(){
+      btn.disabled=false;btn.textContent="进 入";
+      err.textContent="密码不对，请再试一次";
+      input.value="";
+      try{input.focus();}catch(e){}
+    });
+  });
+});
+})();
 </script>
 </body>
 </html>

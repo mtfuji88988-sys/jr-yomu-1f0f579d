@@ -1,59 +1,127 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>大声说日文 · 学习管家</title>
-<style>
-:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--soft:#F5E6D8;--line:#E8DDCD;--muted:#8A7F72;--card:#fff;--sky:#EAF2F5}
-@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--soft:#3A2E25;--line:#3C342B;--muted:#A79A8B;--card:#2A241E;--sky:#26313A}}
+<meta name="referrer" content="no-referrer">
+<title>私人学习空间</title>
+<style>:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--line:#E8DDCD;--muted:#8A7F72;--card:#fff}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--line:#3C342B;--muted:#A79A8B;--card:#2A241E}}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;line-height:1.85;padding:34px 16px 60px}
-.wrap{max-width:640px;margin:0 auto}
-h1{font-size:23px;color:var(--terra);border-bottom:3px solid var(--terra);padding-bottom:10px}
-.intro{background:var(--sky);border:1px solid var(--line);border-radius:10px;padding:12px 15px;font-size:13.5px;margin:14px 0 20px}
-.intro b{color:var(--terra)}
-a.card{display:block;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--terra);border-radius:12px;padding:15px 17px;margin:12px 0;text-decoration:none;color:var(--ink)}
-a.card:active{opacity:.7}
-.tag{display:inline-block;background:var(--soft);color:var(--terra);font-size:11.5px;padding:2px 9px;border-radius:20px;margin-right:6px}
-.ti{font-size:16.5px;font-weight:700;margin:5px 0 4px;line-height:1.4}
-.meta{font-size:12px;color:var(--muted)}
-.foot{color:var(--muted);font-size:12px;margin-top:22px;padding-top:12px;border-top:1px solid var(--line)}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;-webkit-text-size-adjust:100%}
+#jrxGate{visibility:hidden;min-height:100%;display:flex;align-items:center;justify-content:center;padding:30px 18px}
+.jrxCard{width:100%;max-width:330px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--terra);border-radius:14px;padding:30px 24px 26px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.jrxLock{font-size:34px;line-height:1}
+.jrxCard h1{font-size:19px;color:var(--terra);margin:12px 0 6px;font-weight:600}
+.jrxHint{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+#jrxPw{width:100%;padding:13px 14px;font-size:17px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:10px;text-align:center;letter-spacing:2px;outline:none;-webkit-appearance:none}
+#jrxPw:focus{border-color:var(--terra)}
+#jrxGo{width:100%;margin-top:14px;padding:13px;font-size:16px;font-family:inherit;letter-spacing:4px;color:#fff;background:var(--terra);border:0;border-radius:10px;cursor:pointer}
+#jrxGo:disabled{opacity:.55}
+#jrxGo:active{opacity:.8}
+#jrxErr{min-height:20px;margin-top:12px;font-size:13px;color:#C0392B}
+@media(prefers-color-scheme:dark){#jrxErr{color:#E8877A}}
+.jrxFoot{margin-top:18px;font-size:11.5px;color:var(--muted);line-height:1.7}
+.jrxHidden{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1>🗣 大声说日文</h1>
-<div class="intro">这是<b>“开口跟读”主线</b>:26 篇初级(N5-N4)日常口语短文,每篇 6~11 句,全部生活场景。用法:<b>第一遍</b>听整篇 → <b>第二遍</b>逐句点读、<b>大声跟读</b> → <b>第三遍</b>关中文只读日文 → <b>第四遍</b>关假名出声背。每天一篇,张口就来。</div>
+<div id="jrxGate"><form class="jrxCard" id="jrxForm">
+<div class="jrxLock">&#128274;</div>
+<h1>私人学习空间</h1>
+<p class="jrxHint">本页内容已加密<br>请输入访问密码</p>
+<input class="jrxHidden" type="text" name="username" value="jr-yomu" autocomplete="username" tabindex="-1" aria-hidden="true">
+<input type="password" id="jrxPw" name="password" autocomplete="current-password" placeholder="访问密码" aria-label="访问密码">
+<button type="submit" id="jrxGo">进 入</button>
+<div id="jrxErr" role="alert"></div>
+<div class="jrxFoot">解锁一次后本设备记住<br>之后翻页不再询问</div>
+</form></div>
+<script type="application/json" id="jrxData">{"v":1,"n":250000,"s":"dctSebvjkf1/mRMxh7XtQ3VAOZQX5fh45wM6tiPJWR8=","i":"LX/Dssg7+mTxkZrH","c":"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"}</script>
+<script>(function(){
+"use strict";
+function el(id){return document.getElementById(id);}
+var node=el("jrxData"),D;
+try{D=JSON.parse(node.textContent);}catch(e){D=null;}
+if(!D){document.documentElement.innerHTML="<p style=\"padding:40px;font:16px sans-serif\">页面数据损坏，请联系维护者。</p>";return;}
+var CK="jrx.k."+D.s.substring(0,10);
 
-<a class="card" href="s1.html"><span class="tag">吃喝</span><span class="tag">初级</span><div class="ti">『カレーパンがない』— 便利店没有咖喱面包</div><div class="meta">8句 · Elsa の放送 #1 · 男声Keita朗读</div></a>
-<a class="card" href="s2.html"><span class="tag">日常</span><span class="tag">初级</span><div class="ti">『スマホが落ちた』— 躺着玩手机砸到脸</div><div class="meta">8句 · Elsa の放送 #2 · 男声Keita朗读</div></a>
-<a class="card" href="s3.html"><span class="tag">日常</span><span class="tag">初级</span><div class="ti">『朝までゲーム』— 打游戏打到天亮</div><div class="meta">8句 · Elsa の放送 #3 · 男声Keita朗读</div></a>
-<a class="card" href="s4.html"><span class="tag">日常</span><span class="tag">初级</span><div class="ti">『机をきれいに』— 从今天起每天擦桌子</div><div class="meta">8句 · Elsa の放送 #4 · 男声Keita朗读</div></a>
-<a class="card" href="s5.html"><span class="tag">购物</span><span class="tag">初级</span><div class="ti">『傘が壊れました』— 伞坏了,下周买把一样的</div><div class="meta">7句 · Elsa の放送 #5 · 男声Keita朗读</div></a>
-<a class="card" href="s6.html"><span class="tag">吃喝</span><span class="tag">初级</span><div class="ti">『朝ごはんは何を食べますか』— 姐姐的早餐面包配咖啡</div><div class="meta">8句 · Elsa の放送 #6 · 男声Keita朗读</div></a>
-<a class="card" href="s7.html"><span class="tag">兴趣</span><span class="tag">初级</span><div class="ti">『猫の動画』— YouTube 上全世界的猫</div><div class="meta">11句 · Elsa の放送 #7 · 男声Keita朗读</div></a>
-<a class="card" href="s8.html"><span class="tag">社交</span><span class="tag">初级</span><div class="ti">『財布を忘れてごめんなさい』— 和佐藤下馆子忘了带钱包</div><div class="meta">9句 · Elsa の放送 #8 · 男声Keita朗读</div></a>
-<a class="card" href="s9.html"><span class="tag">吃喝</span><span class="tag">初级</span><div class="ti">『箸とスプーン』— 筷子和勺子的用法</div><div class="meta">8句 · Elsa の放送 #9 · 男声Keita朗读</div></a>
-<a class="card" href="s10.html"><span class="tag">吃喝</span><span class="tag">初级</span><div class="ti">『お昼休みはマクドナルドへ』— 午休去麦当劳</div><div class="meta">7句 · Elsa の放送 #10 · 男声Keita朗读</div></a>
-<a class="card" href="s11.html"><span class="tag">健康</span><span class="tag">初级</span><div class="ti">『魚と野菜』— 把饮食换成鱼和蔬菜</div><div class="meta">11句 · Elsa の放送 #11 · 男声Keita朗读</div></a>
-<a class="card" href="s12.html"><span class="tag">日常</span><span class="tag">初级</span><div class="ti">『朝の時間』— 早晨的时间怎么用</div><div class="meta">7句 · Elsa の放送 #12 · 男声Keita朗读</div></a>
-<a class="card" href="s13.html"><span class="tag">吃喝</span><span class="tag">初级</span><div class="ti">『すき焼き』— 妹妹做的寿喜烧</div><div class="meta">6句 · Elsa の放送 #13 · 男声Keita朗读</div></a>
-<a class="card" href="s14.html"><span class="tag">日常</span><span class="tag">初级</span><div class="ti">『財布を見つけた』— 路上捡到钱包</div><div class="meta">9句 · Elsa の放送 #14 · 男声Keita朗读</div></a>
-<a class="card" href="s15.html"><span class="tag">社交</span><span class="tag">初级</span><div class="ti">『友達と一緒に過ごした一日』— 和朋友过的一天</div><div class="meta">6句 · Elsa の放送 #15 · 男声Keita朗读</div></a>
-<a class="card" href="s16.html"><span class="tag">生活</span><span class="tag">初级</span><div class="ti">『初めての地震』— 第一次遇到地震</div><div class="meta">7句 · Elsa の放送 #16 · 男声Keita朗读</div></a>
-<a class="card" href="s17.html"><span class="tag">出行</span><span class="tag">初级</span><div class="ti">『今夜はタクシーで』— 今晚打车回家</div><div class="meta">7句 · Elsa の放送 #17 · 男声Keita朗读</div></a>
-<a class="card" href="s18.html"><span class="tag">吃喝</span><span class="tag">初级</span><div class="ti">『トッポギ大好き』— 最爱辣炒年糕</div><div class="meta">7句 · Elsa の放送 #18 · 男声Keita朗读</div></a>
-<a class="card" href="s19.html"><span class="tag">日常</span><span class="tag">初级</span><div class="ti">『有意義な一日』— 有意义的一天</div><div class="meta">6句 · Elsa の放送 #19 · 男声Keita朗读</div></a>
-<a class="card" href="s20.html"><span class="tag">日常</span><span class="tag">初级</span><div class="ti">『休日の一日』— 休息日的一天</div><div class="meta">7句 · Elsa の放送 #20 · 男声Keita朗读</div></a>
-<a class="card" href="s21.html"><span class="tag">社交</span><span class="tag">初级</span><div class="ti">『同僚とお寿司』— 和同事去吃寿司</div><div class="meta">6句 · Elsa の放送 #21 · 男声Keita朗读</div></a>
-<a class="card" href="s22.html"><span class="tag">生活</span><span class="tag">初级</span><div class="ti">『今日は歯医者さん』— 今天去看牙医</div><div class="meta">6句 · Elsa の放送 #22 · 男声Keita朗读</div></a>
-<a class="card" href="s23.html"><span class="tag">吃喝</span><span class="tag">初级</span><div class="ti">『久々のスシロー』— 久违的寿司郎</div><div class="meta">7句 · Elsa の放送 #23 · 男声Keita朗读</div></a>
-<a class="card" href="s24.html"><span class="tag">出行</span><span class="tag">初级</span><div class="ti">『ラーメン博物館』— 逛拉面博物馆</div><div class="meta">8句 · Elsa の放送 #24 · 男声Keita朗读</div></a>
-<a class="card" href="s25.html"><span class="tag">家人</span><span class="tag">初级</span><div class="ti">『おばあちゃん大好き』— 最爱奶奶</div><div class="meta">7句 · Elsa の放送 #25 · 男声Keita朗读</div></a>
-<a class="card" href="s26.html"><span class="tag">生活</span><span class="tag">初级</span><div class="ti">『果物のお裾分け』— 邻里分来的水果</div><div class="meta">6句 · Elsa の放送 #26 · 男声Keita朗读</div></a>
+function toBuf(a){var s=atob(a),u=new Uint8Array(s.length),i;for(i=0;i<s.length;i++){u[i]=s.charCodeAt(i);}return u;}
+function toB64(b){var u=new Uint8Array(b),s="",i;for(i=0;i<u.length;i++){s+=String.fromCharCode(u[i]);}return btoa(s);}
 
-<div class="foot">学习管家 · 大声说日文线(26篇 · Elsa の放送「跟我一起大聲說日文」系列语音整理)· 仅供本人学习使用,请勿分享链接。</div>
-</div>
+var store=null;
+try{localStorage.setItem("jrx.t","1");localStorage.removeItem("jrx.t");store=localStorage;}catch(e){}
+if(!store){try{sessionStorage.setItem("jrx.t","1");sessionStorage.removeItem("jrx.t");store=sessionStorage;}catch(e){}}
+function sGet(k){try{return store?store.getItem(k):null;}catch(e){return null;}}
+function sSet(k,v){try{if(store){store.setItem(k,v);}}catch(e){}}
+function sDel(k){try{if(store){store.removeItem(k);}}catch(e){}}
+
+function whenReady(fn){
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",fn);}
+  else{fn();}
+}
+function showGate(msg){
+  whenReady(function(){
+    var g=el("jrxGate");
+    if(g){g.style.visibility="visible";}
+    if(msg){var e2=el("jrxErr");if(e2){e2.textContent=msg;}}
+  });
+}
+function reveal(html){
+  whenReady(function(){
+    try{document.open();document.write(html);document.close();}
+    catch(e){document.documentElement.innerHTML=html;}
+  });
+}
+
+if(!window.crypto||!window.crypto.subtle){
+  showGate("此浏览器无法解密：请确认用 https:// 网址打开本页。");
+  return;
+}
+var SUB=window.crypto.subtle;
+
+function importAes(raw){return SUB.importKey("raw",raw,{name:"AES-GCM"},true,["decrypt"]);}
+function decryptWith(key){
+  return SUB.decrypt({name:"AES-GCM",iv:toBuf(D.i)},key,toBuf(D.c)).then(function(buf){
+    return new TextDecoder("utf-8").decode(buf);
+  });
+}
+function derive(pw){
+  return SUB.importKey("raw",new TextEncoder().encode(pw),{name:"PBKDF2"},false,["deriveKey"]).then(function(base){
+    return SUB.deriveKey({name:"PBKDF2",salt:toBuf(D.s),iterations:D.n,hash:"SHA-256"},base,{name:"AES-GCM",length:256},true,["decrypt"]);
+  });
+}
+
+var cached=sGet(CK);
+if(cached){
+  importAes(toBuf(cached)).then(decryptWith).then(reveal).catch(function(){sDel(CK);showGate("");});
+}else{
+  showGate("");
+}
+
+whenReady(function(){
+  var f=el("jrxForm");
+  if(!f){return;}
+  f.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var input=el("jrxPw"),btn=el("jrxGo"),err=el("jrxErr");
+    var pw=input.value||"";
+    if(!pw){err.textContent="请输入密码";return;}
+    btn.disabled=true;btn.textContent="解密中…";err.textContent="";
+    derive(pw).then(function(key){
+      return decryptWith(key).then(function(html){
+        return SUB.exportKey("raw",key).then(function(raw){sSet(CK,toB64(raw));return html;});
+      });
+    }).then(reveal).catch(function(){
+      btn.disabled=false;btn.textContent="进 入";
+      err.textContent="密码不对，请再试一次";
+      input.value="";
+      try{input.focus();}catch(e){}
+    });
+  });
+});
+})();
+</script>
 </body>
 </html>

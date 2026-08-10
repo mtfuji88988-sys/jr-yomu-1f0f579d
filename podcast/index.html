@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<title>私人学习空间</title>
+<style>:root{--paper:#FBF7F0;--ink:#2B2620;--terra:#C15F3C;--line:#E8DDCD;--muted:#8A7F72;--card:#fff}
+@media(prefers-color-scheme:dark){:root{--paper:#211C17;--ink:#EDE6DC;--terra:#DD8158;--line:#3C342B;--muted:#A79A8B;--card:#2A241E}}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Songti SC",sans-serif;-webkit-text-size-adjust:100%}
+#jrxGate{visibility:hidden;min-height:100%;display:flex;align-items:center;justify-content:center;padding:30px 18px}
+.jrxCard{width:100%;max-width:330px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--terra);border-radius:14px;padding:30px 24px 26px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.jrxLock{font-size:34px;line-height:1}
+.jrxCard h1{font-size:19px;color:var(--terra);margin:12px 0 6px;font-weight:600}
+.jrxHint{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+#jrxPw{width:100%;padding:13px 14px;font-size:17px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:10px;text-align:center;letter-spacing:2px;outline:none;-webkit-appearance:none}
+#jrxPw:focus{border-color:var(--terra)}
+#jrxGo{width:100%;margin-top:14px;padding:13px;font-size:16px;font-family:inherit;letter-spacing:4px;color:#fff;background:var(--terra);border:0;border-radius:10px;cursor:pointer}
+#jrxGo:disabled{opacity:.55}
+#jrxGo:active{opacity:.8}
+#jrxErr{min-height:20px;margin-top:12px;font-size:13px;color:#C0392B}
+@media(prefers-color-scheme:dark){#jrxErr{color:#E8877A}}
+.jrxFoot{margin-top:18px;font-size:11.5px;color:var(--muted);line-height:1.7}
+.jrxHidden{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+</style>
+</head>
+<body>
+<div id="jrxGate"><form class="jrxCard" id="jrxForm">
+<div class="jrxLock">&#128274;</div>
+<h1>私人学习空间</h1>
+<p class="jrxHint">本页内容已加密<br>请输入访问密码</p>
+<input class="jrxHidden" type="text" name="username" value="jr-yomu" autocomplete="username" tabindex="-1" aria-hidden="true">
+<input type="password" id="jrxPw" name="password" autocomplete="current-password" placeholder="访问密码" aria-label="访问密码">
+<button type="submit" id="jrxGo">进 入</button>
+<div id="jrxErr" role="alert"></div>
+<div class="jrxFoot">解锁一次后本设备记住<br>之后翻页不再询问</div>
+</form></div>
+<script type="application/json" id="jrxData">{"v":1,"n":250000,"s":"dctSebvjkf1/mRMxh7XtQ3VAOZQX5fh45wM6tiPJWR8=","i":"9lkqd2Lj8tJuOZoh","c":"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"}</script>
+<script>(function(){
+"use strict";
+function el(id){return document.getElementById(id);}
+var node=el("jrxData"),D;
+try{D=JSON.parse(node.textContent);}catch(e){D=null;}
+if(!D){document.documentElement.innerHTML="<p style=\"padding:40px;font:16px sans-serif\">页面数据损坏，请联系维护者。</p>";return;}
+var CK="jrx.k."+D.s.substring(0,10);
+
+function toBuf(a){var s=atob(a),u=new Uint8Array(s.length),i;for(i=0;i<s.length;i++){u[i]=s.charCodeAt(i);}return u;}
+function toB64(b){var u=new Uint8Array(b),s="",i;for(i=0;i<u.length;i++){s+=String.fromCharCode(u[i]);}return btoa(s);}
+
+var store=null;
+try{localStorage.setItem("jrx.t","1");localStorage.removeItem("jrx.t");store=localStorage;}catch(e){}
+if(!store){try{sessionStorage.setItem("jrx.t","1");sessionStorage.removeItem("jrx.t");store=sessionStorage;}catch(e){}}
+function sGet(k){try{return store?store.getItem(k):null;}catch(e){return null;}}
+function sSet(k,v){try{if(store){store.setItem(k,v);}}catch(e){}}
+function sDel(k){try{if(store){store.removeItem(k);}}catch(e){}}
+
+function whenReady(fn){
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",fn);}
+  else{fn();}
+}
+function showGate(msg){
+  whenReady(function(){
+    var g=el("jrxGate");
+    if(g){g.style.visibility="visible";}
+    if(msg){var e2=el("jrxErr");if(e2){e2.textContent=msg;}}
+  });
+}
+function reveal(html){
+  whenReady(function(){
+    try{document.open();document.write(html);document.close();}
+    catch(e){document.documentElement.innerHTML=html;}
+  });
+}
+
+if(!window.crypto||!window.crypto.subtle){
+  showGate("此浏览器无法解密：请确认用 https:// 网址打开本页。");
+  return;
+}
+var SUB=window.crypto.subtle;
+
+function importAes(raw){return SUB.importKey("raw",raw,{name:"AES-GCM"},true,["decrypt"]);}
+function decryptWith(key){
+  return SUB.decrypt({name:"AES-GCM",iv:toBuf(D.i)},key,toBuf(D.c)).then(function(buf){
+    return new TextDecoder("utf-8").decode(buf);
+  });
+}
+function derive(pw){
+  return SUB.importKey("raw",new TextEncoder().encode(pw),{name:"PBKDF2"},false,["deriveKey"]).then(function(base){
+    return SUB.deriveKey({name:"PBKDF2",salt:toBuf(D.s),iterations:D.n,hash:"SHA-256"},base,{name:"AES-GCM",length:256},true,["decrypt"]);
+  });
+}
+
+var cached=sGet(CK);
+if(cached){
+  importAes(toBuf(cached)).then(decryptWith).then(reveal).catch(function(){sDel(CK);showGate("");});
+}else{
+  showGate("");
+}
+
+whenReady(function(){
+  var f=el("jrxForm");
+  if(!f){return;}
+  f.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var input=el("jrxPw"),btn=el("jrxGo"),err=el("jrxErr");
+    var pw=input.value||"";
+    if(!pw){err.textContent="请输入密码";return;}
+    btn.disabled=true;btn.textContent="解密中…";err.textContent="";
+    derive(pw).then(function(key){
+      return decryptWith(key).then(function(html){
+        return SUB.exportKey("raw",key).then(function(raw){sSet(CK,toB64(raw));return html;});
+      });
+    }).then(reveal).catch(function(){
+      btn.disabled=false;btn.textContent="进 入";
+      err.textContent="密码不对，请再试一次";
+      input.value="";
+      try{input.focus();}catch(e){}
+    });
+  });
+});
+})();
+</script>
+</body>
+</html>
