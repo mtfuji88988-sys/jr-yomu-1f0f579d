@@ -83,6 +83,7 @@ const ITEMS=[
  {id:'takecab_pm',ic:'💊',nm:'晚饭后タケキャブ',t:'19:30',freq:'daily'},
  {id:'muco_pm',ic:'💊',nm:'晚饭后ムコスタ',t:'19:35',freq:'daily'},
  {id:'brush_pm',ic:'🦷',nm:'睡前刷牙5分钟',t:'22:30',freq:'daily'},
+ {id:'bed_1am',ic:'🌙',nm:'1点前上床',t:'两周试验至8/24',freq:'daily',from:'2026-08-11'},
  {id:'manjaro',ic:'💉',nm:'マンジャロ 2.5mg 注射',t:'每周六',freq:'weekly',dow:6},
 ];
 function applicable(ds){const d=new Date(ds+'T12:00:00');return ITEMS.filter(it=>{if(it.from&&ds<it.from)return false;if(it.freq==='weekly')return d.getDay()===it.dow;return true})}
