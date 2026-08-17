@@ -36,19 +36,19 @@ textarea{width:100%;min-height:74px;font-size:19px;border:1.5px solid var(--line
 <h1>🏥 病房会话·翻译卡 <span style="font-size:12px;color:#a08c72">v2</span></h1>
 <div class="tabs">
 <div class="tab on" id="t0" onclick="sw(0)">💬 对话互译</div>
-<div class="tab" id="t1" onclick="sw(1)">🗣 我要说</div>
-<div class="tab" id="t2" onclick="sw(2)">👩‍⚕️ 护士说</div>
+<div class="tab" id="t1" onclick="sw(1)">🗣 患者</div>
+<div class="tab" id="t2" onclick="sw(2)">👩‍⚕️ 看護師</div>
 </div>
 
 <div id="p0">
 <div class="tip">💡 点输入框→按<b>键盘上的🎤麦克风</b>直接说话(说完自动变文字)→点大按钮=翻译+朗读。把手机递给护士,她用下面蓝色框。需联网。</div>
-<div class="pane"><h3>🇨🇳 我说(中文→日本語)</h3>
+<div class="pane"><h3>🗣 患者(中文 → 日本語)</h3>
 <button class="go mic" id="zhMic" onclick="rec('zh')">🎤 按一下,直接说中文</button>
 <textarea id="zhIn" lang="zh-CN" placeholder="(也可以在这里打字)"></textarea>
 <button class="go alt" onclick="tr('zh')">翻译并朗读 ▶︎</button>
 <div class="res" id="zhOut"></div><div class="res2" id="zhOut2"></div>
 <button class="replay hide" id="zhRe" onclick="replay('ja')">🔊 再读一遍</button></div>
-<div class="pane n"><h3>🇯🇵 看護師さん(日本語→中国語)</h3>
+<div class="pane n"><h3>👩‍⚕️ 看護師(日本語 → 中国語)</h3>
 <button class="go mic" id="jaMic" onclick="rec('ja')">🎤 タップして、日本語で話してください</button>
 <textarea id="jaIn" lang="ja" placeholder="(入力もできます)"></textarea>
 <button class="go alt" onclick="tr('ja')">翻訳する ▶︎</button>
